@@ -341,9 +341,9 @@ html, body {
 	background-clip: content-box;
 	width: 42px;
 	height: 47px;
+	margin-left: auto;
 	padding: 22px 10px;
 	position: relative;
-	margin: 10px 0 10px auto;
 	text-indent: 200%;
 	display: block;
 	overflow: hidden;
@@ -351,11 +351,6 @@ html, body {
 	-moz-transition: all 0.25s ease-in-out;
 	-o-transition: all 0.25s ease-in-out;
 	transition: all 0.25s ease-in-out;
-
-	@media @bp-global-small {
-		margin-top: 8px;
-	}
-
 
 	&:hover {
 		background-color: @color__companyname--text;
@@ -376,13 +371,11 @@ html, body {
 	}
 
 	// Top bar
-
 	&:before {
 		top: 13px;
 	}
 
 	// Bottom bar
-
 	&:after {
 		bottom: 13px;
 	}

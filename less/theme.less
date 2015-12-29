@@ -17,6 +17,7 @@
 @bp-global-large: 	~"only screen and (min-width: 1400px)";
 @bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
 @bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
 
 // When specific styles for responsive columns styles are applied
 @bp-global-columns: ~"only screen and (min-width: 478px)";
@@ -106,8 +107,6 @@ body {
 // ------------------------------
 
 
-
-
 // Template Header
 // ------------------------------
 
@@ -117,78 +116,92 @@ body {
     top: 0;
     z-index: 10050;
     width: 100%;
-    padding: 10px 0 50px;
+    min-height: 150px;
+    padding: 30px 70px;
     background-color: @color__header--background;
     .gradient(@color__header--background, transparent);
 
+    @media @bp-global-medium {
+        min-height: 120px;
+        padding: 20px 40px;
+    }
+    @media @tablet {
+        min-height: 100px;
+        padding: 20px;
+    }
+
+
     // Container
 	.container {
-
-		// Flexbox - align itemns vertically to the centre
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
-		flex-direction: row;
-		-webkit-flex-wrap: nowrap;
-		-ms-flex-wrap: nowrap;
-		flex-wrap: nowrap;
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-
-        @media @bp-global-large {
-             padding: 0 70px;
-        }
-        @media @bp-global-medium {
-            padding: 0 40px;
-        }
-        @media @bp-global-small {
-            padding: 0 7px 0 20px;
-            -webkit-align-items: stretch;
-            -ms-flex-align: stretch;
-            align-items: stretch;
-
-        }
+		.flex-display;
+		.justify-content(space-between);
+        .align-items(center);
 	}
 
-    // Company
+    .flex-item {
+        width: 33.333%;
 
-    .company {
-        position: relative;
-        z-index: 10010;
-        margin-right: 10px;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-
-        // Flexbox child: Stretch to fill the available space
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-
-        @media @bp-global-small {
-            padding-right: 10px;
-        }
         @media @mobile {
-            z-index: 1;
+            width: 60%;
+
+            &:first-child,
+            &:last-child {
+                width: 10%;
+            }
+
+        }
+    }
+
+    .phone-number-link {
+        font-family: @font__h4--font-family;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+        color: @color__companyname--text;
+
+        &:before {
+            display: none;
+
+            @media @tablet {
+                display: inline-block;
+                font-size: 26px;
+                line-height: 47px;
+            }
+        }
+    }
+    .phone-number {
+        @media @tablet {
+            display: none;
+        }
+    }
+    .companyname,
+    .logo {
+        text-align: center;
+    }
+    .companyname {
+        margin-top: 10px;
+    }
+}
+
+
+// Header: When feature is hidden
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
+    background: @color__body--background;
+    min-height: initial;
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+    .phone-number-link,
+    .company-link {
+        color: @color__h2--text;
+    }
+    .navigation-toggle {
+        background-color: @color__h2--text;
+
+        &:after, &:before {
+            background: @color__h2--text;
         }
     }
 }
