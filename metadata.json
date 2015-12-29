@@ -138,21 +138,18 @@
             "font__h2--line-height" : "@font-swatch2-line-height",
             "font__h2--letter-spacing" : "-1px",
             "color__h2--text": "@font-swatch2-color",
-
             "font__h3--font-family" : "@font-swatch3-font-family",
             "font__h3--font-size" : "22px",
             "font__h3--font-weight" : "@font-swatch3-font-weight",
             "font__h3--line-height" : "34px",
             "font__h3--letter-spacing" : "-1px",
             "color__h3--text": "@font-swatch3-color",
-
             "font__h4--font-family" : "@font-swatch4-font-family",
             "font__h4--font-size" : "@font-swatch4-font-size",
             "font__h4--font-weight" : "@font-swatch4-font-weight",
             "font__h4--line-height" : "@font-swatch4-line-height",
             "font__h4--letter-spacing" : "@font-swatch4-letter-spacing",
             "color__h4--text": "@font-swatch4-color",
-
             "font__p--font-family" : "@font-swatch5-font-family",
             "font__p--font-size" : "16px",
             "font__p--font-weight" : "400",
