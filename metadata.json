@@ -127,6 +127,19 @@
         "header": {
             "color__header--background" : "#1f2122"
         },
+        "navigation": {
+            "font__navigation--font-family": "@font-swatch6-font-family",
+            "font__navigation--font-size": "20px",
+            "font__navigation--font-weight": "700",
+            "font__navigation--line-height": "26px",
+            "font__navigation--letter-spacing": "2px",
+            "color__navigation--text": "#c0C7f7",
+            "color__navigation--text--selected": "#fff"
+        },
+        "form": {
+            "color__form-legend--text" : "#fff",
+            "color__form-legend--background": "@color__primary"
+        },
         "button": {
             "color__button--background" : "@color__secondary",
             "color__button--text" : "#7e8a8e",
