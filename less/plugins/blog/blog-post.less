@@ -1,0 +1,341 @@
+// ---------------------------------------------
+// Scribe Template: CSS > Plugins > Blog > Blog Post
+// ---------------------------------------------
+
+
+@bp-blog-post-layout-vertical: ~"only screen and (max-width : 900px)";
+
+
+// ------------------------------
+// Blog Post
+// ------------------------------
+
+.blogpost {
+
+
+    // Blog Article
+    // ------------------------------
+    .post-article {
+        position: relative;
+        margin-bottom: 2em;
+    }
+
+
+
+
+    // Post Image
+    // ------------------------------
+
+
+    .post-image {
+        // Aspect Ration Setting
+
+        width: 66.66%;
+        float: right;
+
+        @media @bp-blog-post-layout-vertical {
+            width: auto;
+            float: none;
+        }
+    }
+
+
+
+
+        // Image Link
+        // ------------------------------
+
+
+        .image-link {
+            display: block;
+
+            // Container Width * 0.66
+            height: 0;
+            padding-bottom: 40%;
+
+            background-position: center;
+            background-size: cover;
+
+            .image {
+                display: none;
+            }
+        }
+
+
+
+
+    // Post Content
+    // ------------------------------
+
+
+    .post-content {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+    // Post Excerpt / Post Body
+    // ------------------------------
+
+
+    .post-body {
+        clear: both;
+        margin-left: 33.33%;
+        padding: 40px 70px 40px 0;
+
+        @media @bp-blog-post-layout-vertical {
+            margin-left: 0;
+            padding: 40px;
+        }
+
+        @media @bp-global-small {
+            padding: 20px;
+        }
+    }
+
+
+
+
+    // Post Header
+    // ------------------------------
+
+
+    .post-header {
+        width: 33.33%;
+        background-color: @color__blogpost-title--background;
+        padding: 70px;
+
+        @media @bp-blog-post-layout-vertical {
+            width: auto;
+        }
+
+        @media @bp-global-medium {
+            padding: 40px;
+        }
+        @media @bp-global-small {
+            padding: 20px;
+        }
+
+    }
+
+
+
+
+    // Post Title
+    // ------------------------------
+
+
+    .post-title {
+        margin: 0;
+        padding: 0;
+        color: @color__blogpost-title--text;
+
+        @media @bp-global-medium, @bp-blog-post-layout-vertical {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.8);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.7);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
+    }
+
+
+
+
+    // Post Footer
+    // ------------------------------
+
+
+    .post-footer {
+        position: relative;
+        margin-left: 33.33%;
+
+        @media @bp-blog-post-layout-vertical {
+            margin-left: 0;
+            padding: 40px;
+        }
+
+        @media @bp-global-small {
+            padding: 20px;
+        }
+
+        // Timestamp
+
+        .timestamp {
+            position: absolute;
+            right: 70px;
+            color: fade(@color__p--text, 80%);
+            display: block;
+            margin-bottom: 2em;
+
+            @media @bp-global-medium {
+                font-size: bkscale(@font__p--font-size, 0.9);
+                line-height: bkscale(@font__p--line-height, 0.9);
+            }
+
+            @media @bp-global-small {
+                font-size: bkscale(@font__p--font-size, 0.8);
+                line-height: bkscale(@font__p--line-height, 0.8);
+                right: 0;
+            }
+        }
+    }
+
+
+
+
+    // Post Attributes
+    // ------------------------------
+
+
+    .post-attributes {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+
+        @media @mobile {
+            display: block;
+        }
+    }
+
+
+
+
+    // Post Category / Post Tags
+    // ------------------------------
+
+
+    .post-category, .post-tags {
+        margin-bottom: 2em;
+
+        @media @bp-global-medium {
+            margin-bottom: 1em;
+        }
+
+        @media @bp-global-small {
+            margin-bottom: 1em;
+        }
+
+        // Links
+
+        a {
+            .underline;
+
+            @media @bp-global-medium {
+                font-size: bkscale(@font__p--font-size, 0.9);
+                line-height: bkscale(@font__p--line-height, 0.9);
+            }
+
+            @media @bp-global-small {
+                font-size: bkscale(@font__p--font-size, 0.8);
+                line-height: bkscale(@font__p--line-height, 0.8);
+            }
+
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+
+
+    // Post Category
+    // ------------------------------
+
+
+    .post-category {
+        margin-right: 50px;
+
+        @media @mobile {
+            margin-right: 0;
+        }
+    }
+
+
+
+
+    // Category Title / Tags Title
+    // ------------------------------
+
+
+    .blogpost__category-title,
+    .blogpost__tags-title {
+        font-size: 13px;
+        line-height: 1;
+        color: fade(@color__p--text, 80%);
+        display: block;
+        padding-bottom: 0.5em;
+    }
+
+
+
+
+    // Tags List
+    // ------------------------------
+
+
+    .blogpost__tag-list {
+        display: block;
+    }
+
+
+
+
+    // Tags Item
+    // ------------------------------
+
+
+    .blogpost__tag-item {
+        margin-right: 1.5em;
+
+
+    }
+
+
+
+
+
+
+    // ------------------------------
+    // Sharing Links
+    // ------------------------------
+
+
+
+
+    // Sharing Links
+    // ------------------------------
+
+
+    .blogpost__sharing-links {
+        clear: both;
+    }
+
+    // Network Item
+
+    .blogpost__network-item {
+        @media @bp-global-medium, @bp-global-small {
+            display: block;
+        }
+    }
+}

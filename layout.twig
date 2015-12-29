@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html class="no-js" lang="{{ page.seoLang }}">
+
+	{% include "includes/head.twig" %}
+
+	<body class="{{ page.backgroundClass }}">
+
+		<div class="page-content">
+			<div class="container">
+				{% include "includes/header.twig" %}
+				{% block content %}
+				{% endblock %}
+				{% include "includes/footer.twig" %}
+			</div>
+		</div>
+
+	    {% include basekit.bodyScript %}
+
+		<script src="{{ asset('js/navigation.js')}}"></script>
+		<script src="{{ asset('js/custom.js')}}"></script>
+
+	</body>
+
+</html>

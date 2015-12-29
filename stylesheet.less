@@ -1,0 +1,35 @@
+// --------------------------------------
+// BaseKit Standard Template: Scribe
+// --------------------------------------
+
+#tdk-toolbar {
+    display: none!important;
+}
+
+// -----------------------------
+// Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+@import "@{templateLocal}/less/variables.less";
+
+
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+
+
+@import "@{templateLocal}/less/theme.less"; // Template
+
+
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+
+@import "@{templateLocal}/less/messages.less"; // Messages
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce
+
+
+
+@color__primary--alt : darken(desaturate(@color__primary, 10%), 5%);
+@color__secondary-alt : lighten(saturate(@color__secondary, 1%), 4%);

@@ -1,0 +1,776 @@
+// -------------------------------
+// Scribe Template: CSS > Plugin: Menu
+// -------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1.  #Widget Layout Breakpoints
+// 2.  #Menu Section
+// 3.  #Section Body
+// 4.  #Menu Item
+// 5.  #Featured Menu Item
+// 6.  #Menu Subsection
+// 7.  #Promoted Menu Subsection
+// 8.  #Menu Subsection
+
+
+
+
+// ------------------------------
+// 1.  #Widget Layout Breakpoints
+// ------------------------------
+
+
+
+// ------------------------------
+// 2.  #Menu Section
+// ------------------------------
+
+
+// LESS Framework reset
+
+.odd.bk1-columns {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+// Menu Section
+// ------------------------------
+
+
+.menu-section {
+    padding: 0;
+
+}
+
+
+
+
+// Section Header
+// ------------------------------
+
+
+.section-header {
+    background-color: @color__menu-section-header--background;
+    @media @bp-global-large {
+        padding: 30px 70px;
+    }
+    @media @bp-global-medium {
+        padding: 30px 40px;
+    }
+    @media @bp-global-small {
+        padding: 30px 20px;
+    }
+
+
+}
+
+
+
+
+// Section Title
+// ------------------------------
+
+
+.section-title {
+    font-size: @font__h1--font-size;
+    padding-bottom: 0.3em;
+    color: @color__p--text;
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h1--font-size, 0.82);
+        line-height: bkscale(@font__h1--line-height, 0.82);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h1--font-size, 0.62);
+        line-height: bkscale(@font__h1--line-height, 0.62);
+    }
+}
+
+
+
+
+// Section Description
+// ------------------------------
+
+
+.section-description {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__p--font-size, 0.72);
+        line-height: bkscale(@font__p--line-height, 0.72);
+    }
+}
+
+
+
+
+// ------------------------------
+// 3.  #Section Body
+// ------------------------------
+
+
+
+
+// Menu Items
+// ------------------------------
+
+
+.menu-items:not(.menu-section--subsection), .menu-list {
+    column-count: 1;
+    column-gap: 0;
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0;
+}
+
+.menu-items,  .menu-list {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    background-color: @color__menu--background;
+
+
+}
+
+
+
+// Listing Layout Variations
+// ------------------------------
+
+
+// 4 Columns
+
+@media @bp-global-large {
+
+    // Product Item
+
+    .menu-item {
+        width: 25%;
+        margin: 0;
+        &:nth-child(4n) {
+            border-right: 0;
+        }
+
+    }
+}
+
+
+// 3 Columns
+
+@media @bp-global-medium {
+
+    // Product Item
+
+    .menu-item {
+        width: 33.33%;
+        &:nth-child(3n) {
+            border-right: 0;
+        }
+
+    }
+}
+
+
+// 2 Columns
+
+@media @bp-global-small {
+
+    // Product Item
+
+    .menu-item {
+        width: 50%;
+        &:nth-child(2n) {
+            border-right: 0;
+        }
+
+    }
+}
+
+
+// 1 Column
+
+@media @mobile {
+
+    // Product Item
+
+    .menu-item {
+        width: 100%;
+        margin: 0;
+        border-right: 0 !important;
+         &:nth-last-child(-n+1) {
+            box-shadow: none;
+        }
+    }
+}
+
+
+
+// ------------------------------
+// 4.  #Menu Item
+// ------------------------------
+
+
+.menu-item {
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+    border-right: 1px solid fade(@color__p--text, 16%);
+    box-shadow: inset 0px -1px 0px 0px fade(@color__p--text, 16%);
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    @media @bp-global-large {
+        padding: 70px;
+    }
+
+    @media @bp-global-medium {
+        padding: 40px;
+    }
+
+    @media @bp-global-small {
+        padding: 20px;
+    }
+
+
+
+
+
+    // Item Article
+    // ------------------------------
+
+
+    .item-article {
+
+    }
+
+
+
+    // Item Image
+    // ------------------------------
+
+
+    .item-image {
+
+
+
+    }
+
+    // Image Link
+
+    .item-image .image-link,
+    &.menu-item--featured .item-image .image-link {
+        line-height: 200px;
+        height: 220px;
+        background-color: #fff;
+        padding: 10px;
+    }
+
+
+
+
+    // Item Content
+    // ------------------------------
+
+
+    .item-content {
+        margin-top: 0;
+    }
+
+    // Item Header
+
+    .item-header {
+        padding: 1em;
+    }
+
+
+    // Item Title
+
+    .item-title {
+        color: @color__p--text;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
+        @media @bp-global-medium {
+            font-size: bkscale(@font__h2--font-size, 0.9);
+            line-height: bkscale(@font__h2--line-height, 0.9);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__h2--font-size, 0.8);
+            line-height: bkscale(@font__h2--line-height, 0.8);
+        }
+
+    }
+
+    // Item Description
+
+    .item-description {
+
+
+        &, p {
+            font-family: @font__h1--font-family;
+            color: fade(@color__p--text, 70%);
+            @media @bp-global-medium {
+                font-size: bkscale(@font__p--font-size, 0.82);
+                line-height: bkscale(@font__p--line-height, 0.82);
+            }
+            @media @bp-global-small {
+                font-size: bkscale(@font__p--font-size, 0.72);
+                line-height: bkscale(@font__p--line-height, 0.72);
+            }
+        }
+    }
+
+    // Item Footer
+
+    .item-footer {
+
+
+    }
+
+    // Item Subtitle
+
+    .item-subtitle {
+        font-size: 12px;
+        color: fade(@color__p--text, 50%);
+    }
+
+    // Item Details
+
+    .item-details {
+        color: fade(@color__p--text, 70%);
+        font-size: bkscale(@font__p--font-size, 0.8);
+        line-height: bkscale(@font__p--line-height, 0.8);
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.7);
+            line-height: bkscale(@font__p--line-height, 0.7);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.6);
+            line-height: bkscale(@font__p--line-height, 0.6);
+        }
+    }
+
+    // Dietary List
+
+    .dietary-list {
+        @media @bp-global-medium {
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+
+    // Dietary Item
+
+    .dietary-item {
+        color: fade(@color__p--text, 70%);
+        font-size: bkscale(@font__p--font-size, 0.8);
+        line-height: bkscale(@font__p--line-height, 0.8);
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.7);
+            line-height: bkscale(@font__p--line-height, 0.7);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.6);
+            line-height: bkscale(@font__p--line-height, 0.6);
+        }
+
+        &:before {
+            content: '';
+            width: 0.4em;
+            height: 0.4em;
+            background-color: fade(@color__p--text, 20%);
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+
+
+// Section Footer
+// ------------------------------
+
+
+.menu-section .section-footer {
+    @media @bp-global-large {
+        padding: 30px 70px;
+    }
+    @media @bp-global-medium {
+        padding: 30px 40px;
+    }
+    @media @bp-global-small {
+        padding: 30px 20px;
+    }
+
+    // Section Note
+
+    .section-note {
+
+        @media @bp-global-large {
+            font-size: bkscale(@font__p--font-size, 0.82);
+            line-height: bkscale(@font__p--line-height, 0.82);
+        }
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.72);
+            line-height: bkscale(@font__p--line-height, 0.72);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.62);
+            line-height: bkscale(@font__p--line-height, 0.62);
+        }
+    }
+}
+
+
+
+
+
+// ------------------------------
+// 5.  #Featured Menu Item
+// ------------------------------
+
+
+.menu-item--featured {
+    background-color: transparent;
+
+    // Item title
+
+    .item-title {
+        &:before, &:after {
+            content: "";
+            height: 6px;
+            display: block;
+            margin: 5px auto;
+            width: 65%;
+            background-color: @color__primary--alt;
+        }
+    }
+
+    // Item Description
+
+    .item-description {
+        &, p {
+            color: @color__p--text;
+        }
+    }
+
+
+
+}
+
+
+// ------------------------------
+// 6.  #Menu Subsection
+// ------------------------------
+
+
+
+
+.menu-subsection {
+    margin: -1px 0 0 0;
+    position: relative;
+    background-color: @color__body--background;
+    border-top: 1px solid fade(@color__p--text, 16%);
+    border-bottom: 1px solid fade(@color__p--text, 16%);
+
+
+    @media @bp-global-large {
+        padding: 30px;
+    }
+    @media @bp-global-medium {
+        padding: 20px;
+    }
+    @media @bp-global-small {
+        padding: 10px;
+    }
+
+
+    // Section Header
+    // ------------------------------
+    .menu-section--subsection {
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            overflow: hidden;
+            background-color: @color__body--background;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+
+    // Section Header
+    // ------------------------------
+
+
+    .section-header {
+        background-color: fade(@color__p--text, 3%);
+        border-bottom: 1px solid fade(@color__p--text, 16%);
+        @media @bp-global-large {
+            padding: 30px;
+        }
+        @media @bp-global-medium {
+            padding: 20px;
+        }
+        @media @bp-global-small {
+            padding: 10px;
+        }
+    }
+
+
+
+
+    // Menu Item
+    // ------------------------------
+
+
+    .menu-item {
+        margin-bottom: 0;
+    }
+
+
+
+
+    // Section Title
+    // ------------------------------
+
+
+    .section-title {
+        font-size: bkscale(@font__h1--font-size, 0.9);
+        line-height: bkscale(@font__h1--line-height, 0.9);
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.8);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.6);
+            line-height: bkscale(@font__h1--line-height, 0.6);
+        }
+
+
+    }
+
+
+
+
+    // Section Description
+    // ------------------------------
+
+
+    .section-subtitle {
+        font-size: bkscale(@font__p--font-size, 0.8);
+        line-height: bkscale(@font__p--line-height, 0.8);
+        color: @color__p--text;
+        padding-bottom: 0;
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.7);
+            line-height: bkscale(@font__p--line-height, 0.7);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.6);
+            line-height: bkscale(@font__p--line-height, 0.6);
+        }
+    }
+
+
+
+
+    // Item Title
+    // ------------------------------
+
+
+    .item-title {
+        font-size: bkscale(@font__h1--font-size, 0.7);
+        line-height: bkscale(@font__h1--line-height, 0.7);
+        @media @bp-global-medium {
+            font-size: bkscale(@font__h1--font-size, 0.62);
+            line-height: bkscale(@font__h1--line-height, 0.62);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.52);
+            line-height: bkscale(@font__h1--line-height, 0.42);
+        }
+    }
+
+
+
+
+    // Item Description
+    // ------------------------------
+
+
+    .item-description p {
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
+    }
+}
+
+
+
+
+
+
+// ------------------------------
+// 7.  #Promoted Menu Subsection
+// ------------------------------
+
+
+
+
+
+.menu-section--featured {
+    margin-bottom: 0;
+    background-color: @color__body--background;
+    padding: 0;
+
+    .menu-item {
+
+    }
+
+    .section-header {
+        background-color: @color__menu-section-featured--background;
+        border-bottom: none;
+    }
+}
+
+
+
+
+// ------------------------------
+// 8.  #Menu Subsection
+// ------------------------------
+
+
+
+
+
+
+
+// Menusections List
+// ------------------------------
+
+
+.menusections-list {
+    margin: 0;
+    background: @color__menusections--background;
+    padding: 20px 70px;
+
+    @media @bp-global-medium {
+        padding: 10px 40px;
+    }
+
+    @media @bp-global-small {
+        padding: 5px 20px;
+    }
+
+
+    // Menu Item Name
+
+    .menu-item-name {
+        color: @color__p--text;
+        box-shadow: inset 0px -1px 0px 0px fade(@color__p--text, 30%);
+        display: inline-block;
+        line-height: 1.8;
+
+        &:hover {
+            box-shadow: inset 0px -2px 0px 0px fade(@color__p--text, 100%);
+            color: @color__p--text;
+        }
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.82);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.72);
+        }
+    }
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+    .menu-items, .menu-list {
+        display: block;
+    }
+
+    .menu-item {
+        width: auto;
+        border-right: none;
+
+    }
+
+    .widget[data-name="menusections"] + .widget[data-name="menu"] {
+        margin-top: 0;
+    }
+
+    .menusections-list {
+        padding: 0;
+        background: transparent;
+    }
+}

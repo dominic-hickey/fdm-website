@@ -1,0 +1,417 @@
+// -----------------------------
+// Scribe Template: CSS > Widgets > Content Widget
+// -----------------------------
+
+
+h1, .heading--1 {color: @color__h1--text;}
+h2, .heading--2 {color: @color__h2--text;}
+h3, .heading--3 {color: @color__h3--text;}
+h4, .heading--4 {color: @color__h4--text;}
+
+h1, h2, h3, h4, p {
+	-webkit-font-smoothing: antialiased;
+}
+
+.content, .post-body {
+
+	// H1
+	// ------------------------------
+
+
+	h1 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font__h1--font-size, 0.9);
+			line-height: bkscale(@font__h1--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__h1--font-size, 0.8);
+			line-height: bkscale(@font__h1--line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H2
+	// ------------------------------
+
+
+	h2 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font__h2--font-size, 0.9);
+			line-height: bkscale(@font__h2--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__h2--font-size, 0.8);
+			line-height: bkscale(@font__h2--line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H3
+	// ------------------------------
+
+
+	h3 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font__h3--font-size, 0.9);
+			line-height: bkscale(@font__h3--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__h3--font-size, 0.8);
+			line-height: bkscale(@font__h3--line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H4
+	// ------------------------------
+
+
+	h4 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font__h4--font-size, 0.9);
+			line-height: bkscale(@font__h4--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__h4--font-size, 0.8);
+			line-height: bkscale(@font__h4--line-height, 0.8);
+		}
+	}
+
+
+
+
+	// Paragraph and Strings
+	// ------------------------------
+
+
+	p, &  {
+		@media @bp-global-medium {
+			font-size: bkscale(@font__p--font-size, 0.9);
+			line-height: bkscale(@font__p--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__p--font-size, 0.8);
+			line-height: bkscale(@font__p--line-height, 0.8);
+		}
+	}
+
+
+
+
+	// Link
+	// ------------------------------
+
+
+	a {
+		box-shadow: inset 0px -1px 0px 0px @color__link--text;
+		display: inline-block;
+		line-height: 1.5;
+
+		&:hover {
+			text-decoration: none;
+			box-shadow: inset 0px -2px 0px 0px @color__link--text;
+		}
+	}
+
+
+
+
+	// Unordered List
+	// ------------------------------
+
+
+	ul {
+		margin: 0 0 0 1.2em;
+		padding: 0;
+
+		li {
+			padding: 0 0 0 0.5em;
+			margin: 0 0 1em 0;
+			font-size: bkscale(@font__p--font-size, 0.9);
+			line-height: bkscale(@font__p--line-height, 0.9);
+
+			@media @bp-global-medium {
+				font-size: bkscale(@font__p--font-size, 0.8);
+				line-height: bkscale(@font__p--line-height, 0.8);
+			}
+
+			@media @bp-global-small {
+				font-size: bkscale(@font__p--font-size, 0.7);
+				line-height: bkscale(@font__p--line-height, 0.7);
+				padding-left: 0;
+			}
+		}
+	}
+
+
+
+	// Ordered List
+	// ------------------------------
+
+
+	ol {
+		margin: 1em 0;
+		padding-left: 0;
+		counter-reset: ordered-counter;
+		li {
+			position: relative;
+			padding-left: 3em;
+			margin-bottom: 1em;
+			list-style-type: none;
+			font-size: bkscale(@font__p--font-size, 0.9);
+			line-height: bkscale(@font__p--line-height, 0.9);
+
+			@media @bp-global-medium {
+				font-size: bkscale(@font__p--font-size, 0.8);
+				line-height: bkscale(@font__p--line-height, 0.8);
+			}
+
+			@media @bp-global-small {
+				font-size: bkscale(@font__p--font-size, 0.7);
+				line-height: bkscale(@font__p--line-height, 0.7);
+				padding-left: 2.5em;
+			}
+
+			// Custom Numbers
+
+			&:before {
+				min-width: 26px;
+				padding: 0 0.4em 0 0;
+				display: inline-block;
+				left: 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				border-right: 1px solid fade(@color__p--text, 20%);
+				font-family: @font__h1--font-family;
+				content: counter(ordered-counter);
+				counter-increment: ordered-counter;
+				text-align: left;
+			}
+		}
+	}
+
+
+
+
+	// Block Quote
+	// ------------------------------
+
+
+	blockquote {
+		quotes: "\201C""\201D""\2018""\2019";
+		position: relative;
+		font-family: @font__h1--font-family;
+		text-align: center;
+		font-size: @font__h4--font-size;
+		line-height: @font__h4--line-height;
+		border-top: 1px solid fade(@color__p--text, 10%);
+		border-bottom: 1px solid fade(@color__p--text, 10%);
+		padding: 1.5em 50px;
+		width: 70%;
+		margin: 1.8em auto;
+
+		@media @bp-global-medium {
+			font-size: bkscale(@font__h4--font-size, 0.9);
+			line-height: bkscale(@font__h4--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__h4--font-size, 0.8);
+			line-height: bkscale(@font__h4--line-height, 0.8);
+			width: auto;
+			padding: 1.2em 30px;
+		}
+
+		&:before, &:after {
+			color: @color__h4--text;
+			position: absolute;
+			font-size: 90px;
+			display: inline-block;
+			line-height: 1;
+			height: 0.5em;
+			@media @bp-global-small {
+				font-size: 50px;
+			}
+		}
+
+		&:before {
+			content: open-quote;
+			top: 10px;
+			left: 0;
+		}
+
+		&:after {
+			content: close-quote;
+			bottom: 10px;
+			right: 0;
+		}
+	}
+
+
+
+
+	// Pre
+	// ------------------------------
+
+
+	pre {
+		display: block;
+		margin: 1em 0;
+		padding: 1em;
+		border: none;
+		border-radius: 0;
+		background-color: fade(@color__p--text, 10%);
+		overflow: auto;
+		color: @color__p--text;
+	}
+
+
+
+
+	// Code
+	// ------------------------------
+
+
+	code {
+		font-size: 0.9em;
+		background-color: transparent;
+		color: @color__p--text;
+	}
+
+
+
+
+	// Table
+	// ------------------------------
+
+
+
+	table {
+		overflow: auto;
+		width: 100%;
+		border: none;
+		border-collapse: separate;
+	  	border-spacing: 2px;
+	  	margin: 2em 0;
+
+		@media @bp-global-medium {
+			font-size: bkscale(@font__p--font-size, 0.9);
+			line-height: bkscale(@font__p--line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font__p--font-size, 0.8);
+			line-height: bkscale(@font__p--line-height, 0.8);
+		}
+	}
+
+	// Table Cell
+
+	td, th {
+		border: none;
+		background-color: lighten(desaturate(@color__primary, 80%), 14%);
+		color: @color__p--text;
+	}
+
+	// Thead
+
+	table thead td {
+		background-color: @color__primary;
+	}
+
+
+
+
+	// Horizontal Rule
+	// ------------------------------
+
+
+	hr {
+		height: 5px;
+		background-color: @color__primary;
+		border: none;
+		margin: 2em 0;
+
+		@media @bp-global-medium {
+		    height: 3px;
+		}
+
+		@media @bp-global-small {
+		    height: 1px;
+		}
+	}
+}
+
+
+
+
+// More, Less Button
+// ------------------------------
+
+
+.button--expand {
+	line-height: bkscale(@font__button--font-size, 2);
+	font-size:  bkscale(@font__button--font-size, 0.8);
+}
+
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		// Blockquote
+
+		.content blockquote {
+			width: 100%;
+		}
+
+
+		// 4 columns
+		// ------------------------------
+
+
+		.columns-four-first,
+		.columns-four-second,
+		.columns-four-third,
+		.columns-four-fourth {
+
+			// Blockquote
+
+			.content blockquote {
+				padding-right: 0;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  home-page">
+
+    {{widget('feature', 'homepagefeature', {
+      'headline': 'profile',
+      'strapline': 'profile',
+      'defaultBgImg': asset('images/feature-image.jpg'),
+      'positionTopPercentage': '0',
+      'showBtn': true,
+      'buttonText': 'Read about us'
+    })|raw}}
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+		<div class="container">
+
+			<!-- Main Widet Zone -->
+	   		{{zone('main')|raw}}
+
+		</div>
+	</div>
+	<!-- End Zone Content -->
+
+</section>
+
+<!-- End Home Page Content -->
+{% endblock %}

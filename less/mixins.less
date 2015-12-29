@@ -1,0 +1,42 @@
+// ------------------------------
+// Scribe Template: CSS > Mixins
+// ------------------------------
+
+
+
+
+// Enabling HW acceleration in WebKit
+// ----------------------------------
+
+
+.animation {
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+
+// Underline Links
+// ----------------------------------
+.underline {
+    color: @color__link--text;
+    box-shadow: inset 0px -1px 0px 0px fade(@color__link--text, 30%);
+    display: inline-block;
+    line-height: 1.8;
+
+    &:hover {
+        box-shadow: inset 0px -2px 0px 0px fade(@color__link--text, 100%);
+        color: @color__secondary-alt;
+    }
+}
+
+
+// Gradient
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}

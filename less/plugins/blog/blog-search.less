@@ -1,0 +1,226 @@
+// -----------------------------------------------
+// Scribe Template: CSS > Plugins > Blog > Blog Search
+// -----------------------------------------------
+
+
+
+
+// Blog Search
+// ------------------------------
+
+
+.widget__blogsearch {
+
+
+    // Legend
+
+    .legend {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        padding: 0 26px;
+        color: @color__blogsearch-legend--text;
+        background-color: @color__blogsearch-legend--background;
+        width: 33.33%;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: bkscale(@font__button--font-size, 3);
+        height: bkscale(@font__button--font-size, 3);
+        text-align: right;
+
+       @media @bp-global-small {
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: left;
+            height: auto;
+            line-height: 1;
+            padding: 20px;
+        }
+    }
+
+    // Form Body
+
+    .form-body {
+        width: 66.66%;
+        margin: 0 0 0 auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+
+        @media @bp-global-large {
+            padding: 0 70px;
+        }
+        @media @bp-global-medium {
+            padding: 0 40px;
+        }
+        @media @bp-global-small {
+            padding: 0 20px;
+            width: auto;
+        }
+    }
+
+    // Form Group
+
+    .form-group {
+        margin-bottom: 0;
+        &:first-child {
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            margin-right: 10px;
+        }
+
+
+    }
+
+    // First Form Group
+
+    .blogsearch__form-group:first-child {
+        @media @mobile {
+            margin-right: 3px; // LESS Framework reset
+        }
+    }
+
+    // Last Form Group
+
+    .form-group:last-child {
+        margin: 0;
+    }
+
+    // Label
+
+    .label {
+        display: none;
+
+    }
+
+    .button--submit {
+        @media @bp-global-small {
+            width: 50px;
+            overflow: hidden;
+            text-indent: 200px;
+            display: block;
+            position: relative;
+            padding: 0;
+
+            &:after {
+                content: '\f002';
+                font-family: 'FontAwesome', sans-serif;
+                position: absolute;
+                text-align: center;
+                line-height: bkscale(@font__button--font-size, 3);
+                color: @color__button--text;
+                font-size: 18px;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-indent: 0;
+            }
+        }
+        @media @mobile {
+            &:after {
+                line-height: bkscale(@font__button--font-size, 2.2);
+            }
+        }
+    }
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // Legend
+
+    .widget__blogsearch .legend {
+        width: auto;
+        display: block;
+        float: none;
+        position: relative;
+        text-align: left;
+        padding: 0;
+        background: none;
+    }
+
+    // Form Body
+
+    .widget__blogsearch .form-body {
+        float: none;
+        width: auto;
+        border-left: none;
+        padding: 0;
+    }
+
+
+    // 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Form Body
+
+        .widget__blogsearch .form-body {
+            display: block;
+        }
+
+        // Legend
+
+        .widget__blogsearch .legend {
+            border-bottom: none;
+        }
+
+        // First Form Group
+
+        .widget__blogsearch .form-group:first-child {
+            margin-bottom: 10px;
+        }
+    }
+}

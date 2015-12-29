@@ -1,0 +1,79 @@
+// ----------------------------------------
+// Scribe Template: CSS > Widgets > Social List
+// ----------------------------------------
+
+
+
+
+
+// Social Item
+// ------------------------------
+
+
+.social-item {
+	margin: 0 6px 6px 0;
+	display: inline-block;
+}
+
+
+
+
+// Social Link
+// ------------------------------
+
+
+.social-link {
+	display: block;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	// Icon
+
+	&:before {
+		font-size: 20px;
+		display: block;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		background-color: transparent;
+		color: @color__button--text;
+		margin: 0 auto;
+		box-shadow: inset 0px 0px 0px 2px @color__button--border;
+
+		@media @tablet {
+			font-size: 20px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		@media @mobile {
+			font-size: 16px;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+
+
+	}
+
+	// Icon hover
+
+	&:hover:before {
+		background-color: fade(@color__button--text, 7%);
+	}
+}
+
+
+
+
+// Social Name
+// ------------------------------
+
+
+.socialicons__social-name {
+	display: none;
+}

@@ -1,0 +1,320 @@
+// ------------------------------
+// Scribe Template: CSS > Theme
+// ------------------------------
+
+
+
+// ------------------------------
+// 1. #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width : 2000px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width : 2000px)";
+
+@bp-global-large: 	~"only screen and (min-width : 1500px)";
+@bp-global-medium: 	~"only screen and (min-width : 701px) and (max-width : 1500px)";
+@bp-global-small: 	~"only screen and (max-width : 769px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width : 478px)";
+
+
+
+
+
+
+
+body {
+    background-color: darken(@color__body--background, 12%);
+}
+
+
+// Page Content
+// ------------------------------
+
+
+.page-content {
+    background-color: @color__body--background;
+
+    @media @bp-global-above-fullwidth {
+        width: 2000px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+// ------------------------------
+// 3. #Floating Footer Fix
+// ------------------------------
+
+
+
+
+// Avoids Floating Footer
+// ------------------------------
+
+
+.page-content > .container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.page {
+    -webkit-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+
+
+
+// ------------------------------
+// 4. #Header
+// ------------------------------
+
+
+
+
+// Template Header
+// ------------------------------
+
+
+.template-header {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 10px 0 50px;
+    background-color: @color__header--background;
+    .gradient(@color__header--background, transparent);
+
+    // Container
+	.container {
+
+		// Flexbox - align itemns vertically to the centre
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+        @media @bp-global-large {
+             padding: 0 70px;
+        }
+        @media @bp-global-medium {
+            padding: 0 40px;
+        }
+        @media @bp-global-small {
+            padding: 0 7px 0 20px;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+
+        }
+	}
+
+    // Company
+
+    .company {
+        position: relative;
+        z-index: 10010;
+        margin-right: 10px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        // Flexbox child: Stretch to fill the available space
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        @media @bp-global-small {
+            padding-right: 10px;
+        }
+        @media @mobile {
+            z-index: 1;
+        }
+    }
+}
+
+
+
+
+// Template Navigation
+// ------------------------------
+
+
+.template-navigation {
+    min-width: 50px;
+}
+
+
+
+
+// ------------------------------
+// 5. #Footer
+// ------------------------------
+
+
+
+// Template Footer
+// ------------------------------
+
+
+.template-footer {
+    box-shadow: 0px -1px 0px 0px darken(@color__body--background, 5%);
+
+
+    // Container
+    // ------------------------------
+
+
+	.container {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+
+
+        @media @tablet {
+            display: block;
+        }
+
+
+        // Widget
+
+        .widget {
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            width: 50%;
+            @media @tablet {
+                width: auto;
+            }
+            @media @bp-global-large {
+                padding: 20px 70px;
+            }
+            @media @bp-global-medium {
+                padding: 20px 40px;
+            }
+            @media @bp-global-small {
+                padding: 20px 20px;
+            }
+        }
+	}
+}
+
+
+
+
+
+
+
+// ------------------------------
+// 6. #Main Zone
+// ------------------------------
+
+
+
+
+.zone-content {
+    .container {
+
+    }
+
+}
+
+
+
+
+
+
+// -------------------------------
+// 7. #Typography
+// -------------------------------
+
+
+
+
+a {
+	color: @color__link--text;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+

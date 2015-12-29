@@ -1,0 +1,414 @@
+// -------------------------------------------------------
+// Scribe Template: CSS > Plugins > Ecommerce > Basket Summary
+// -------------------------------------------------------
+
+
+// ------------------------------
+// 2.  #Basket Summary
+// ------------------------------
+
+
+
+
+@basketsummary-medium: ~"only screen and (max-width : 680px)";
+
+
+
+
+// Summary Title
+// ------------------------------
+
+
+.summary-title {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h2--font-size, 0.9);
+        line-height: bkscale(@font__h2--line-height, 0.9);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font__h2--font-size, 0.8);
+        line-height: bkscale(@font__h2--line-height, 0.8);
+    }
+}
+
+
+
+
+// Summary Table
+// ------------------------------
+
+
+.summary-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    margin: 0;
+
+
+
+
+    // Table and Cells Reset
+    // ------------------------------
+
+
+    &, td, th, .cell {
+        border: none;
+        background: transparent;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+
+
+
+    // Row Heading
+    // ------------------------------
+
+
+    .table-row--heading {
+        .cell {
+            padding-bottom: 1em;
+            font-family: @font__h1--font-family;
+            font-size: bkscale(@font__p--font-size, .82);
+
+            &:nth-last-of-type(-n+2) {
+                text-align: right;
+            }
+        }
+    }
+
+
+
+
+    // Product Item Row
+    // ------------------------------
+
+
+    .table-row:not(.table-row--heading):not(.table-row--order-total) {
+        .cell  {
+            background-color: @color__secondary;
+        }
+    }
+
+
+
+
+    // Cell Image
+    // ------------------------------
+
+
+    .cell--image {
+        width: 126px;
+        padding-left: 10px;
+    }
+
+
+
+
+    // Cell Title
+    // ------------------------------
+
+
+    .cell--title {
+        width: auto;
+        padding-right: 10px;
+        padding-left: 16px;
+
+    }
+
+
+
+
+    // Item Title
+    // ------------------------------
+
+
+    .summary-item-title  {
+        font-family: @font__h1--font-family;
+        font-size: @font__h4--font-size;
+    }
+
+        // Item Link
+
+        .summary-item-link {
+            color: @color__p--text;
+        }
+
+
+
+    // Cell Quantity
+    // ------------------------------
+
+
+    .cell--quantity {
+        padding: 0 16px 0 0;
+        width: 10%;
+        min-width: 100px;
+    }
+
+
+
+
+    // Cell Total, Cell Price
+    // ------------------------------
+
+
+    .cell--total {
+        text-align: right;
+        padding: 0 16px;
+    }
+    .cell--price {
+        padding: 0 0 0 16px;
+        text-align: right;
+    }
+
+
+
+
+    // Order Total
+    // ------------------------------
+
+
+    .cell--order-total {
+        text-align: right;
+        background-color: @color__body--background;
+    }
+
+
+
+
+    // Cell Image Item Link
+    // ------------------------------
+
+
+    .cell--image .summary-item-link {
+        width: 100px;
+        height: 100px;
+        display: block;
+        line-height: 80px;
+        background-position: -100%;
+        background-color: #fff;
+        padding: 10px;
+
+        // Image
+
+        .image {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80px;
+            max-height: 80px;
+        }
+    }
+
+
+
+
+    // Row Order Total
+    // ------------------------------
+
+
+    .table-row--order-total {
+        background-color: transparent;
+    }
+
+        // Order Total
+        .order-total {
+            color: @color__p--text;
+        }
+}
+
+
+
+
+// Quantity Wrap
+// ------------------------------
+
+
+.quantity-wrap {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    background-color: transparent;
+
+    // Button Quantity
+
+    .button--quantity {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    // Quantity Field
+
+    .quantity-field {
+        color: @color__p--text;
+    }
+}
+
+
+
+
+// Summary Item Title
+// ------------------------------
+
+
+.summary-item-title  {
+    @media @mobile {
+        font-size: bkscale(@font__h4--font-size, 0.9) !important;
+        line-height: bkscale(@font__h4--line-height, 0.8) !important;
+    }
+}
+
+
+
+
+// Summary Form
+// ------------------------------
+
+
+.summary-form {
+    text-align: right;
+    @media @basketsummary-medium, @mobile {
+        text-align: center;
+    }
+}
+
+
+
+
+// ------------------------------
+// Compact Layout
+// ------------------------------
+
+
+
+
+@media @basketsummary-medium, @mobile {
+
+
+
+
+    // Summary Table
+    // ------------------------------
+
+
+    .summary-table {
+
+        // Table elements to block elements
+
+        &, .table-row, .cell, .summary-body {
+            display: block;
+        }
+
+        // Table Row Heading
+
+        .table-row--heading {
+            display: none;
+        }
+
+        // Table Row
+
+        .table-row {
+            overflow: hidden;
+            background-color: @color__primary;
+            margin-bottom: 10px;
+            clear: both;
+            border-bottom: none;
+        }
+
+        // Cell Image
+
+        .cell--image {
+            float: left;
+        }
+
+        // Item Title
+
+        .summary-item-title  {
+            font-size: bkscale(@font__h4--font-size, 1);
+        }
+
+        // Cell Price, Cell Total, Cell Quantity LABELS
+
+        .cell--price, .cell--total, .cell--quantity {
+            &:before {
+                content: attr(data-title);
+                display: block;
+                font-size: 13px;
+                color: fade(@color__p--text, 80%);
+            }
+        }
+
+        // Cell Quantity
+
+        .cell.cell--quantity {
+            clear: both;
+            padding: 6px 10px;
+            text-align: right;
+            position: relative;
+            width: auto;
+
+            // Pseudo Label - LESS Framework
+
+            &:before {
+                height: 30px;
+                line-height: 30px !important;
+                display: block;
+                position: absolute;
+                right: 90px;
+                top: 6px;
+            }
+        }
+
+        // Quantity Wrap
+
+        .quantity-wrap {
+            margin: 0 -5px 0 auto;
+            width: 80px;
+            max-width: 100%;
+            .button--quantity {
+                border: 5px solid @color__primary;
+                line-height: 20px;
+            }
+        }
+
+        // Cell Price
+
+        .cell--price {
+            clear: left;
+        }
+
+        // Order Total
+
+        .order-total {
+            text-align: center;
+        }
+
+        // Cell Price, Cell Total
+
+        .cell--price, .cell--total {
+            float: left;
+            width: 50%;
+            border-top: 1px solid @color__body--background !important;
+            padding: 6px 10px;
+            background-color: darken(@color__body--background, 8%) !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

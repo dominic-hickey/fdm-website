@@ -1,0 +1,135 @@
+// ------------------------------
+// Scribe Template: CSS > Widgets > Contact Form
+// ------------------------------
+
+
+
+
+// Fieldset
+// ------------------------------
+
+
+.contactform__fieldset {
+	position: relative;
+}
+
+
+
+
+// Form Group
+// ------------------------------
+
+
+.contactform__form-group {
+	margin-bottom: 26px;
+
+	@media @bp-global-small {
+		margin-bottom: 16px;
+	}
+
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+
+	// Label Email
+
+	.label--email {
+		display: none;
+	}
+}
+
+
+
+
+// From Body
+// ------------------------------
+
+
+.contactform__form-body {
+	width: 66.66%;
+	margin: 0 0 0 auto;
+	padding: 0 70px;
+
+	@media @bp-global-large {
+         padding: 0 70px;
+    }
+    @media @bp-global-medium {
+        padding: 0 40px;
+    }
+    @media @bp-global-small {
+        padding: 0 20px;
+        width: auto;
+    }
+}
+
+
+
+
+// Legend
+// ------------------------------
+
+
+.contactform__legend {
+	position: absolute;
+	top: 0;
+	right: auto;
+	bottom: 0;
+	left: 0;
+	padding: 26px;
+	color: @color__form-legend--text;
+	background-color: @color__form-legend--background;
+	width: 33.33%;
+	font-family: @font__h2--font-family;
+	font-size: @font__h2--font-size;
+	line-height: @font__h2--line-height;
+	text-align: right;
+	@media @bp-global-small {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+	// Legend
+
+	.contactform__legend {
+		width: 100%;
+		float: none;
+		background-color: transparent;
+		position: relative;
+		text-align: left;
+		padding: 0;
+	}
+
+	// Form Body
+
+	.contactform__form-body {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+	.contactform__form-group {
+		margin-bottom: 16px;
+	}
+}

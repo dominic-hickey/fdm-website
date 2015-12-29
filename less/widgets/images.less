@@ -1,0 +1,194 @@
+// -----------------------------------
+// Scribe Template: CSS > Widgets > Images
+// -----------------------------------
+
+
+// ------------------------------
+//    Common Image Styles
+// ------------------------------
+
+
+
+
+// Image Link
+// ------------------------------
+
+
+.image-link {
+    display: inline-block;
+    overflow: visible;
+}
+
+
+
+
+// Image Figure
+// ------------------------------
+
+
+.imagewidget__figure {
+    margin: 0;
+}
+
+
+
+// Image Alignment
+// ------------------------------
+
+
+.imagewidget__caption, .imagewidget {
+    text-align: center;
+}
+
+
+
+
+// Image Caption
+// ------------------------------
+
+
+.imagewidget__caption {
+    padding: 1em 0;
+}
+
+
+
+
+// Image Title
+// ------------------------------
+
+
+.image-title {
+    font-family: @font__h1--font-family;
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
+    padding-bottom: 0.6em;
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h4--font-size, 0.9);
+        line-height: bkscale(@font__h4--line-height, 0.9);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font__h4--font-size, 0.7);
+        line-height: bkscale(@font__h4--line-height, 0.7);
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 30%;
+        background-color: @color__p--text;
+        margin-top: 0.4em;
+    }
+}
+
+
+
+
+// Image Description
+// ------------------------------
+
+
+.image-description {
+    font-size: bkscale(@font__p--font-size, 0.85);
+    line-height: bkscale(@font__p--line-height, 0.85);
+    @media @bp-global-medium {
+        font-size: bkscale(@font__p--font-size, 0.75);
+        line-height: bkscale(@font__p--line-height, 0.75);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font__p--font-size, 0.6);
+        line-height: bkscale(@font__p--line-height, 0.6);
+    }
+}
+
+
+
+
+// ------------------------------
+//    Image Widget
+// ------------------------------
+
+
+// Image Title
+// ------------------------------
+
+
+.imagewidget .image-title:after {
+    margin: 0 auto;
+}
+
+
+// Align Left
+// ------------------------------
+
+
+.imagewidget.widget-align-left {
+    &, .caption {
+        text-align: left;
+    }
+
+    .caption, .image-link {
+        float: left;
+    }
+
+    .caption {
+        margin: 0 0 0 1em;
+        padding: 0;
+    }
+
+    .image-title:after {
+        margin: 0 auto 0 0;
+    }
+}
+
+
+
+
+// Align Right
+// ------------------------------
+
+
+.imagewidget.widget-align-right {
+    &, .caption {
+        text-align: right;
+    }
+
+    .caption, .image-link {
+        float: right;
+    }
+
+    .caption {
+        margin: 0 1em 0 0;
+        padding: 0;
+    }
+
+    .image-title:after {
+        margin: 0 0 0 auto;
+    }
+}
+
+
+
+
+// Align Center
+// ------------------------------
+
+
+.imagewidget.widget-align-center {
+    &, .caption {
+        text-align: center;
+    }
+
+
+    .caption {
+        margin: 1em auto 0;
+        padding: 0;
+    }
+
+    .image-title:after {
+        margin: 0 auto;
+    }
+}

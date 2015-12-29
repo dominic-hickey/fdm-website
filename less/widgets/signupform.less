@@ -1,0 +1,197 @@
+// -----------------------------------------
+// Scribe Template: CSS > Widgets > Sign Up Form
+// -----------------------------------------
+
+
+
+
+.widget__signupform {
+
+
+
+	// Legend
+	// ------------------------------
+
+
+	.legend {
+		position: absolute;
+		top: 0;
+		right: auto;
+		bottom: 0;
+		left: 0;
+		padding: 0 26px;
+		color: @color__form-legend--text;
+		background-color: @color__form-legend--background;
+		width: 33.33%;
+		font-family: @font__h2--font-family;
+		font-size: @font__h2--font-size;
+		line-height: bkscale(@font__button--font-size, 3);
+		height: bkscale(@font__button--font-size, 3);
+		text-align: right;
+
+		@media @bp-global-small {
+			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			text-align: left;
+			height: auto;
+	        line-height: 1;
+	        padding: 20px;
+		}
+	}
+
+
+
+
+	// Form Body
+	// ------------------------------
+
+
+	.form-body {
+		width: 66.66%;
+		margin: 0 0 0 auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+
+
+
+		@media @bp-global-large {
+			padding: 0 70px;
+	    }
+	    @media @bp-global-medium {
+	        padding: 0 40px;
+	    }
+	    @media @bp-global-small {
+	        padding: 0 20px;
+	        width: auto;
+	    }
+	    @media @mobile {
+	    	display: block;
+	    }
+	}
+
+
+
+
+	// Form Group
+	// ------------------------------
+
+
+	.form-group {
+		margin-bottom: 0;
+		&:first-child {
+			-webkit-box-flex: 0;
+			-moz-box-flex: 0;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			margin-right: 10px;
+			@media @mobile {
+		    	margin-bottom: 10px;
+		    }
+		}
+
+	}
+
+	// Last Form Group
+
+	.form-group:last-of-type {
+		margin: 0;
+	}
+
+
+
+
+	// Label
+	// ------------------------------
+
+
+	.label {
+		display: none;
+
+	}
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+	// Legend
+
+	.widget__signupform .legend {
+		width: auto;
+		display: block;
+		float: none;
+		position: relative;
+		text-align: left;
+		padding: 0;
+		background: none;
+
+	}
+
+	// Form Body
+
+	.widget__signupform .form-body {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+}
+
+// 4 columns
+// ------------------------------
+
+
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth,
+.columns-three-left,
+.columns-three-right,
+.columns-three-middle {
+
+	// Form Body
+
+	.widget__signupform .form-body {
+		display: block;
+	}
+
+	// First Form Group
+
+	.widget__signupform .form-group:first-child {
+		margin-bottom: 10px;
+	}
+}

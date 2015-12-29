@@ -1,0 +1,323 @@
+// ------------------------------------
+// Scribe Template: CSS > Widgets > Profile
+// ------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Typography
+//  2.   #Address
+//  3.   #Email
+//  4.   #Phone
+//  5.   #Latest Tweet
+//  6.   #Single Email Form
+//  7.   #Social Icons
+//  8.   #Map
+
+
+
+
+// ------------------------------
+// 1.   #Typography
+// ------------------------------
+
+
+.widget__profile {
+
+
+	// Standard Text
+	// ------------------------------
+
+
+	&, p, h2, h3, a, span .socialicons__social-name {
+		color: fade(@color__p--text, 70%);
+		font-family: @font__p--font-family;
+		font-size: 16px;
+		line-height: 1.5;
+		padding-bottom: 0;
+
+		@media @mobile {
+			font-size: 14px;
+		}
+
+		@media @mobile {
+			font-size: 12px;
+		}
+	}
+
+
+	// Headlines
+	// ------------------------------
+
+
+	.company-strapline, .company-description__description, .company-business__business {
+
+		font-size: 18px;
+		line-height: 1.5;
+		letter-spacing: 0;
+
+		@media @mobile {
+			font-size: 16px;
+		}
+	}
+
+}
+
+
+
+
+// ------------------------------
+// 2.   #Address
+// ------------------------------
+
+
+.companyaddress__vcard {
+
+
+	// Paragraph
+	// ------------------------------
+
+
+	p {
+		display: inline;
+		&:after {
+			content: ",";
+			margin-left: -0.2em;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// 3.   #Email
+// ------------------------------
+
+
+.emailaddress__email {
+
+
+	// Icon Envelope
+	// ------------------------------
+
+
+	&:before {
+		content: '\f003';
+		font-family: 'FontAwesome', sans-serif;
+		margin-right: 0.5em;
+		font-size: 1em;
+		display: inline-block;
+		vertical-align: middle;
+
+		@media @mobile {
+			font-size: 1.2em;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// 4.   #Phone
+// ------------------------------
+
+
+.widget__profile {
+	.phone-number-link {
+
+
+		// Icon
+		// ------------------------------
+
+
+		&:before {
+			content: '\f095';
+			font-family: 'FontAwesome', sans-serif;
+			margin-right: 0.5em;
+			font-size: 1em;
+			display: inline-block;
+			vertical-align: middle;
+
+			@media @mobile {
+				font-size: 1.2em;
+			}
+		}
+
+		@media @mobile {
+			background-color: transparent;
+			letter-spacing: 0;
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0;
+			color: @color__link--text;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// Latest Tweet
+// ------------------------------
+
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/twitter.less
+
+.widget__profile {
+
+
+
+
+	// Account Link
+	// ------------------------------
+
+
+	.account-link {
+		line-height: 40px;
+	}
+
+
+
+
+	// Tweet Metadata
+	// ------------------------------
+
+
+	.tweet-metadata {
+		&, * {
+			font-size: 12px;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// Single Email Form
+// ------------------------------
+
+
+.widget__profile {
+
+
+
+
+	// Legend
+	// ------------------------------
+
+
+	.signupform__legend {
+		margin-bottom: 1em;
+	}
+
+
+
+
+	// Form Body
+	// ------------------------------
+
+
+	.signupform__form-body {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+
+		.form-group:first-child {
+			margin-right: 16px;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
+
+		// Button
+
+		.button {
+			font-size: 18px;
+		}
+	}
+
+
+
+
+	// Label
+	// ------------------------------
+
+
+	.signupform__label {
+		display: none;
+	}
+}
+
+
+
+
+
+// ------------------------------
+// 7.   #Social Icons
+// ------------------------------
+
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/social-list.less
+
+
+.widget__profile {
+
+
+	// Social Link
+	// ------------------------------
+
+
+	.social-link {
+
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
+
+
+		// Icon
+
+		&:before {
+			box-shadow: none;
+			color: @color__socialicons--icon;
+			background-color: @color__socialicons--icon--background;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 16px;
+		}
+	}
+}

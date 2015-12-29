@@ -1,0 +1,570 @@
+// ------------------------------------------------
+// Scribe Template: CSS > Plugins > Ecommerce > Product
+// ------------------------------------------------
+
+
+
+
+// ---------------------------------
+// Breakpoints for Product layouts
+// ---------------------------------
+
+
+
+
+@product-large: ~"only screen and (min-width : 890px)";
+@product-medium: ~"only screen and (max-width : 890px)";
+@product-small: ~"only screen and (max-width : 400px)";
+
+@bp-product-rows: ~"only screen and (max-width : 940px)";
+
+
+
+// ------------------------------
+// Product
+// ------------------------------
+
+
+.ecomproduct {
+
+}
+
+
+
+
+// ------------------------------
+// Product Article
+// ------------------------------
+
+
+.product-article {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    @media @bp-product-rows {
+        display: block;
+    }
+}
+
+
+
+// ------------------------------
+// Product Imaginery
+// ------------------------------
+
+
+
+
+// Product Images
+// ------------------------------
+
+
+.product-images {
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    background-color: @color__ecomproduct-images--background;
+    padding: 1px 0;
+}
+
+
+
+
+// Product Gallery
+// ------------------------------
+
+
+.product-gallery {
+    overflow: hidden;
+    @media @bp-global-large {
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        height: 560px;
+        margin: 0;
+    }
+
+    @media @bp-global-medium {
+        margin: 40px;
+        position: relative;
+        max-width: 390px;
+        overflow: hidden;
+        height: 60px;
+    }
+
+    @media @bp-global-small, @mobile {
+        margin: 20px;
+        position: relative;
+        max-width: 270px;
+        height: 40px;
+    }
+
+    // Gallery Item
+
+    .gallery-item {
+        font-size: 0;
+        position: relative;
+        background-color: #fff;
+        display: block;
+        border: 2px solid #fff;
+
+        @media @bp-global-large {
+            float: none;
+            margin-bottom: 16px;
+            line-height: 74px;
+        }
+
+        @media @bp-global-medium, @bp-global-small {
+            float: left;
+        }
+
+        @media @bp-global-medium {
+            width: 60px;
+            height: 60px;
+            line-height: 56px;
+            margin-right: 6px;
+        }
+         @media @bp-global-small {
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            margin-right: 6px;
+        }
+    }
+
+    // Image Button
+
+    .image-button {
+        display: inline-block;
+        line-height: 76px;
+        height: 80px;
+        @media @bp-global-medium {
+            line-height: 56px;
+            height: 60px;
+        }
+        @media @bp-global-small {
+            line-height: 36px;
+            height: 40px;
+        }
+
+        // Image
+
+        .image {
+            line-height: 76px;
+            display: inline-block;
+            vertical-align: middle;
+            @media @bp-global-medium {
+                line-height: 56px;
+            }
+            @media @bp-global-small {
+                line-height: 36px;
+            }
+        }
+    }
+}
+
+
+// Custom Image Gallery Slider Button
+// ----------------------------------
+// Appended via JS
+
+.ecom-view-more {
+    .button;
+    background-color: lighten(desaturate(@color__primary, 80%), 14%);
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    bottom: 0;
+    left: 0;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    overflow: hidden;
+    text-indent: 150%;
+    z-index: 1000;
+    padding: 0;
+
+    &:hover {
+        background-color: lighten(desaturate(@color__primary, 80%), 14%);
+    }
+
+    @media @bp-global-medium {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        left: 330px;
+        top: 0;
+    }
+    @media @bp-global-small {
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        left: 230px;
+        top: 0;
+    }
+
+    // Icon
+
+    &:after {
+        font-family: 'FontAwesome', sans-serif;
+        content: '\f078';
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+        width: 100%;
+        font-size: 18px;
+        @media @bp-global-medium, @bp-global-small {
+            content: '\f054';
+        }
+    }
+
+}
+
+
+
+
+// Product Image
+// ------------------------------
+
+
+.product-image {
+    background-color: #fff;
+    padding: 10px;
+
+    @media @bp-global-large {
+        margin: 70px 70px 70px 176px;
+
+    }
+    @media @bp-global-medium {
+        margin: 40px;
+    }
+    @media @bp-global-small {
+        margin: 20px;
+    }
+
+    body.product-one-image & {
+        @media @bp-global-large {
+            margin-left: 70px;
+        }
+    }
+
+    &.no-image {
+        display: none;
+    }
+}
+
+
+
+
+// Image Link
+// ------------------------------
+
+
+.product-image .image-link {
+    display: block;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-color: #fff;
+
+    @media @bp-global-large {
+        padding: 26px;
+        height: 560px;
+    }
+    @media @bp-global-medium {
+        padding: 20px;
+        height: 400px;
+    }
+    @media @bp-global-small {
+        padding: 10px;
+        height: 200px;
+    }
+}
+
+// Image
+// ------------------------------
+
+ .product-image .image {
+    display: none;
+}
+
+
+// Product Content
+// ------------------------------
+
+
+.product-content {
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    background: @color__ecomproduct--background;
+
+    @media @bp-global-large {
+        padding: 60px 70px;
+    }
+    @media @bp-global-medium {
+        padding: 30px 40px;
+    }
+    @media @bp-global-small {
+        padding: 20px;
+    }
+}
+
+
+
+
+// Product Title
+// ------------------------------
+
+
+.product-title {
+    color: @color__ecomproduct-title--text;
+    @media @bp-global-large {
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+    }
+    @media @bp-global-medium {
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h3--font-size, 0.8);
+        line-height: bkscale(@font__h3--line-height, 0.8);
+    }
+}
+
+
+
+
+// Product Price
+// ------------------------------
+
+
+.ecomproduct__product-price {
+    color: @color__ecomproduct-price--text;
+    @media @bp-global-large {
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+    }
+    @media @bp-global-medium {
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h3--font-size, 0.8);
+        line-height: bkscale(@font__h3--line-height, 0.8);
+    }
+}
+
+
+
+// ------------------------------
+// Product Body
+// ------------------------------
+
+
+.product-body {
+
+    margin-bottom: 26px;
+
+    // Paragraph
+
+    &, p {
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Product Actions
+// ------------------------------
+
+
+.product-actions {
+    margin-bottom: 2em;
+
+
+
+
+    // Add to Basket Button
+    // ------------------------------
+
+    .form .button {
+        &.added {
+            background-color: @color__body--background;
+            &:before {
+                content: '\f00c'
+            }
+        }
+    }
+
+
+
+
+    // Legend
+    // ------------------------------
+
+    legend {
+        display: none;
+    }
+
+
+
+
+    // Fieldset
+    // ------------------------------
+
+    .fieldset {
+        margin-bottom: 2em;
+    }
+
+
+
+
+    // Form Group
+    // ------------------------------
+
+
+    .form-group {
+        display: inline-block;
+        min-width: 100px;
+        margin: 0 0.6em 1em 0;
+        float: left;
+
+
+
+
+        // Label
+        // ------------------------------
+
+
+        .label {
+            font-size: 13px;
+            line-height: 1;
+            color: fade(@color__p--text, 70%);
+            display: block;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Basket Wrap
+// ------------------------------
+
+
+.view-basket-wrap {
+    margin-top: 26px;
+}
+
+
+
+
+// ------------------------------
+// Product Attributes
+// ------------------------------
+
+
+.product-attributes {
+    clear: both;
+
+
+
+    // Attribute Title
+    // ------------------------------
+
+
+    .product-attribute-title {
+        line-height: 2;
+        color: fade(@color__p--text, 80%);
+        padding: 0;
+        display: block;
+        margin: 0 0 0.25em 0;
+        font-size: 13px;
+    }
+
+
+
+
+    // Tag List
+    // ------------------------------
+
+
+    .tag-list {
+        display: block;
+        line-height: 1;
+    }
+
+
+
+
+    // Tag Item
+    // ------------------------------
+
+
+    .tag-item {
+        line-height: 1;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+    }
+
+
+
+
+    // Product Category, Product Tags
+    // ------------------------------
+
+
+    .product-category, .product-tags {
+        display: block;
+        vertical-align: top;
+        line-height: 1;
+        margin: 0 0 1em 0;
+
+
+        // P
+
+        p {
+            line-height: 1;
+        }
+    }
+
+
+
+
+    // Category Link, Tag Link
+    // ------------------------------
+
+
+    .category-link, .tag-link {
+        .underline;
+        color: @color__p--text;
+        @media @bp-global-medium {
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
+        }
+    }
+}

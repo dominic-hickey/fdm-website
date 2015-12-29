@@ -1,0 +1,357 @@
+// -----------------------------
+// Scribe Template: CSS > Widgets
+// -----------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// -----------------------------
+// #Table Of Contents
+// -----------------------------
+
+//  0.   #Widget Components
+//  0.1  -- #Widget Wrapper
+//  0.2  -- #Form Elements
+//  0.3  -- #Pagination
+//  1.   #Logo
+//  2.   #Company Name
+//  3.   #Navigation
+//  4.   #Feature
+//  5.   #Buttons
+//  5.1  -- #Standard
+//  5.2  -- #Dropbox
+//  5.3  -- #Click To Call
+//  6.   #Image
+//  7.   #Gallery
+//  8.   #Slideshow
+//  9.   #Contact Form
+// 10.   #Signup Form
+// 11.   #Social List
+// 12.   #Twitter Feed
+// 13.   #Divider (Keyline)
+// 14.   #Profile
+// 15.   #Map
+// 16.   #Content Widget
+// 17.   #Yelp Review
+
+
+
+// -----------------------------
+// 0.  #Components
+// -----------------------------
+
+
+
+
+// 0.1 Widget Wrapper
+// ------------------------------
+
+
+.widget {
+    .clearfix;
+    clear: both;
+}
+
+// Standard Widgets
+
+.zone-content .widget {
+    @media @bp-global-large {
+        margin: 0 70px 20px;
+    }
+    @media @bp-global-medium {
+        margin: 0 40px 20px;
+    }
+    @media @bp-global-small {
+        margin: 0 20px 20px;
+    }
+
+    // First Widget in the Zone
+
+    &:first-child {
+        @media @bp-global-large {
+            margin-top: 60px;
+        }
+        @media @bp-global-medium {
+            margin-top: 40px;
+        }
+        @media @bp-global-small {
+            margin-top: 20px;
+        }
+    }
+
+    // Widgets in Responsive Columns
+
+    .responsivecolumns .widget {
+        margin: 0 0 20px 0;
+    }
+}
+
+// Full Width Widgets
+
+.widget[data-name="contactform"],
+.widget[data-name="youtube"],
+.widget[data-name="map"],
+.widget[data-name="youtube"],
+.widget[data-name="gallery"],
+.widget[data-name="responsiveslideshow"],
+.widget[data-name="signupform"],
+.widget[data-name="blogpostlist"],
+.widget[data-name="blogpost"],
+.widget[data-name="blogsearch"],
+.widget[data-name="ecomproductslist"],
+.widget[data-name="ecomproduct"],
+.widget[data-name="ecomfeaturedproducts"],
+.widget[data-name="line"],
+.widget[data-name="menusections"],
+.widget[data-name="menu"] {
+    margin-left: 0;
+    margin-right: 0;
+
+    @media @bp-global-large {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    @media @bp-global-medium {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    @media @bp-global-small {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &:first-child {
+        margin-top: 1px;
+    }
+    &:last-child {
+        margin-bottom: 1px;
+    }
+}
+
+// Removes spacing between Menu Navigation and Menu Widget
+
+.widget[data-name="menusections"] + .widget[data-name="menu"] {
+    @media @bp-global-large {
+         margin-top: -60px;
+    }
+    @media @bp-global-medium {
+         margin-top: -40px;
+    }
+    @media @bp-global-small {
+         margin-top: -20px;
+    }
+}
+
+
+// 0.2 Form Elements
+// ------------------------------
+
+
+@import "@{templateLocal}/less/widgets/-forms.less";
+
+
+
+
+// 0.3 Pagination
+// ------------------------------
+
+
+@import "@{templateLocal}/less/widgets/-pagination.less";
+
+
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/logo.less";
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/companyname.less";
+
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+
+@import "@{templateLocal}/less/navigation.less";
+
+
+
+
+// -----------------------------
+// 4.  #Feature widget
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/feature.less";
+
+
+
+
+// -----------------------------
+// 5.  #Buttons
+// -----------------------------
+
+
+
+
+
+
+
+// 5.1 Standard buttons
+// ------------------------------
+
+// See '-forms.less'
+
+
+
+
+// 5.2 Dropbox
+// ------------------------------
+
+
+@import "@{templateLocal}/less/widgets/dropbox.less";
+
+
+// 5.3 Click to call
+// ------------------------------
+
+
+@import "@{templateLocal}/less/widgets/clicktocall.less";
+
+
+
+
+// -----------------------------
+// 6.  #Images
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/images.less";
+
+
+
+
+// -----------------------------
+// 7.  #Gallery
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/gallery.less";
+
+
+
+
+// -----------------------------
+// 8.  #Slideshow
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/slideshow.less";
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/contact-form.less";
+
+
+
+
+// -----------------------------
+// 10.  #Signup Form
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/signupform.less";
+
+
+
+
+// -----------------------------
+// 11.  #Social List
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/social-list.less";
+
+
+
+
+// -----------------------------
+// 12.  #Twitter Feed
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/twitter.less";
+
+
+
+
+// -----------------------------
+// 13.  #Divider (Keyline)
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/divider.less";
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/profile.less";
+
+
+
+
+// -----------------------------
+// 15. #Map
+// -----------------------------
+
+
+// no styles
+
+
+
+
+// -----------------------------
+// 16.  #Content Widget
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/content.less";
+
+
+
+
+// -----------------------------
+// 17.  #Yelp Review
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/yelp-review.less";
+
+
+
+

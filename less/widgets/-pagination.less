@@ -1,0 +1,203 @@
+// ---------------------------------------------------
+// Scribe Template: CSS > Widgets > Pagination (component)
+// ---------------------------------------------------
+
+
+
+
+// Pagination List
+// ------------------------------
+
+
+.pagination-list:not(.responsiveslideshow__pagination-list) {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    clear: both;
+    margin-bottom: 0;
+    position: relative;
+    margin-top: -1px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+
+
+
+    // Pagination Item
+    // ------------------------------
+
+
+    @media @bp-global-large, @bp-global-medium {
+        .pagination-item:nth-child(2n) .button--pagination {
+            background-color: @color__secondary-alt;
+        }
+    }
+
+    @media @bp-global-small {
+
+        .pagination-item:nth-child(4n) .button--pagination, .pagination-item:nth-child(4n-3) .button--pagination {
+            background-color: @color__secondary;
+        }
+        .pagination-item:nth-child(4n-2) .button--pagination, .pagination-item:nth-child(4n-1) .button--pagination {
+            background-color: @color__secondary-alt;
+        }
+    }
+
+
+
+
+
+
+    // Pagination Button
+    // ------------------------------
+
+
+    .button--pagination {
+        background: @color__secondary;
+        color: @color__body--background;
+        font-family: @font__button--font-family;
+        font-size: @font__p--font-size;
+        line-height: 1;
+        display: block;
+        box-shadow: none;
+        text-align: center;
+
+        @media @bp-global-large {
+            padding: 20px 70px;
+        }
+        @media @bp-global-medium {
+            padding: 20px 40px;
+        }
+        @media @bp-global-small {
+            padding: 20px 20px;
+        }
+
+        &:hover {
+            background: darken(@color__secondary, 10%) !important;
+        }
+
+
+
+
+        // Pagination Icons
+        // ------------------------------
+
+
+        &:before, &:after {
+            display: inline-block;
+            color: @color__body--background;
+            text-align: center;
+            margin-right: 26px;
+            font-size: 3em;
+            vertical-align: middle;
+            background-color: transparent;
+            position: relative;
+            width: auto;
+
+            @media @mobile {
+                font-size: 2em;
+            }
+        }
+    }
+
+
+    // Previous Button Icon
+
+
+    .icon--previous:before {
+        content: '\f104';
+    }
+
+    // Next Button Icon
+
+
+    .icon--next:after {
+        content: '\f105';
+    }
+
+    // Control Text
+
+    .control-text {
+        box-shadow: inset 0px -1px 0px 0px fade(@color__body--background, 30%);
+        display: inline-block;
+        line-height: 1.5;
+    }
+
+    // Button Next
+
+    .button--next {
+        text-align: right;
+        &:after {
+            margin-left: 26px;
+        }
+    }
+
+    // Button Previous
+
+
+    .button--previous {
+        text-align: left;
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+
+
+    .button--pagination:not(.icon) {
+        padding: 20px 70px;
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+    .pagination-item {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        &:not(.blogpostlist__pagination-item) {
+            @media @bp-global-small {
+                -webkit-flex: 0 1 50%;
+                -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
+                width: 50%;
+            }
+        }
+    }
+
+    .pagination-item.current {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        @media @bp-global-small {
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
+        .button--pagination {
+            background: @color__secondary;
+            color: @color__p--text;
+        }
+    }
+}
