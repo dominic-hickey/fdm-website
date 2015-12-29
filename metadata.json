@@ -154,7 +154,7 @@
             "font__p--font-weight" : "400",
             "font__p--line-height" : "34px",
             "font__p--letter-spacing" : "#696a6b",
-            "color__h2--text": "@font-swatch2-color"
+            "color__p--text": "@font-swatch2-color"
         },
         "header": {
             "color__header--background" : "#1f2122"
