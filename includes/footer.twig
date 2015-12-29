@@ -2,8 +2,12 @@
 <footer class="template-footer">
 
 	<div class="container">
-        {{widget('profile', 'profile1', { 'profileType':'socialicons' })|raw}}
-		{{widget('profile', 'profile2', { 'profileType':'twitter' })|raw}}
+        <div class="flex-item">
+            {{widget('profile', 'profile1', { 'profileType':'socialicons' })|raw}}
+        </div>
+        <div class="flex-item">
+		    {{widget('profile', 'profile2', { 'profileType':'email' })|raw}}
+        </div>
 	</div>
 
 </footer>

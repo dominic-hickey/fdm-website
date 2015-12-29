@@ -3,21 +3,6 @@
 // ----------------------------------------
 
 
-
-
-
-// Social Item
-// ------------------------------
-
-
-.social-item {
-	margin: 0 6px 6px 0;
-	display: inline-block;
-}
-
-
-
-
 // Social Link
 // ------------------------------
 
@@ -33,15 +18,14 @@
 	// Icon
 
 	&:before {
-		font-size: 20px;
+		font-size: 19px;
 		display: block;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		background-color: transparent;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		background-color: @color__button--background;
 		color: @color__button--text;
 		margin: 0 auto;
-		box-shadow: inset 0px 0px 0px 2px @color__button--border;
 
 		@media @tablet {
 			font-size: 20px;
@@ -57,13 +41,11 @@
 			line-height: 30px;
 		}
 
-
 	}
 
 	// Icon hover
-
 	&:hover:before {
-		background-color: fade(@color__button--text, 7%);
+		background-color: @color__button--background--hover;
 	}
 }
 

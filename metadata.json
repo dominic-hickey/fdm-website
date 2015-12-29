@@ -153,8 +153,8 @@
             "font__p--font-size" : "16px",
             "font__p--font-weight" : "400",
             "font__p--line-height" : "34px",
-            "font__p--letter-spacing" : "#696a6b",
-            "color__p--text": "@font-swatch2-color"
+            "font__p--letter-spacing" : "@font-swatch5-letter-spacing",
+            "color__p--text": "#696a6b"
         },
         "header": {
             "color__header--background" : "#1f2122"
@@ -218,11 +218,6 @@
             "color__menu--background" : "fade(@color__p--text, 3%)",
             "color__menu-section-header--background" : "@color__primary",
             "color__menu-section-featured--background" : "@color__primary"
-        },
-        "socialicons": {
-            "color__socialicons--icon" : "#9aa7b5",
-            "color__socialicons--icon--hover" : "#9aa7b5",
-            "color__socialicons--icon--background" : "rgba(154,167,181,0.2)"
         },
         "blog": {
             "color__blogsearch-legend--background" : "@color__form-legend--background",

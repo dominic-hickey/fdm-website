@@ -72,6 +72,11 @@
             padding-bottom: 1em;
             font-family: @font__h1--font-family;
             font-size: bkscale(@font__p--font-size, .82);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 1;
+            color: @color__p--text;
 
             &:nth-last-of-type(-n+2) {
                 text-align: right;
@@ -240,6 +245,7 @@
         height: 30px;
         line-height: 30px;
         text-align: center;
+        background-color: darken(@color__button--background, 5%);
     }
 
     // Quantity Field
@@ -272,8 +278,14 @@
 
 .summary-form {
     text-align: right;
+
     @media @basketsummary-medium, @mobile {
         text-align: center;
+    }
+
+    .button--submit {
+        background-color: @color__primary;
+        color: @color__body--background;
     }
 }
 
@@ -370,6 +382,7 @@
             margin: 0 -5px 0 auto;
             width: 80px;
             max-width: 100%;
+
             .button--quantity {
                 border: 5px solid @color__primary;
                 line-height: 20px;
