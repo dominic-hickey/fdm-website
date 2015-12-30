@@ -39,24 +39,10 @@
 // Avatar
 // ------------------------------
 
-.twitter__avatar {
-
-}
-
 .twitter__avatar-image {
 	width: 40px;
 	height: 40px;
 	display: block;
-
-	@media @bp-global-medium {
-		width: 30px;
-		height: 30px;
-	}
-
-	@media @bp-global-small {
-		width: 26px;
-		height: 26px;
-	}
 }
 
 
@@ -67,7 +53,9 @@
 
 
 .tweet-wrap {
-
+    @media @mobile {
+        margin-top: 20px;
+    }
 }
 
 

@@ -3,19 +3,6 @@
 // ------------------------------------
 
 
-
-
-// Breakpoints for gallery layouts
-// -------------------------------
-
-@gallery-5col: ~"only screen and (min-width : 1500px)";
-@gallery-4col: ~"only screen and (min-width : 1300px) and (max-width : 1500px)";
-@gallery-3col: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
-@gallery-2col: ~"only screen and (max-width : 850px)";
-
-
-
-
 // Gallery Item
 // ------------------------------
 
@@ -23,38 +10,29 @@
 .gallery__gallery-item {
 	float: left;
 	height: 0; // Height is achieved using padding-bottom
+	width: 20%;
+	padding-bottom: 20%;
 	overflow: hidden;
 	position: relative;
 	margin: 0;
 
 
-	// 5 Columns Layout
-
-	@media @gallery-5col {
-		width: 20%;
-		padding-bottom: 20%;
-	}
-
-
 	// 4 Columns Layout
-
-	@media @gallery-4col {
+	@media @bp-global-medium {
 		width: 25%;
 		padding-bottom: 25%;
 	}
 
 
 	// 3 Columns Layout
-
-	@media @gallery-3col {
+	@media @tablet {
 		width: 33.33%;
 		padding-bottom: 33.33%;
 	}
 
 
 	// 2 Columns Layout
-
-	@media @gallery-2col {
+	@media @mobile {
 		width: 50%;
 		padding-bottom: 50%;
 	}
