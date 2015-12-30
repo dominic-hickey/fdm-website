@@ -353,6 +353,11 @@ html, body {
 	transition: all 0.25s ease-in-out;
 	cursor: pointer;
 
+	@media @mobile {
+		right: -10px;
+		padding-left: 0;
+	}
+
 	&:hover {
 		background-color: @color__companyname--text;
 		opacity: .6;
