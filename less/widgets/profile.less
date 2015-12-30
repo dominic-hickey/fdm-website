@@ -1,6 +1,77 @@
-// // ------------------------------------
-// // Scribe Template: CSS > Widgets > Profile
-// // ------------------------------------
+// --------------------------------------
+// Kings Template: CSS > Widgets > Profile
+// ---------------------------------------
+
+
+.profile {
+
+
+    // Typography
+    // -----------
+
+    a, h2, h3, p {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+    }
+    h2, h3, p {
+        .paragraph;
+    }
+
+    // Twitter
+    // -----------
+
+    .avatar,
+    .account-link,
+    .tweet-metadata {
+        display: none;
+    }
+    .tweet-content {
+       padding: 0;
+    }
+
+
+    // Address
+    // -----------
+
+    .address p {
+        padding-left: 10px;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: -6px;
+            display: inline-block;
+            content: ",";
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+
+    // Form
+    // ----------
+
+    .form-body {
+        .flex-display;
+        .justify-content(center);
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .label {
+        display: none;
+    }
+    .legend {
+        margin-bottom: 20px;
+    }
+    .input {
+        width: 250px;
+        margin-right: 20px;
+    }
+
+}
 
 
 // Header Profile
@@ -45,21 +116,8 @@
 
         // Address
         .address p {
-            padding-left: 4px;
             font-size: 12px;
             line-height: 22px;
-
-            &:after {
-                position: absolute;
-                top: 0;
-                right: -6px;
-                display: inline-block;
-                content: ",";
-            }
-
-            &:last-child:after {
-                display: none;
-            }
         }
 
         // Strapline / Description
@@ -88,7 +146,6 @@
             display: none;
         }
         .tweet-content {
-            padding: 0;
 
             a {
                 color: lighten(@color__primary, 35%);
@@ -103,15 +160,12 @@
         // Form
         // ----------
 
-        .label,
         .legend {
             display: none;
         }
+
         .form-body {
-            .flex-display;
-        }
-        .form-group {
-            margin-bottom: 0;
+            .justify-content(inherit);
         }
 
         // Input

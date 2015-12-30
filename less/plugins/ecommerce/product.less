@@ -12,11 +12,11 @@
 
 
 
-@product-large: ~"only screen and (min-width : 890px)";
-@product-medium: ~"only screen and (max-width : 890px)";
+@product-large: ~"only screen and (min-width : 769px)";
+@product-medium: ~"only screen and (max-width : 769px)";
 @product-small: ~"only screen and (max-width : 400px)";
 
-@bp-product-rows: ~"only screen and (max-width : 940px)";
+@bp-product-rows: ~"only screen and (max-width : 769px)";
 
 
 
@@ -127,7 +127,7 @@
             line-height: 56px;
             margin-right: 6px;
         }
-         @media @bp-global-small {
+        @media @bp-global-small {
             width: 40px;
             height: 40px;
             line-height: 36px;
@@ -275,15 +275,15 @@
 
     @media @bp-global-large {
         padding: 26px;
-        height: 560px;
+        height: 400px;
     }
     @media @bp-global-medium {
         padding: 20px;
-        height: 400px;
+        height: 350px;
     }
     @media @bp-global-small {
         padding: 10px;
-        height: 200px;
+        height: 300px;
     }
 }
 
@@ -304,15 +304,13 @@
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     background: @color__ecomproduct--background;
+    padding: 70px 30px;
 
-    @media @bp-global-large {
-        padding: 60px 70px;
-    }
     @media @bp-global-medium {
-        padding: 30px 40px;
+        padding: 40px;
     }
-    @media @bp-global-small {
-        padding: 20px;
+    @media @tablet {
+        padding: 0 20px 20px;
     }
 }
 
@@ -324,19 +322,8 @@
 
 
 .product-title {
+    padding-bottom: 0;
     color: @color__ecomproduct-title--text;
-    @media @bp-global-large {
-        font-size: @font__h1--font-size;
-        line-height: @font__h1--line-height;
-    }
-    @media @bp-global-medium {
-        font-size: @font__h3--font-size;
-        line-height: @font__h3--line-height;
-    }
-    @media @bp-global-small {
-        font-size: bkscale(@font__h3--font-size, 0.8);
-        line-height: bkscale(@font__h3--line-height, 0.8);
-    }
 }
 
 
@@ -348,18 +335,6 @@
 
 .ecomproduct__product-price {
     color: @color__ecomproduct-price--text;
-    @media @bp-global-large {
-        font-size: @font__h3--font-size;
-        line-height: @font__h3--line-height;
-    }
-    @media @bp-global-medium {
-        font-size: @font__h3--font-size;
-        line-height: @font__h3--line-height;
-    }
-    @media @bp-global-small {
-        font-size: bkscale(@font__h3--font-size, 0.8);
-        line-height: bkscale(@font__h3--line-height, 0.8);
-    }
 }
 
 
@@ -371,18 +346,13 @@
 
 .product-body {
 
-    margin-bottom: 26px;
+    margin: 16px 0 24px;
 
     // Paragraph
-
     &, p {
-        @media @bp-global-medium {
+        @media @bp-global-small {
             font-size: bkscale(@font__p--font-size, 0.9);
             line-height: bkscale(@font__p--line-height, 0.9);
-        }
-        @media @bp-global-small {
-            font-size: bkscale(@font__p--font-size, 0.8);
-            line-height: bkscale(@font__p--line-height, 0.8);
         }
     }
 }
@@ -407,10 +377,39 @@
     .form .button {
         &.added {
             background-color: @color__body--background;
+
             &:before {
                 content: '\f00c'
             }
         }
+    }
+
+    // Button
+    .button {
+        background-color: darken(@color__ecomproductslist-filters--background, 5%);
+
+        &:hover {
+            background-color: darken(@color__ecomproductslist-filters--background, 9%);
+        }
+    }
+
+
+
+
+    // Select Wrap
+    // ------------------------------
+
+    .select-wrap {
+        margin-top: 6px;
+        padding: 4px 20px 0px 14px;
+        background-color: @color__body--background;
+
+        &:after {
+            padding-right: 14px;
+        }
+    }
+    .select {
+        padding-right: 20px;
     }
 
 
@@ -419,7 +418,7 @@
     // Legend
     // ------------------------------
 
-    legend {
+    .legend {
         display: none;
     }
 
@@ -443,7 +442,7 @@
     .form-group {
         display: inline-block;
         min-width: 100px;
-        margin: 0 0.6em 1em 0;
+        margin: 0 0.6em 0 0;
         float: left;
 
 
@@ -452,27 +451,18 @@
         // Label
         // ------------------------------
 
-
         .label {
-            font-size: 13px;
+            padding: 5px 0;
+            font-family: @font__h4--font-family;
+            font-size: 12px;
+            letter-spacing: 2px;
             line-height: 1;
-            color: fade(@color__p--text, 70%);
+            color: lighten(@color__p--text, 20%);
             display: block;
-            padding-bottom: 0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
     }
-}
-
-
-
-
-// ------------------------------
-// Basket Wrap
-// ------------------------------
-
-
-.view-basket-wrap {
-    margin-top: 26px;
 }
 
 
@@ -556,7 +546,8 @@
 
     .category-link, .tag-link {
         .underline;
-        color: @color__p--text;
+        font-size: 14px;
+
         @media @bp-global-medium {
             font-size: bkscale(@font__p--font-size, 0.9);
             line-height: bkscale(@font__p--line-height, 0.9);
