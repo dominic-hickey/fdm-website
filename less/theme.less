@@ -9,10 +9,10 @@
 // ------------------------------
 
 // Page is contained and centered
-@bp-global-above-fullwidth: ~"only screen and (min-width: 2000px)";
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
 
 // Page displayed full width
-@bp-global-below-fullwidth: ~"only screen and (max-width: 2000px)";
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
 
 @bp-global-large: 	~"only screen and (min-width: 1400px)";
 @bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
@@ -38,7 +38,8 @@ body {
     background-color: @color__body--background;
 
     @media @bp-global-above-fullwidth {
-        width: 2000px;
+        width: 90%;
+        max-width: 1800px;
         margin: 0 auto;
     }
 }
@@ -115,14 +116,18 @@ body {
     position: absolute;
     top: 0;
     z-index: 10050;
-    width: 100%;
+    width: 90%;
     min-height: 150px;
+    max-width: 1800px;
     padding: 30px 70px;
     background-color: @color__header--background;
     .gradient(@color__header--background, transparent);
 
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
     @media @bp-global-medium {
-        padding: 20px 40px;
+        padding: 30px 40px;
     }
     @media @tablet {
         min-height: 100px;
@@ -149,58 +154,6 @@ body {
                 width: 10%;
             }
 
-        }
-    }
-
-
-    // Profile Widget
-    // --------------
-
-    .phone-number-link {
-        font-family: @font__h4--font-family;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 3px;
-        color: @color__companyname--text;
-        text-transform: uppercase;
-
-        &:before {
-            display: none;
-
-            @media @tablet {
-                display: inline-block;
-                font-size: 26px;
-                line-height: 47px;
-            }
-        }
-    }
-    .phone-number {
-        @media @tablet {
-            display: none;
-        }
-    }
-
-
-    // Profile Message
-    .bk-message {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        background-image: none;
-        border: 0;
-        border-radius: 0;
-        color: @color__companyname--text;
-
-        p {
-            font-family: @font__h4--font-family;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 32px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            -webkit-font-smoothing: inherit;
         }
     }
 

@@ -3,321 +3,202 @@
 // // ------------------------------------
 
 
-// // -----------------------------
-// // #Table of Contents
-// // -----------------------------
-
-// //  1.   #Typography
-// //  2.   #Address
-// //  3.   #Email
-// //  4.   #Phone
-// //  5.   #Latest Tweet
-// //  6.   #Single Email Form
-// //  7.   #Social Icons
-// //  8.   #Map
-
-
-
-
-// // ------------------------------
-// // 1.   #Typography
-// // ------------------------------
-
-
-// .widget__profile {
-
-
-// 	// Standard Text
-// 	// ------------------------------
-
-
-// 	&, p, h2, h3, a, span .socialicons__social-name {
-// 		color: fade(@color__p--text, 70%);
-// 		font-family: @font__p--font-family;
-// 		font-size: 16px;
-// 		line-height: 1.5;
-// 		padding-bottom: 0;
-
-// 		@media @mobile {
-// 			font-size: 14px;
-// 		}
-
-// 		@media @mobile {
-// 			font-size: 12px;
-// 		}
-// 	}
-
-
-// 	// Headlines
-// 	// ------------------------------
-
-
-// 	.company-strapline, .company-description__description, .company-business__business {
-
-// 		font-size: 18px;
-// 		line-height: 1.5;
-// 		letter-spacing: 0;
-
-// 		@media @mobile {
-// 			font-size: 16px;
-// 		}
-// 	}
-
-// }
-
-
-
-
-// // ------------------------------
-// // 2.   #Address
-// // ------------------------------
-
-
-// .companyaddress__vcard {
-
-
-// 	// Paragraph
-// 	// ------------------------------
-
-
-// 	p {
-// 		display: inline;
-// 		&:after {
-// 			content: ",";
-// 			margin-left: -0.2em;
-// 		}
-// 		&:last-child:after {
-// 			display: none;
-// 		}
-// 	}
-// }
-
-
-
-
-// // ------------------------------
-// // 3.   #Email
-// // ------------------------------
-
-
-// .emailaddress__email {
-
-
-// 	// Icon Envelope
-// 	// ------------------------------
-
-
-// 	&:before {
-// 		content: '\f003';
-// 		font-family: 'FontAwesome', sans-serif;
-// 		margin-right: 0.5em;
-// 		font-size: 1em;
-// 		display: inline-block;
-// 		vertical-align: middle;
-
-// 		@media @mobile {
-// 			font-size: 1.2em;
-// 		}
-// 	}
-// }
-
-
-
-
-// // ------------------------------
-// // 4.   #Phone
-// // ------------------------------
-
-
-// .widget__profile {
-// 	.phone-number-link {
-
-
-// 		// Icon
-// 		// ------------------------------
-
-
-// 		&:before {
-// 			content: '\f095';
-// 			font-family: 'FontAwesome', sans-serif;
-// 			margin-right: 0.5em;
-// 			font-size: 1em;
-// 			display: inline-block;
-// 			vertical-align: middle;
-
-// 			@media @mobile {
-// 				font-size: 1.2em;
-// 			}
-// 		}
-
-// 		@media @mobile {
-// 			background-color: transparent;
-// 			letter-spacing: 0;
-// 			font-size: inherit;
-// 			line-height: inherit;
-// 			padding: 0;
-// 			color: @color__link--text;
-// 		}
-// 	}
-// }
-
-
-
-
-// // ------------------------------
-// // Latest Tweet
-// // ------------------------------
-
-
-// // Modifications to suit the footer design
-// // Original styles: css/widgets/twitter.less
-
-// .widget__profile {
-
-
-
-
-// 	// Account Link
-// 	// ------------------------------
-
-
-// 	.account-link {
-// 		line-height: 40px;
-// 	}
-
-
-
-
-// 	// Tweet Metadata
-// 	// ------------------------------
-
-
-// 	.tweet-metadata {
-// 		&, * {
-// 			font-size: 12px;
-// 		}
-// 	}
-// }
-
-
-
-
-// // ------------------------------
-// // Single Email Form
-// // ------------------------------
-
-
-// .widget__profile {
-
-
-
-
-// 	// Legend
-// 	// ------------------------------
-
-
-// 	.signupform__legend {
-// 		margin-bottom: 1em;
-// 	}
-
-
-
-
-// 	// Form Body
-// 	// ------------------------------
-
-
-// 	.signupform__form-body {
-// 		display: -webkit-box;
-// 		display: -moz-box;
-// 		display: -ms-flexbox;
-// 		display: -webkit-flex;
-// 		display: flex;
-// 		-webkit-box-direction: normal;
-// 		-moz-box-direction: normal;
-// 		-webkit-box-orient: horizontal;
-// 		-moz-box-orient: horizontal;
-// 		-webkit-flex-direction: row;
-// 		-ms-flex-direction: row;
-// 		flex-direction: row;
-// 		-webkit-flex-wrap: nowrap;
-// 		-ms-flex-wrap: nowrap;
-// 		flex-wrap: nowrap;
-// 		-webkit-box-pack: start;
-// 		-moz-box-pack: start;
-// 		-webkit-justify-content: flex-start;
-// 		-ms-flex-pack: start;
-// 		justify-content: flex-start;
-// 		-webkit-align-content: stretch;
-// 		-ms-flex-line-pack: stretch;
-// 		align-content: stretch;
-
-// 		.form-group:first-child {
-// 			margin-right: 16px;
-// 			-webkit-box-flex: 1;
-// 			-moz-box-flex: 1;
-// 			-webkit-flex: 1 1 auto;
-// 			-ms-flex: 1 1 auto;
-// 			flex: 1 1 auto;
-// 		}
-
-// 		// Button
-
-// 		.button {
-// 			font-size: 18px;
-// 		}
-// 	}
-
-
-
-
-// 	// Label
-// 	// ------------------------------
-
-
-// 	.signupform__label {
-// 		display: none;
-// 	}
-// }
-
-
-
-
-
-// // ------------------------------
-// // 7.   #Social Icons
-// // ------------------------------
-
-
-// // Modifications to suit the footer design
-// // Original styles: css/widgets/social-list.less
-
-
-// .widget__profile {
-
-
-// 	// Social Link
-// 	// ------------------------------
-
-
-// 	.social-link {
-
-// 		opacity: 0.8;
-// 		&:hover {
-// 			opacity: 1;
-// 		}
-
-
-// 		// Icon
-
-// 		&:before {
-// 			box-shadow: none;
-// 			color: @color__socialicons--icon;
-// 			background-color: @color__socialicons--icon--background;
-// 			width: 40px;
-// 			height: 40px;
-// 			line-height: 40px;
-// 			font-size: 16px;
-// 		}
-// 	}
-// }
+// Header Profile
+// --------------
+
+.template-header {
+
+    .profile {
+
+        // Typography
+        a, h2, h3, p {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 3px;
+            color: @color__companyname--text;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+
+            &:before {
+                display: none;
+
+                @media @tablet {
+                    display: inline-block;
+                    font-size: 26px;
+                    line-height: 47px;
+                }
+            }
+        }
+
+
+        // Telephone
+        .phone-number {
+            @media @tablet {
+                display: none;
+            }
+        }
+
+        // Address
+        .address p {
+            padding-left: 4px;
+            font-size: 12px;
+            line-height: 22px;
+
+            &:after {
+                position: absolute;
+                top: 0;
+                right: -6px;
+                display: inline-block;
+                content: ",";
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+
+        // Strapline / Description
+        .strapline,
+        .description,
+        .tweet-content,
+        .tweet-content a {
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        // Social Icons
+        .social-item {
+            margin-right: 16px;
+        }
+        .social-link:before {
+            width: auto;
+            background-color: transparent;
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .avatar,
+        .account-link,
+        .tweet-metadata {
+            display: none;
+        }
+        .tweet-content {
+            padding: 0;
+
+            a {
+                color: lighten(@color__primary, 35%);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+        // Form
+        // ----------
+
+        .label,
+        .legend {
+            display: none;
+        }
+        .form-body {
+            .flex-display;
+        }
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        // Input
+        .input,
+        .button {
+            .feature__button;
+            margin: 0;
+            line-height: 40px;
+            box-shadow: none;
+        }
+        .input {
+            max-width: 170px;
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+
+        // Button
+        .button {
+            padding: 0 10px;
+            border-left: 0;
+        }
+
+    }
+
+
+    // Profile Message
+    // ---------------
+
+    .message {
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+    .bk-message {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+        border-radius: 0;
+        color: @color__companyname--text;
+
+        @media @mobile {
+            padding-top: 8px;
+            background-image: image('/images/msg-empty.png');
+        }
+
+        p {
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+        }
+    }
+
+}

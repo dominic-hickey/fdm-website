@@ -44,7 +44,7 @@
     min-height: 900px;
 
     @media @bp-global-medium {
-        min-height: 750px;
+        min-height: 800px;
     }
     @media @tablet {
         min-height: 100vh;
@@ -144,11 +144,10 @@
 
 .feature__button {
     margin: 20px 0 0;
-    box-shadow: inset 0px 0px 0px 2px @color__feature-button--border;
+    // box-shadow: inset 0px 0px 0px 2px @color__feature-button--border;
+    border: 2px solid @color__feature-button--border;
     color: @color__feature-button--text;
     background-color: @color__feature-button--background;
-    font-size: bkscale(@font__feature-button--font-size, 1.2);
-    line-height: bkscale(@font__feature-button--line-height, 1.2);
 
     @media @bp-global-medium, @bp-global-small {
         margin-top: 10px;
