@@ -1,36 +1,41 @@
-// ------------------------------
-// Scribe Template: CSS > Widgets > Twitter Feed
-// ------------------------------
-
-
-
-
-
-// 2 Columns Layout on a Large Screen
-// ----------------------------------
-
-
-@media @bp-global-large, @bp-global-medium {
-	.widget__twitter .tweet-item {
-		width: 49%;
-		margin-right: 2%;
-		margin-bottom: 2%;
-		float: left;
-		&:nth-child(2n) {
-			margin-right: 0;
-		}
-	}
-}
-
+// -----------------------------------
+// Kings: CSS > Widgets > Twitter Feed
+// -----------------------------------
 
 
 
 // Tweet Item
 // ------------------------------
 
-
 .tweet-item {
 	position: relative;
+    display: inline-block;
+    float: left;
+    padding: 50px;
+    background-color: @color__secondary;
+
+    width: 30.333%;
+    margin-right: 3.333%;
+    margin-bottom: 3.333%;
+
+    @media (max-width: 1400px) {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        padding: 40px;
+    }
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
 }
 
 
@@ -45,17 +50,8 @@
 	display: block;
 }
 
-
-
-
-// Tweet Wrap
-// ------------------------------
-
-
-.tweet-wrap {
-    @media @mobile {
-        margin-top: 20px;
-    }
+.avatar-link {
+    display: inline-block;
 }
 
 
@@ -69,21 +65,8 @@
     padding-top: 15px;
     position: relative;
 
-    @media @bp-global-medium {
-        padding-top: 10px;
-		font-size: bkscale(@font__h4--font-size, 0.8);
-		line-height: bkscale(@font__h4--line-height, 0.8);
-
-    }
-
-    @media @bp-global-small {
-        padding-top: 5px;
-		font-size: bkscale(@font__h4--font-size, 0.68);
-		line-height: bkscale(@font__h4--line-height, 0.68);
-    }
 
     // Link
-
     a {
         // Allows text wrap for long words without spacing
         -ms-word-break: break-all;
@@ -107,13 +90,19 @@
 
 .twitter__account-link {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50px;
     font-size: 19px;
     line-height: 40px;
     min-height: 40px;
     margin-left: 55px;
     color: @color__h2--text;
+
+    @media @tablet {
+        top: 40px;
+    }
+    @media @mobile {
+        top: 30px;
+    }
 }
 
 
@@ -173,12 +162,7 @@
 
 
 
-
-
-
 @media @bp-global-columns {
-
-
 
 
     // All Columns
