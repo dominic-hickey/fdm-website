@@ -122,7 +122,6 @@ body {
     .gradient(@color__header--background, transparent);
 
     @media @bp-global-medium {
-        min-height: 120px;
         padding: 20px 40px;
     }
     @media @tablet {
@@ -138,6 +137,7 @@ body {
         .align-items(center);
 	}
 
+    // Flex Item
     .flex-item {
         width: 33.333%;
 
@@ -152,6 +152,10 @@ body {
         }
     }
 
+
+    // Profile Widget
+    // --------------
+
     .phone-number-link {
         font-family: @font__h4--font-family;
         font-size: 13px;
@@ -159,6 +163,7 @@ body {
         line-height: 32px;
         letter-spacing: 3px;
         color: @color__companyname--text;
+        text-transform: uppercase;
 
         &:before {
             display: none;
@@ -175,6 +180,33 @@ body {
             display: none;
         }
     }
+
+
+    // Profile Message
+    .bk-message {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        color: @color__companyname--text;
+
+        p {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        &--empty {
+            background-image: none;
+        }
+    }
+
+
+    // Company Name / Logo
     .companyname,
     .logo {
         text-align: center;
@@ -185,7 +217,10 @@ body {
 }
 
 
-// Header: When feature is hidden
+
+
+// Header: Additional (when feature is hidden)
+// -------------------------------------------
 
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
     position: relative;
