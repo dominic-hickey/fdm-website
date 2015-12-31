@@ -12,21 +12,18 @@ h1, h2, h3, h4, p {
 	-webkit-font-smoothing: antialiased;
 }
 
-.content, .post-body {
+.content,
+.post-body {
+
 
 	// H1
 	// ------------------------------
 
 
 	h1 {
-		@media @bp-global-medium {
+		@media @bp-global-small {
 			font-size: bkscale(@font__h1--font-size, 0.9);
 			line-height: bkscale(@font__h1--line-height, 0.9);
-		}
-
-		@media @bp-global-small {
-			font-size: bkscale(@font__h1--font-size, 0.8);
-			line-height: bkscale(@font__h1--line-height, 0.8);
 		}
 	}
 
@@ -38,14 +35,9 @@ h1, h2, h3, h4, p {
 
 
 	h2 {
-		@media @bp-global-medium {
+		@media @bp-global-small {
 			font-size: bkscale(@font__h2--font-size, 0.9);
 			line-height: bkscale(@font__h2--line-height, 0.9);
-		}
-
-		@media @bp-global-small {
-			font-size: bkscale(@font__h2--font-size, 0.8);
-			line-height: bkscale(@font__h2--line-height, 0.8);
 		}
 	}
 
@@ -57,14 +49,10 @@ h1, h2, h3, h4, p {
 
 
 	h3 {
-		@media @bp-global-medium {
-			font-size: bkscale(@font__h3--font-size, 0.9);
-			line-height: bkscale(@font__h3--line-height, 0.9);
-		}
 
 		@media @bp-global-small {
-			font-size: bkscale(@font__h3--font-size, 0.8);
-			line-height: bkscale(@font__h3--line-height, 0.8);
+			font-size: bkscale(@font__h3--font-size, 0.9);
+			line-height: bkscale(@font__h3--line-height, 0.9);
 		}
 	}
 
@@ -76,14 +64,10 @@ h1, h2, h3, h4, p {
 
 
 	h4 {
-		@media @bp-global-medium {
-			font-size: bkscale(@font__h4--font-size, 0.9);
-			line-height: bkscale(@font__h4--line-height, 0.9);
-		}
 
 		@media @bp-global-small {
-			font-size: bkscale(@font__h4--font-size, 0.8);
-			line-height: bkscale(@font__h4--line-height, 0.8);
+			font-size: bkscale(@font__h4--font-size, 0.9);
+			line-height: bkscale(@font__h4--line-height, 0.9);
 		}
 	}
 
@@ -95,14 +79,9 @@ h1, h2, h3, h4, p {
 
 
 	p, &  {
-		@media @bp-global-medium {
+		@media @bp-global-small {
 			font-size: bkscale(@font__p--font-size, 0.9);
 			line-height: bkscale(@font__p--line-height, 0.9);
-		}
-
-		@media @bp-global-small {
-			font-size: bkscale(@font__p--font-size, 0.8);
-			line-height: bkscale(@font__p--line-height, 0.8);
 		}
 	}
 
@@ -141,14 +120,7 @@ h1, h2, h3, h4, p {
 			font-size: bkscale(@font__p--font-size, 0.9);
 			line-height: bkscale(@font__p--line-height, 0.9);
 
-			@media @bp-global-medium {
-				font-size: bkscale(@font__p--font-size, 0.8);
-				line-height: bkscale(@font__p--line-height, 0.8);
-			}
-
 			@media @bp-global-small {
-				font-size: bkscale(@font__p--font-size, 0.7);
-				line-height: bkscale(@font__p--line-height, 0.7);
 				padding-left: 0;
 			}
 		}
@@ -164,6 +136,7 @@ h1, h2, h3, h4, p {
 		margin: 1em 0;
 		padding-left: 0;
 		counter-reset: ordered-counter;
+
 		li {
 			position: relative;
 			padding-left: 3em;
@@ -172,14 +145,7 @@ h1, h2, h3, h4, p {
 			font-size: bkscale(@font__p--font-size, 0.9);
 			line-height: bkscale(@font__p--line-height, 0.9);
 
-			@media @bp-global-medium {
-				font-size: bkscale(@font__p--font-size, 0.8);
-				line-height: bkscale(@font__p--line-height, 0.8);
-			}
-
 			@media @bp-global-small {
-				font-size: bkscale(@font__p--font-size, 0.7);
-				line-height: bkscale(@font__p--line-height, 0.7);
 				padding-left: 2.5em;
 			}
 

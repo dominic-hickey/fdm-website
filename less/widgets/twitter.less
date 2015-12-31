@@ -14,9 +14,9 @@
     padding: 50px;
     background-color: @color__secondary;
 
-    width: 30.333%;
-    margin-right: 3.333%;
-    margin-bottom: 3.333%;
+    width: 31.333%;
+    margin-right: 3%;
+    margin-bottom: 3%;
 
     @media (max-width: 1400px) {
         width: 48%;
@@ -36,6 +36,10 @@
         margin-right: 0;
     }
 
+}
+
+.tweet-item {
+    position: relative;
 }
 
 
@@ -161,32 +165,11 @@
 // ---------------------------------
 
 
-
 @media @bp-global-columns {
-
-
-    // All Columns
-    // ------------------------------
-
-
-    .responsivecolumns {
-
-        // Tweet Item
-
-        .widget__twitter .tweet-item {
-            width: auto;
-            float: none;
-            margin-bottom: 2em;
-        }
-
-    }
-
-
 
 
     // 3 and 4 columns
     // ------------------------------
-
 
     .columns-four-first,
     .columns-four-second,
@@ -196,15 +179,14 @@
     .columns-three-right,
     .columns-three-middle {
 
-        // Tweet Content
 
+        // Tweet Content
         .tweet-content {
             font-size: @font__p--font-size;
             line-height: @font__p--line-height;
         }
 
         // Tweet Metadata
-
         .tweet-metadata {
             display: none;
         }

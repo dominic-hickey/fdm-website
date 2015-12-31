@@ -4,7 +4,7 @@
 
 
 // ------------------------------
-//    Common Image Styles
+// Common Image Styles
 // ------------------------------
 
 
@@ -59,11 +59,8 @@
 
 
 .image-title {
-    font-family: @font__h1--font-family;
-    font-size: @font__h4--font-size;
-    line-height: @font__h4--line-height;
-    color: @color__h2--text;
     padding-bottom: 0;
+    .heading--4;
 
     @media @bp-global-medium {
         font-size: bkscale(@font__h4--font-size, 0.9);
@@ -84,17 +81,12 @@
 
 
 .image-description {
-    font-size: bkscale(@font__p--font-size, 0.85);
-    line-height: bkscale(@font__p--line-height, 0.85);
-
-    @media @bp-global-medium {
-        font-size: bkscale(@font__p--font-size, 0.75);
-        line-height: bkscale(@font__p--line-height, 0.75);
-    }
+    font-size: bkscale(@font__p--font-size, 0.9);
+    line-height: bkscale(@font__p--line-height, 0.9);
 
     @media @bp-global-small {
-        font-size: bkscale(@font__p--font-size, 0.6);
-        line-height: bkscale(@font__p--line-height, 0.6);
+        font-size: bkscale(@font__p--font-size, 0.8);
+        line-height: bkscale(@font__p--line-height, 0.8);
     }
 }
 

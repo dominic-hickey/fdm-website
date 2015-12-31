@@ -4,15 +4,22 @@
 
 <section class="page  default-page">
 
+    <div class="template-header--default">
+        {% include "includes/header.twig" %}
+    </div>
+
+    <div class="page-title">
+        {{widget('pagetitle', 'page-title', {})|raw}}
+    </div>
+
 	<!-- Zone Content -->
 	<div class="zone-content">
-
 		<div class="container">
-			<!-- Main Widet Zone -->
+
 	   		{{zone('main')|raw}}
+
 		</div>
 	</div>
-	<!-- End Zone Content -->
 
 </section>
 

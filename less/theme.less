@@ -1,11 +1,11 @@
 // ------------------------------
-// Scribe Template: CSS > Theme
+// Kigns Template: CSS > Theme
 // ------------------------------
 
 
 
 // ------------------------------
-// 1. #Global Breakpoints
+// #Global Breakpoints
 // ------------------------------
 
 // Page is contained and centered
@@ -24,6 +24,10 @@
 
 
 
+// ------------------------------
+// Site Styles
+// ------------------------------
+
 
 body {
     background-color: darken(@color__body--background, 12%);
@@ -31,9 +35,6 @@ body {
 
 
 // Page Content
-// ------------------------------
-
-
 .page-content {
     background-color: @color__body--background;
 
@@ -47,18 +48,40 @@ body {
 
 
 
-
-
+// Page Title
 // ------------------------------
-// 3. #Floating Footer Fix
-// ------------------------------
+
+.page-title {
+    margin-bottom: 70px;
+    padding: 20px 70px;
+    background-color: @color__secondary;
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+    @media @bp-global-medium {
+        margin-bottom: 40px;
+        padding: 20px 40px;
+    }
+    @media @bp-global-small {
+        margin-bottom: 20px;
+        padding: 10px 20px;
+    }
+}
+
+.pagetitle-text {
+    padding-bottom: 0;
+    .heading--2;
+
+    @media @mobile {
+        font-size: bkscale(@font__h2--font-size, 0.7);
+        line-height: bkscale(@font__h2--line-height, 0.7);
+    }
+}
 
 
 
 
 // Avoids Floating Footer
 // ------------------------------
-
 
 .page-content > .container {
     display: -webkit-box;
@@ -104,11 +127,7 @@ body {
 
 
 // ------------------------------
-// 4. #Header
-// ------------------------------
-
-
-// Template Header
+// #Header
 // ------------------------------
 
 
@@ -171,10 +190,13 @@ body {
 
 
 
-// Header: Additional (when feature is hidden)
-// -------------------------------------------
+// Header: Additional
+// ------------------------------
 
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+// For default page and when feature is hidden
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
+.default-page .template-header {
     position: relative;
     background: @color__body--background;
     min-height: initial;
@@ -198,12 +220,7 @@ body {
 
 
 // ------------------------------
-// 5. #Footer
-// ------------------------------
-
-
-
-// Template Footer
+// #Footer
 // ------------------------------
 
 
@@ -230,18 +247,8 @@ body {
 
 
 
-
-
-// ------------------------------
-// 6. #Main Zone
-// ------------------------------
-
-
-
-
-
 // -------------------------------
-// 7. #Typography
+// #Typography
 // -------------------------------
 
 

@@ -39,7 +39,7 @@
     -ms-flex-align: center;
     align-items: center;
 
-    @media @bp-global-small {
+    @media (max-width: 1024px) {
         display: block;
     }
 
@@ -50,12 +50,12 @@
         width: 33.33%;
         background-color: @color__ecomproductslist-filters--background;
 
-        @media @bp-global-small{
-            width: auto;
+        @media (max-width: 1024px) {
+            width: 100%;
         }
 
-        @media @bp-global-medium {
-            padding: 20px 40px;
+        @media (max-width: 1024px) {
+            padding: 20px 40px 10px;
         }
 
         @media @bp-global-small {
@@ -85,16 +85,12 @@
     width: 66.66%;
     background-color: @color__ecomproductslist-filters--background;
 
-    @media  @bp-global-small{
-         width: 100%;
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding: 10px 40px;
     }
-
-    @media @bp-global-medium {
-        padding: 20px 40px;
-    }
-
     @media @bp-global-small {
-        padding: 20px 20px 0 20px;
+        padding: 10px 20px;
     }
 }
 
@@ -166,13 +162,10 @@
     }
 
 
-    @media  @bp-global-medium, @bp-global-small {
-        width: 49%;
-        margin-bottom: 20px;
-
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 8px;
+        margin-right: 0;
     }
 
 
@@ -286,6 +279,7 @@
 
     .form-group {
         margin-bottom: 0;
+
         @media @mobile, @bp-global-medium {
             display: block;
         }
@@ -297,11 +291,6 @@
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-
-        @media  @bp-global-medium {
-            margin-bottom: 10px;
-        }
-
     }
 
     // Last Form Group
@@ -327,7 +316,7 @@
 
 
     .button--submit {
-        @media @mobile, only screen and (min-width : 1001px) and (max-width : 1300px) {
+        @media @bp-global-medium {
             width: 50px;
             overflow: hidden;
             text-indent: 200px;
@@ -559,13 +548,9 @@
     font-size: @font__h3--font-size;
     line-height: @font__h3--line-height;
 
-    @media @bp-global-medium {
-        font-size: bkscale(@font__h3--font-size, 0.82);
-        line-height: bkscale(@font__h3--line-height, 0.82);
-    }
     @media @bp-global-small {
-        font-size: bkscale(@font__h3--font-size, 0.72);
-        line-height: bkscale(@font__h3--line-height, 0.72);
+        font-size: bkscale(@font__h3--font-size, 0.8);
+        line-height: bkscale(@font__h3--line-height, 0.8);
     }
      // Title Links
 

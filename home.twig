@@ -13,21 +13,50 @@
       'buttonText': 'Lorem ipsum al'
     })|raw}}
 
+
+    <!-- Feature Arrow -->
+    <div class="feature-arrow">
+        <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+    </div>
+
+
     {% include "includes/header.twig" %}
 
+
 	<!-- Zone Content -->
-	<div class="zone-content">
+	<div id="main-scroll" class="zone-content">
 		<div class="container">
 
-			<!-- Main Widet Zone -->
-
-	   		{{zone('main')|raw}}
+            {{zone('main')|raw}}
 
 		</div>
 	</div>
-	<!-- End Zone Content -->
 
 </section>
 
-<!-- End Home Page Content -->
+{% endblock %}
+
+
+{% block bodyscripts %}
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+
+        $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+
+            var target = $(this).attr("href");
+
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
+                location.hash = target;
+            });
+
+            return false;
+        });
+
+    });
+
+</script>
+
 {% endblock %}

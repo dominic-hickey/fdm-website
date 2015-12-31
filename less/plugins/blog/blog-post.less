@@ -159,8 +159,12 @@
             padding: 40px;
         }
 
+        @media @bp-blog-post-layout-vertical {
+            padding: 0 40px 20px;
+        }
+
         @media @bp-global-small {
-            padding: 20px;
+            padding: 0 20px 20px;
         }
 
         // Timestamp
@@ -177,10 +181,13 @@
                 line-height: bkscale(@font__p--line-height, 0.9);
             }
 
+            @media @bp-blog-post-layout-vertical {
+                right: 30px;
+            }
+
             @media @bp-global-small {
                 font-size: bkscale(@font__p--font-size, 0.8);
                 line-height: bkscale(@font__p--line-height, 0.8);
-                right: 0;
             }
         }
     }
@@ -336,11 +343,4 @@
         clear: both;
     }
 
-    // Network Item
-
-    .blogpost__network-item {
-        @media @bp-global-medium, @bp-global-small {
-            display: block;
-        }
-    }
 }

@@ -144,7 +144,6 @@
 
 .feature__button {
     margin: 20px 0 0;
-    // box-shadow: inset 0px 0px 0px 2px @color__feature-button--border;
     border: 2px solid @color__feature-button--border;
     color: @color__feature-button--text;
     background-color: @color__feature-button--background;
@@ -163,5 +162,70 @@
 
     &:hover {
         background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+
+
+// Feature Arrow
+// ------------------------------
+
+
+.feature-arrow {
+    position: relative;
+    top: -100px;
+    z-index: 10009;
+    width: 100%;
+    opacity: .6;
+
+    @media @tablet {
+        top: -80px;
+    }
+}
+
+.feature-arrow-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+
+    background-image: image('/images/down-arrow.png');
+    background-image: image('/images/down-arrow.svg');
+}
+
+
+// Arrow Bounce
+// ------------
+
+.arrow-bounce {
+    -webkit-animation-name: bounce;
+    -moz-animation-name: bounce;
+    -webkit-animation-duration: .7s;
+    -moz-animation-duration: .7s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -webkit-animation-timing-function: eaze-in-out;
+    -moz-animation-timing-function: eaze-in-out;
+}
+
+// Bounce Keyframes
+@-webkit-keyframes bounce {
+    from {
+        top: 0;
+    }
+    to {
+        top: 8px;
+    }
+}
+@-moz-keyframes bounce {
+    from {
+        top: 0;
+    }
+    to {
+        top: 8px;
     }
 }

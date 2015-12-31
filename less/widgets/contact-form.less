@@ -34,7 +34,6 @@
 
 
 	// Label Email
-
 	.label--email {
 		display: none;
 	}
@@ -43,7 +42,7 @@
 
 
 
-// From Body
+// Form Body
 // ------------------------------
 
 
@@ -85,12 +84,30 @@
 	font-size: @font__h2--font-size;
 	line-height: @font__h2--line-height;
 	text-align: right;
+
 	@media @bp-global-small {
 		position: relative;
 		width: 100%;
 		text-align: left;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+	    font-size: 20px;
+	    line-height: 24px;
 	}
+}
+
+
+
+
+
+// Label
+// ------------------------------
+
+
+.label--message {
+	 @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.9);
+    }
 }
 
 
@@ -102,27 +119,20 @@
 // ---------------------------------
 
 
-
-
-// All Columns
-// ------------------------------
-
-
 .responsivecolumns {
 
 	// Legend
-
 	.contactform__legend {
 		width: 100%;
-		float: none;
-		background-color: transparent;
-		position: relative;
-		text-align: left;
-		padding: 0;
+	    background-color: transparent;
+	    position: relative;
+	    text-align: left;
+	    padding: 0;
+	    margin-bottom: 20px;
+	    color: @color__primary;
 	}
 
 	// Form Body
-
 	.contactform__form-body {
 		float: none;
 		width: auto;
