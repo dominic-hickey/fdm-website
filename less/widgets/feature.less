@@ -8,6 +8,16 @@
 
 
 .feature__background-image {
+    background-size: cover;
+}
+
+
+
+
+// Content Wrap
+// ------------------------------
+
+.feature__content-wrap {
     position: relative;
     z-index: 2;
     display: -webkit-box;
@@ -38,10 +48,11 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-size: cover;
+
+    min-height: 900px;
     padding: 1em 0;
     overflow: auto;
-    min-height: 900px;
+    background-color: fade(@color__feature-content--background, 80%);
 
     @media @bp-global-medium {
         min-height: 800px;
@@ -50,31 +61,10 @@
         min-height: 100vh;
     }
 
-
-    // Overlay
-
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: @color__feature-content--background;
-        opacity: 0.8;
-    }
 }
 
 
-
-
-// Content Wrap
-// ------------------------------
-
-
-.feature__content-wrap {
+.feature__content-inner-wrap {
     position: relative;
     z-index: 3;
     width: 100%;
