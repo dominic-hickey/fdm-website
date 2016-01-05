@@ -47,8 +47,17 @@ body {
 
 // Main
 .main-content {
-    background-color: @color__body--background;
     position: relative;
+    z-index: 10010;
+    padding-top: 70px;
+    background-color: @color__body--background;
+
+    @media @bp-global-medium {
+        padding-top: 40px;
+    }
+    @media @bp-global-small {
+        padding-top: 20px;
+    }
 }
 
 @color__primary--alt : darken(desaturate(@color__primary, 10%), 5%);
