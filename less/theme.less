@@ -36,6 +36,7 @@ body {
 
 // Site Container
 .site-container {
+    width: 100%;
     background-color: @color__body--background;
 
     @media @bp-global-above-fullwidth {
@@ -101,43 +102,14 @@ body {
 // Avoids Floating Footer
 // ------------------------------
 
-.page-content > .container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+.site-container {
+    .flex-display;
+    .flex-direction(column);
     min-height: 100vh;
 }
 
 .page {
-    -webkit-flex: 1 1 auto;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    .flex(1 1 auto);
 }
 
 
@@ -249,7 +221,8 @@ body {
 
 
 .template-footer {
-    box-shadow: 0px -1px 0px 0px darken(@color__body--background, 5%);
+    width: 100%;
+    border-top: 1px solid darken(@color__body--background, 10%);
     text-align: center;
 
 
