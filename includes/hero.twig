@@ -1,0 +1,22 @@
+<div class="hero">
+
+    {{widget('feature', 'feature', {
+        'header': 'profile',
+        'strapline': 'profile',
+        'defaultBgImg': asset('images/feature-image.jpg'),
+        'positionTopPercentage': '50',
+        'showBtn': true,
+        'buttonText': 'Button',
+        'action': 'external',
+        'url': 'http://docs.basekit.com',
+        'target': '_blank'
+    })|raw}}
+
+    {% include "includes/header.twig" %}
+
+    <!-- Feature Arrow -->
+    <div class="feature-arrow">
+        <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+    </div>
+
+</div>

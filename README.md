@@ -1,2 +1,2 @@
-# kings
-Kings BaseKit Template (v8)
+# variable-template
+Variable template showing new v2 variables for style editor

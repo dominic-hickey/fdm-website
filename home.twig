@@ -2,42 +2,27 @@
 
 {% block content %}
 
-<section class="page  home-page">
+<!-- Page Content -->
+<section class="page  page--home">
 
-    {{widget('feature', 'homepagefeature', {
-      'headline': 'profile',
-      'strapline': 'profile',
-      'defaultBgImg': asset('images/feature-image.jpg'),
-      'positionTopPercentage': '0',
-      'showBtn': true,
-      'buttonText': 'Lorem ipsum al'
-    })|raw}}
-
-
-    <!-- Feature Arrow -->
-    <div class="feature-arrow">
-        <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
-    </div>
-
-
-    {% include "includes/header.twig" %}
-
+	{% include "includes/hero.twig" %}
 
 	<!-- Zone Content -->
-	<div id="main-scroll" class="zone-content">
-		<div class="container">
+    <div id="main-scroll" class="main-content">
+        <div class="container">
 
             {{zone('main')|raw}}
 
-		</div>
-	</div>
-
+        </div>
+    </div>
 </section>
 
 {% endblock %}
 
 
 {% block bodyscripts %}
+
+<script src="{{ asset('js/hero.js')}}"></script>
 
 <!-- Smooth Scroll -->
 <script>

@@ -2,24 +2,26 @@
 
 {% block content %}
 
-<section class="page  default-page">
+<section class="page  page--default">
 
-    <div class="template-header--default">
-        {% include "includes/header.twig" %}
-    </div>
+
+    {% include "includes/header.twig" %}
+
 
     <div class="page-title">
         {{widget('pagetitle', 'page-title', {})|raw}}
     </div>
 
-	<!-- Zone Content -->
-	<div class="zone-content">
-		<div class="container">
 
-	   		{{zone('main')|raw}}
+    <!-- Zone Content -->
+    <div class="main-content">
+        <div class="container">
 
-		</div>
-	</div>
+            {{zone('main')|raw}}
+
+        </div>
+    </div>
+
 
 </section>
 

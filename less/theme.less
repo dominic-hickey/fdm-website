@@ -34,8 +34,8 @@ body {
 }
 
 
-// Page Content
-.page-content {
+// Site Container
+.site-container {
     background-color: @color__body--background;
 
     @media @bp-global-above-fullwidth {
@@ -44,6 +44,15 @@ body {
         margin: 0 auto;
     }
 }
+
+// Main
+.main-content {
+    background-color: @color__body--background;
+    position: relative;
+}
+
+@color__primary--alt : darken(desaturate(@color__primary, 10%), 5%);
+@color__secondary-alt : lighten(saturate(@color__secondary, 1%), 4%);
 
 
 
@@ -194,9 +203,8 @@ body {
 // ------------------------------
 
 // For default page and when feature is hidden
-
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
-.default-page .template-header {
+.page--default .template-header {
     position: relative;
     background: @color__body--background;
     min-height: initial;
@@ -211,6 +219,13 @@ body {
 
         &:after, &:before {
             background: @color__h2--text;
+        }
+    }
+    .open .navigation-toggle {
+        background-color: transparent;
+
+        &:after, &:before {
+            background: @color__body--background;
         }
     }
 }

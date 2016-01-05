@@ -1,6 +1,35 @@
-// ------------------------------------
-// Scribe Template: CSS > Widgets > Feature
-// ------------------------------------
+// ----------------------------------------
+// Kings Template: CSS > Widgets > Feature
+// ----------------------------------------
+
+
+// Background Image
+// ------------------------------
+
+.hero {
+
+    .js-background-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+    }
+
+}
+
+.feature {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.feature + .main-content {
+    background-color: @color__body--background;
+}
 
 
 // Background Image
@@ -9,6 +38,7 @@
 
 .feature__background-image {
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -23,16 +53,16 @@
     .flex-display;
     .align-items(center);
 
-    min-height: 900px;
+    height: 900px;
     padding: 1em 0;
     overflow: auto;
     background-color: fade(@color__feature-content--background, 80%);
 
     @media @bp-global-medium {
-        min-height: 800px;
+        height: 800px;
     }
     @media @tablet {
-        min-height: 100vh;
+        height: 100vh;
     }
 
 }
@@ -137,14 +167,17 @@
 
 
 .feature-arrow {
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 800px;
     z-index: 10009;
     width: 100%;
     opacity: .6;
 
+    @media @bp-global-medium {
+        top: 700px;
+    }
     @media @tablet {
-        top: -80px;
+        top: 92vh;
     }
 }
 
@@ -193,3 +226,9 @@
         top: 8px;
     }
 }
+
+
+
+
+
+
