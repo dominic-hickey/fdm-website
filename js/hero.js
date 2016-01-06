@@ -143,6 +143,7 @@ var featureParallaxEffect = function () {
             widget.css('top','0px');
 
             resizing = false;
+
             // Get dimensions
             widgetWidth             = $(".site-container").width();
             widgetHeight            = widget.height();
@@ -172,7 +173,7 @@ var featureParallaxEffect = function () {
             // Mobile device test
 
             if ( navigator.userAgent.match(/(iPod|iPhone|iPad|android)/) || windowWidth <= screenSizeTrigger ) {
-                mobileDevice = false;
+                mobileDevice = true;
             } else {
                 mobileDevice = false;
             }
