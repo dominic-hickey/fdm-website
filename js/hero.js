@@ -123,7 +123,6 @@ var featureParallaxEffect = function () {
 
             // Effects initial settings
             bgScrollEffectEnabled   = true,
-            featureStuckEnabled     = true,
             fadeOutEffectEnabled    = true,
 
             // Scroll progress initial value
@@ -141,7 +140,6 @@ var featureParallaxEffect = function () {
 
 
         var calcDimension = function () {
-            widget.removeClass("stuck");
             widget.css('top','0px');
 
             resizing = false;
@@ -174,7 +172,7 @@ var featureParallaxEffect = function () {
             // Mobile device test
 
             if ( navigator.userAgent.match(/(iPod|iPhone|iPad|android)/) || windowWidth <= screenSizeTrigger ) {
-                mobileDevice = true;
+                mobileDevice = false;
             } else {
                 mobileDevice = false;
             }
@@ -217,37 +215,6 @@ var featureParallaxEffect = function () {
 
                 widgetBackground.css('transform', 'translate3d(0px, ' + bgPosition +'px,0)');
 
-            }
-
-        };
-
-        // ===============================================================
-        // Stuck Effect
-
-        var stuckEffect = function (scrollProgress) {
-
-            var positionOffset = 0;
-
-            // When widget is taller than the viewport a negative top position will be set when stuck
-            if ( widgetViewportOverflow ) {
-                positionOffset = widgetBottomCoordinate - widgetPosition.top - windowHeight;
-            }
-
-            // Stuck it when bottom of the widget reached the bottom of the viewport
-            // and when the top of the top of the widget passed above the viewport
-            if ( featureStuckEnabled && windowOffset +1 >= widgetPosition.top && widgetViewportOverflow == true ) {
-                widget.addClass("stuck");
-                widget.css('top', -(Math.max(0, positionOffset)) +'px');
-
-            } else if (featureStuckEnabled && widgetViewportOverflow == false) {
-                widget.addClass("stuck");
-                widget.css('top', widgetPosition.top +'px');
-            }
-
-            // Unstuck the widget
-            else {
-                widget.removeClass("stuck");
-                widget.css('top','0px');
             }
 
         };
@@ -333,7 +300,6 @@ var featureParallaxEffect = function () {
                 if ( widgetViewportOverflow ) {
                     // Disable effects  untill bottom of the widget reaches the viewport
                     fadeOutEffectEnabled = false;
-                    featureStuckEnabled = false;
                     bgScrollEffectEnabled = false;
 
 
@@ -341,7 +307,6 @@ var featureParallaxEffect = function () {
 
                     if ( windowOffset  >= ( widgetBottomCoordinate  - windowHeight )  ) {
                         // Enable effects
-                        featureStuckEnabled = true;
                         fadeOutEffectEnabled = true;
                         bgScrollEffectEnabled = true;
 
@@ -354,7 +319,6 @@ var featureParallaxEffect = function () {
                 // When widget height fits within the viewport
 
                 } else {
-                    featureStuckEnabled = true;
                     fadeOutEffectEnabled = true;
                     bgScrollEffectEnabled = true;
                 }
@@ -372,10 +336,6 @@ var featureParallaxEffect = function () {
                     backgroundScrollEffect(scrollProgress);
                 }
 
-                if ( resizing == false ) {
-                    stuckEffect(scrollProgress);
-                }
-
                 if ( fadeOutEffectEnabled && resizing == false ) {
                     fadeOutEffect(scrollProgress);
                 }
@@ -390,8 +350,6 @@ var featureParallaxEffect = function () {
 
 
 }; //featureParallaxEffect
-
-
 
 
 
