@@ -3,32 +3,8 @@
 // ----------------------------------------
 
 
-// Background Image
-// ------------------------------
-
-.hero {
-
-    .js-background-image {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-size: cover;
-        z-index: 1;
-        -webkit-backface-visibility: hidden;
-    }
-
-}
-
 .feature {
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.feature + .main-content {
-    background-color: @color__body--background;
+    overflow: hidden;
 }
 
 
@@ -39,6 +15,7 @@
 .feature__background-image {
     background-size: cover;
     background-repeat: no-repeat;
+    // background-attachment: fixed;
 }
 
 
@@ -73,7 +50,7 @@
     position: relative;
     z-index: 3;
     width: 100%;
-    max-width: 820px;
+    max-width: 760px;
     margin: 0 auto;
     text-align: center;
 }
