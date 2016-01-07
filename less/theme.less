@@ -50,15 +50,7 @@ body {
 .main-content {
     position: relative;
     z-index: 10010;
-    // padding-top: 70px;
     background-color: @color__body--background;
-
-    // @media @bp-global-medium {
-    //     padding-top: 40px;
-    // }
-    // @media @bp-global-small {
-    //     padding-top: 20px;
-    // }
 }
 
 
@@ -71,28 +63,26 @@ body {
 // Page Title
 // ------------------------------
 
-.page-title {
-    padding: 14px 70px;
+.pagetitle {
+    padding: 6px 70px;
     background-color: @color__secondary;
     border-bottom: 1px solid darken(@color__body--background, 10%);
 
     @media @bp-global-medium {
-        // margin-bottom: 40px;
-        padding: 14px 40px;
+        padding: 6px 40px;
     }
     @media @bp-global-small {
-        // margin-bottom: 20px;
-        padding: 10px 20px;
+        padding: 6px 20px;
     }
 }
 
 .pagetitle-text {
     padding-bottom: 0;
-    .heading--3;
+    .heading--4;
 
     @media @mobile {
-        font-size: bkscale(@font__h3--font-size, 0.7);
-        line-height: bkscale(@font__h3--line-height, 0.7);
+        font-size: bkscale(@font__h4--font-size, 0.7);
+        line-height: bkscale(@font__h4--line-height, 0.7);
     }
 }
 
