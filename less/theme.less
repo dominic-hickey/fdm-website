@@ -50,16 +50,17 @@ body {
 .main-content {
     position: relative;
     z-index: 10010;
-    padding-top: 70px;
+    // padding-top: 70px;
     background-color: @color__body--background;
 
-    @media @bp-global-medium {
-        padding-top: 40px;
-    }
-    @media @bp-global-small {
-        padding-top: 20px;
-    }
+    // @media @bp-global-medium {
+    //     padding-top: 40px;
+    // }
+    // @media @bp-global-small {
+    //     padding-top: 20px;
+    // }
 }
+
 
 @color__primary--alt : darken(desaturate(@color__primary, 10%), 5%);
 @color__secondary-alt : lighten(saturate(@color__secondary, 1%), 4%);
@@ -76,11 +77,11 @@ body {
     border-bottom: 1px solid darken(@color__body--background, 10%);
 
     @media @bp-global-medium {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         padding: 20px 40px;
     }
     @media @bp-global-small {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         padding: 10px 20px;
     }
 }
@@ -171,6 +172,9 @@ body {
     .companyname,
     .logo {
         text-align: center;
+    }
+    .logo-image {
+        max-height: 120px;
     }
     .companyname {
         margin-top: 10px;

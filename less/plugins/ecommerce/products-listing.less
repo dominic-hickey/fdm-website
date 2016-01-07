@@ -46,9 +46,8 @@
     // Fieldset Search
 
     .fieldset--search {
-        padding: 20px 70px;
+        padding: 20px 40px;
         width: 33.33%;
-        background-color: @color__ecomproductslist-filters--background;
 
         @media (max-width: 1024px) {
             width: 100%;
@@ -62,15 +61,6 @@
             padding: 14px 20px;
         }
     }
-
-    // Button
-    .button {
-        background-color: darken(@color__ecomproductslist-filters--background, 5%);
-
-        &:hover {
-            background-color: darken(@color__ecomproductslist-filters--background, 9%);
-        }
-    }
 }
 
 
@@ -79,11 +69,19 @@
 // Products List Fieldset Filters
 // ------------------------------
 
+.product-filters {
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+    .form-group {
+        margin-right: 0;
+    }
+}
+
 
 .ecomproductslist__fieldset--filters {
     padding: 12px 70px 8px;
     width: 66.66%;
-    background-color: @color__ecomproductslist-filters--background;
+    // background-color: @color__ecomproductslist-filters--background;
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -216,6 +214,7 @@
 
 
 .listing-order {
+    display: none;
     clear: both;
     font-size: bkscale(@font__p--font-size, 0.72);
     line-height: bkscale(@font__p--line-height, 0.72);
@@ -314,12 +313,22 @@
         }
     }
 
+    .input {
+        padding-left: 14px;
+        box-shadow: none;
+        background-color: @color__secondary;
+        .heading--4;
+        font-size: 14px;
+    }
+
 
     .button--submit {
+        border-left: 1px solid darken(@color__secondary, 8%);
+        line-height: 44px;
+
         @media @bp-global-medium {
             width: 50px;
-            overflow: hidden;
-            text-indent: 200px;
+            text-indent: -9999px;
             display: block;
             position: relative;
             padding: 0;
@@ -329,7 +338,7 @@
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
                 text-align: center;
-                line-height: bkscale(@font__button--font-size, 3);
+                line-height: 44px;
                 color: @color__button--text;
                 font-size: 18px;
                 top: 0;
@@ -534,8 +543,8 @@
 
 .product-item-details {
     text-align: center;
+
     @media @mobile {
-        margin: 4px 16px 12px;
         padding-top: 0;
         border-top: none;
     }
@@ -557,6 +566,14 @@
     .title-link {
         color: @color__ecomproductslist-product-title--text;
     }
+}
+
+
+
+// Pagination
+.pagination-list {
+    margin-top: 20px;
+    text-align: center;
 }
 
 

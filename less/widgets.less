@@ -87,49 +87,50 @@
 }
 
 // Full Width Widgets
+.main-content {
+    .widget[data-widget-type="contactform"],
+    .widget[data-widget-type="youtube"],
+    .widget[data-widget-type="map"],
+    .widget[data-widget-type="youtube"],
+    .widget[data-widget-type="gallery"],
+    .widget[data-widget-type="responsiveslideshow"],
+    .widget[data-widget-type="signupform"],
+    .widget[data-widget-type="blogpostlist"],
+    .widget[data-widget-type="blogpost"],
+    .widget[data-widget-type="blogsearch"],
+    .widget[data-widget-type="ecomproductslist"],
+    .widget[data-widget-type="ecomproduct"],
+    .widget[data-widget-type="ecomfeaturedproducts"],
+    .widget[data-widget-type="line"],
+    .widget[data-widget-type="menusections"],
+    .widget[data-widget-type="menu"] {
+        margin-left: 0;
+        margin-right: 0;
 
-.widget[data-name="contactform"],
-.widget[data-name="youtube"],
-.widget[data-name="map"],
-.widget[data-name="youtube"],
-.widget[data-name="gallery"],
-.widget[data-name="responsiveslideshow"],
-.widget[data-name="signupform"],
-.widget[data-name="blogpostlist"],
-.widget[data-name="blogpost"],
-.widget[data-name="blogsearch"],
-.widget[data-name="ecomproductslist"],
-.widget[data-name="ecomproduct"],
-.widget[data-name="ecomfeaturedproducts"],
-.widget[data-name="line"],
-.widget[data-name="menusections"],
-.widget[data-name="menu"] {
-    margin-left: 0;
-    margin-right: 0;
-
-    @media @bp-global-large {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    @media @bp-global-medium {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    @media @bp-global-small {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    &:first-child {
-        margin-top: 1px;
-    }
-    &:last-child {
-        margin-bottom: 1px;
+        @media @bp-global-large {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        @media @bp-global-medium {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        @media @bp-global-small {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
 // Removes spacing between Menu Navigation and Menu Widget
 
-.widget[data-name="menusections"] + .widget[data-name="menu"] {
+.widget[data-widget-type="menusections"] + .widget[data-widget-type="menu"] {
     @media @bp-global-large {
          margin-top: -60px;
     }

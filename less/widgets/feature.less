@@ -17,9 +17,7 @@
     background-position-y: -250px!important;
 
     @media @tablet {
-        opacity: 1 !important;
-        background-attachment: scroll;
-        -webkit-transform: translateY(0)!important;
+        background-attachment: inherit;
         background-position-y: 0!important;
     }
 }
@@ -45,6 +43,7 @@
         height: 800px;
     }
     @media @tablet {
+        height: 450px;
         height: 100vh;
         padding: 20px;
     }
@@ -60,8 +59,9 @@
     margin: 0 auto;
     text-align: center;
 
-    @media @mobile {
+    @media @tablet {
         opacity: 1!important;
+        -webkit-transform: translateY(0)!important;
     }
 }
 
@@ -158,10 +158,15 @@
     position: absolute;
     top: 800px;
     z-index: 10009;
-    width: 100%;
     max-width: 1800px;
     opacity: .6;
 
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+    }
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
     @media @bp-global-medium {
         top: 700px;
     }

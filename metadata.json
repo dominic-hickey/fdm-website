@@ -234,7 +234,6 @@
             "color__blogpost-title--text" : "@color__p--text"
         },
         "ecommerce": {
-            "color__ecomproductslist-filters--background" : "@color__primary",
             "color__ecomproductslist-product-title--text" : "@color__p--text",
             "color__ecomproduct--background" : "@color__primary",
             "color__ecomproduct-images--background" : "lighten(desaturate(@color__primary, 80%), 14%)",

@@ -162,6 +162,11 @@ textarea {
 
 .select-wrap {
     position: relative;
+    max-width: 200px;
+
+    @media @mobile {
+        max-width: 100%;
+    }
 
     &:hover {
         box-shadow: inset 0px -1px 0px 0px @color__primary;
