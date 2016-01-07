@@ -57,13 +57,13 @@
 
 .main-content .widget {
     @media @bp-global-large {
-        margin: 0 70px 20px;
+        margin: 60px 70px 20px;
     }
     @media @bp-global-medium {
-        margin: 0 40px 20px;
+        margin: 40px 40px 20px;
     }
     @media @bp-global-small {
-        margin: 0 20px 20px;
+        margin: 20px 20px 20px;
     }
 
     // First Widget in the Zone
@@ -85,22 +85,22 @@
 
 // Full Width Widgets
 .main-content {
-    .widget[data-widget-type="contactform"],
-    .widget[data-widget-type="youtube"],
-    .widget[data-widget-type="map"],
-    .widget[data-widget-type="youtube"],
-    .widget[data-widget-type="gallery"],
-    .widget[data-widget-type="responsiveslideshow"],
-    .widget[data-widget-type="signupform"],
-    .widget[data-widget-type="blogpostlist"],
-    .widget[data-widget-type="blogpost"],
-    .widget[data-widget-type="blogsearch"],
-    .widget[data-widget-type="ecomproductslist"],
-    .widget[data-widget-type="ecomproduct"],
-    .widget[data-widget-type="ecomfeaturedproducts"],
-    .widget[data-widget-type="line"],
-    .widget[data-widget-type="menusections"],
-    .widget[data-widget-type="menu"] {
+    .widget[data-name="contactform"],
+    .widget[data-name="youtube"],
+    .widget[data-name="map"],
+    .widget[data-name="youtube"],
+    .widget[data-name="gallery"],
+    .widget[data-name="responsiveslideshow"],
+    .widget[data-name="signupform"],
+    .widget[data-name="blogpostlist"],
+    .widget[data-name="blogpost"],
+    .widget[data-name="blogsearch"],
+    .widget[data-name="ecomproductslist"],
+    .widget[data-name="ecomproduct"],
+    .widget[data-name="ecomfeaturedproducts"],
+    .widget[data-name="line"],
+    .widget[data-name="menusections"],
+    .widget[data-name="menu"] {
         margin-left: 0;
         margin-right: 0;
 
@@ -127,7 +127,7 @@
 
 // Removes spacing between Menu Navigation and Menu Widget
 
-.widget[data-widget-type="menusections"] + .widget[data-widget-type="menu"] {
+.widget[data-name="menusections"] + .widget[data-name="menu"] {
     @media @bp-global-large {
          margin-top: -60px;
     }
