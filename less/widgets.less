@@ -84,9 +84,23 @@
     .responsivecolumns .widget {
         margin: 0 0 20px 0;
     }
+}
 
-    [data-name="content"] {
-        margin-top: 0;
+.widget[data-name="content"] {
+    margin-top: 0;
+}
+.main-content .widget[data-name="content"]:first-child {
+    @media @bp-global-large {
+        margin-top: 60px;
+    }
+    @media @bp-global-medium {
+        margin-top: 40px;
+    }
+    @media @bp-global-small {
+        margin-top: 40px;
+    }
+    @media @mobile {
+        margin-top: 20px;
     }
 }
 
