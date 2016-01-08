@@ -197,10 +197,8 @@
             "color__gallery-description--text" : "@color__body--background"
         },
         "slideshow": {
-            "color__slideshow-caption--background" : "fade(@color__body--background, 80%)",
-            "color__slideshow-title--text" : "@color__p--text",
-            "color__slideshow-description--text" : "@color__p--text",
-            "color__slideshow-pagination-item--background": "@color__secondary"
+            "color__slideshow-title--text" : "#fff",
+            "color__slideshow-description--text" : "#bebebe"
         },
         "feature": {
             "color__feature-content--background": "#26292f",

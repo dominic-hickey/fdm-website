@@ -140,6 +140,10 @@
 	min-height: 50px;
 	margin: 0;
 
+	@media @mobile {
+		top: 3%;
+	}
+
 
 
 	// Button
@@ -150,7 +154,6 @@
 		position: absolute;
 		top: 0;
 		padding: 0;
-		display: block;
 		text-align: center;
 		background-color: transparent;
 		box-shadow: none;
@@ -191,11 +194,22 @@
 // Previous Button
 // ------------------------------
 
+.responsiveslideshow__previous-button:before,
+.responsiveslideshow__next-button:after {
+	@media @mobile {
+		font-size: 26px!important;
+	}
+}
+
 
 .responsiveslideshow__previous-button {
-	left: 0;
-	// Icon
+	left: 20px;
 
+	@media @tablet {
+		left: 0;
+	}
+
+	// Icon
 	&:before {
 		content: '\f104';
 		display: block;
@@ -212,10 +226,13 @@
 
 
 .responsiveslideshow__next-button {
-	right: 0;
+	right: 20px;
+
+	@media @tablet {
+		right: 0;
+	}
 
 	// Icon
-
 	&:after {
 		content: '\f105';
 		display: block;
@@ -235,24 +252,14 @@
 .responsiveslideshow__pause-toggle {
 	top: 0;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	left: 70px;
 	margin: auto;
 
-	@media @bp-global-small {
-		left: 50%;
-		margin-left: -20px;
+	@media @mobile {
+		display: none;
 	}
 
-	.pause-toggle-only & {
-		left: 0;
-		@media @bp-global-small {
-			left: 0;
-  			margin-left: 0;
-		}
-	}
 	// Icon
-
 	&:before {
 		display: block;
 		margin: 0;
@@ -275,67 +282,19 @@
 // ------------------------------
 
 
-
-
 // Caption
 // ------------------------------
 
-
 .responsiveslideshow .caption {
+	.flex-display;
+    .flex-direction(column);
+    .justify-content(center);
 
-}
-
-
-
-
-// Image Title, Image Description
-// ------------------------------
-
-
-.responsiveslideshow__image-title, .responsiveslideshow__image-description {
-	width: auto;
-}
-
-
-
-
-// Image Title
-// ------------------------------
-
-
-.responsiveslideshow__image-title {
-	padding: 0;
+	height: 100%;
 	margin: 0;
-	position: relative;
-	display: inline-block;
-	color: @color__slideshow-title--text;
-	&:after {
-		display: none;
-	}
-}
-
-
-
-
-// Image Description
-// ------------------------------
-
-
-.responsiveslideshow__image-description {
-	color: @color__slideshow-description--text;
-}
-
-
-
-// Caption
-.responsiveslideshow .caption {
-	position: absolute;
-	width: auto;
-	left: 0;
-	bottom: 0;
-	right: auto;
-	padding: 16px 20px;
-	background-color: @color__slideshow-caption--background;
+	padding: 30px;
+	background-color: fade(@color__slideshow-caption--background, 80%);
+	text-align: center;
 
 	@media @bp-global-medium {
 		padding: 10px 25px 15px;
@@ -353,15 +312,67 @@
 
 
 
+// Image Title & Description
+// ------------------------------
+
+.responsiveslideshow__image-title,
+.responsiveslideshow__image-description {
+	width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Image Title
+.responsiveslideshow__image-title {
+	font-size: bkscale(@font__feature-headline--font-size, 0.7);
+	font-weight: @font__feature-headline--font-weight;
+	line-height: @font__feature-headline--line-height;
+	letter-spacing: 2px;
+	color: @color__feature-headline--text;
+	text-transform: uppercase;
+
+	@media @bp-global-medium {
+        font-size: bkscale(@font__feature-headline--font-size, 0.6);
+        line-height: bkscale(@font__feature-headline--line-height, 0.8);
+    }
+    @media @tablet {
+		font-size: bkscale(@font__feature-headline--font-size, 0.4);
+        line-height: bkscale(@font__feature-headline--line-height, 0.6);
+    }
+    @media @mobile {
+		font-size: bkscale(@font__feature-headline--font-size, 0.3);
+        line-height: bkscale(@font__feature-headline--line-height, 0.4);
+    }
+
+	&:after {
+		display: none;
+	}
+}
+
+// Image Description
+.responsiveslideshow__image-description {
+	font-size: bkscale(@font__feature-strapline--font-size, 0.9);
+	font-weight: @font__feature-strapline--font-weight;
+	line-height: @font__feature-strapline--line-height;
+	color: @color__feature-strapline--text;
+
+	@media @bp-global-medium {
+        font-size: bkscale(@font__feature-strapline--font-size, 0.8);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.8);
+    }
+    @media @tablet {
+		font-size: bkscale(@font__feature-strapline--font-size, 0.75);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.75);
+    }
+}
+
 
 
 
 // ------------------------------
 // Slideshow Pagination
 // ------------------------------
-
-
-
 
 
 // Pagination Item
@@ -373,18 +384,15 @@
 	// Button
 
 	.button {
-		background-color: darken(@color__body--background, 15%);
-
-		&:hover {
-			background-color: transparent;
-			box-shadow: inset 0px 0px 0px 5px @color__primary;
-		}
+		opacity: .4;
+		background-color: @color__body--background;
 	}
 
 	// Selected Button
 
 	&.selected .button {
-		background-color: @color__primary;
+		opacity: 1;
+		background-color: @color__body--background;
 	}
 }
 
