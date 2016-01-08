@@ -57,13 +57,13 @@
 
 .main-content .widget {
     @media @bp-global-large {
-        margin: 0 70px 20px;
+        margin: 60px 70px 20px;
     }
     @media @bp-global-medium {
-        margin: 0 40px 20px;
+        margin: 40px 40px 20px;
     }
     @media @bp-global-small {
-        margin: 0 20px 20px;
+        margin: 20px 20px 20px;
     }
 
     // First Widget in the Zone
@@ -74,6 +74,10 @@
         @media @mobile {
             margin-top: 20px;
         }
+    }
+
+    .widget[data-name="content"] {
+        margin-top: 0;
     }
 
     // Widgets in Responsive Columns
