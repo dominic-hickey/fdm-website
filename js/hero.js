@@ -52,3 +52,14 @@ $( window ).resize(function() {
   checkFeatureDimensions();
 });
 
+
+
+$(document).ready(function(){
+
+    // Make feature full height
+    $(".feature__content-wrap").css("height", $(window).height());
+        $(window).bind("resize",function() {
+        $(".feature__content-wrap").css("height", $(window).height());
+    });
+
+});
