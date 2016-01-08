@@ -67,7 +67,8 @@
     }
 
     // First Widget in the Zone
-    &:first-child {
+    &:first-child,
+    [data-name="content"]:first-child {
         @media @bp-global-large {
             margin-top: 60px;
         }
@@ -77,9 +78,12 @@
     }
 
     // Widgets in Responsive Columns
-
     .responsivecolumns .widget {
         margin: 0 0 20px 0;
+    }
+
+    [data-name="content"] {
+        margin-top: 0;
     }
 }
 
@@ -123,14 +127,10 @@
             margin-bottom: 0;
         }
     }
-
-    .widget[data-name="content"] {
-        margin-top: 0;
-    }
 }
 
-// Removes spacing between Menu Navigation and Menu Widget
 
+// Removes spacing between Menu Navigation and Menu Widget
 .widget[data-name="menusections"] + .widget[data-name="menu"] {
     @media @bp-global-large {
          margin-top: -60px;
