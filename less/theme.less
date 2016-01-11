@@ -51,6 +51,19 @@ body {
     position: relative;
     z-index: 9999;
     background-color: @color__body--background;
+
+    @media @bp-global-large {
+        margin-top: 60px;
+    }
+    @media @bp-global-medium {
+        margin-top: 40px;
+    }
+    @media @bp-global-small {
+        margin-top: 30px;
+    }
+    @media @mobile {
+        margin-top: 20px;
+    }
 }
 
 

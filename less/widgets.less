@@ -48,73 +48,30 @@
 // ------------------------------
 
 
-.widget {
-    .clearfix;
-    clear: both;
-}
-
 // Standard Widgets
-
 .main-content .widget {
     @media @bp-global-large {
-        margin: 30px 70px 20px;
+        margin: 0 70px 40px;
     }
     @media @bp-global-medium {
-        margin: 30px 40px 20px;
+        margin: 0 40px 40px;
     }
     @media @bp-global-small {
-        margin: 30px 20px 20px;
+        margin: 0 30px 40px;
     }
     @media @mobile {
-        margin: 20px 20px 20px;
-    }
-
-    // First Widget in the Zone
-    &:first-child,
-    [data-name="content"]:first-child {
-        @media @bp-global-large {
-            margin-top: 60px;
-        }
-        @media @mobile {
-            margin-top: 20px;
-        }
-    }
-
-    // Widgets in Responsive Columns
-    .responsivecolumns .widget {
-        margin: 0 0 20px 0;
-    }
-}
-
-
-.widget[data-name="content"],
-.widget[data-name="responsivecolumns"] .widget[data-name="content"]:first-child {
-    margin-top: 0;
-}
-
-.main-content .widget[data-name="content"]:first-child {
-    @media @bp-global-large {
-        margin-top: 60px;
-    }
-    @media @bp-global-medium {
-        margin-top: 40px;
-    }
-    @media @bp-global-small {
-        margin-top: 40px;
-    }
-    @media @mobile {
-        margin-top: 20px;
+        margin: 0 20px 20px;
     }
 }
 
 // Full Width Widgets
 .main-content {
+    .widget[data-name="responsiveslideshow"],
     .widget[data-name="contactform"],
     .widget[data-name="youtube"],
     .widget[data-name="map"],
     .widget[data-name="youtube"],
     .widget[data-name="gallery"],
-    .widget[data-name="responsiveslideshow"],
     .widget[data-name="signupform"],
     .widget[data-name="blogpostlist"],
     .widget[data-name="blogpost"],
@@ -127,41 +84,10 @@
     .widget[data-name="menu"] {
         margin-left: 0;
         margin-right: 0;
-
-        @media @bp-global-large {
-            margin-top: 60px;
-            margin-bottom: 60px;
-        }
-        @media @bp-global-medium {
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-        @media @bp-global-small {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        &:first-child {
-            margin-top: 0;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 }
 
 
-// Removes spacing between Menu Navigation and Menu Widget
-.widget[data-name="menusections"] + .widget[data-name="menu"] {
-    @media @bp-global-large {
-         margin-top: -60px;
-    }
-    @media @bp-global-medium {
-         margin-top: -40px;
-    }
-    @media @bp-global-small {
-         margin-top: -20px;
-    }
-}
 
 
 // 0.2 Form Elements
