@@ -51,16 +51,16 @@
 // Standard Widgets
 .main-content .widget {
     @media @bp-global-large {
-        margin: 0 70px 40px;
+        margin: 0 70px 80px;
     }
     @media @bp-global-medium {
-        margin: 0 40px 40px;
+        margin: 0 40px 80px;
     }
     @media @bp-global-small {
-        margin: 0 30px 40px;
+        margin: 0 30px 60px;
     }
     @media @mobile {
-        margin: 0 20px 20px;
+        margin: 0 20px 40px;
     }
 }
 
@@ -84,6 +84,10 @@
     .widget[data-name="menu"] {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .widget[data-name="responsivecolumns"] .widget {
+        margin: 0;
     }
 }
 
