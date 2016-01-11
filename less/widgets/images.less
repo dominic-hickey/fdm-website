@@ -48,7 +48,29 @@
 
 
 .imagewidget__caption {
-    padding: 1em 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: fade(@color__slideshow-caption--background, 70%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 10px 25px 15px;
+    }
+
+    @media @bp-global-small {
+        padding: 5px 20px 5px;
+    }
 }
 
 
@@ -58,20 +80,24 @@
 // ------------------------------
 
 
-.image-title {
-    padding-bottom: 0;
-    .heading--4;
+// .imagewidget__image-title {
+//     font-family: @font__feature-headline--font-family;
+//     font-size: 22px;
+//     font-weight: @font__feature-headline--font-weight;
+//     line-height: 30px;
+//     letter-spacing: 1px;
+//     color: @color__feature-headline--text;
+//     text-transform: uppercase;
 
-    @media @bp-global-medium {
-        font-size: bkscale(@font__h4--font-size, 0.9);
-        line-height: bkscale(@font__h4--line-height, 0.9);
-    }
-
-    @media @bp-global-small {
-        font-size: bkscale(@font__h4--font-size, 0.7);
-        line-height: bkscale(@font__h4--line-height, 0.7);
-    }
-}
+//     @media @tablet {
+//         font-size: 28px;
+//         line-height: 32px;
+//     }
+//     @media @mobile {
+//         font-size: 22px;
+//         line-height: 28px;
+//     }
+// }
 
 
 
@@ -79,16 +105,12 @@
 // Image Description
 // ------------------------------
 
-
-.image-description {
-    font-size: bkscale(@font__p--font-size, 0.9);
-    line-height: bkscale(@font__p--line-height, 0.9);
-
-    @media @bp-global-small {
-        font-size: bkscale(@font__p--font-size, 0.8);
-        line-height: bkscale(@font__p--line-height, 0.8);
-    }
-}
+// .imagewidget__image-description {
+//     font-size: 12px;
+//     font-weight: @font__feature-strapline--font-weight;
+//     line-height: 26px;
+//     color: @color__feature-strapline--text;
+// }
 
 
 

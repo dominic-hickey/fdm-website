@@ -141,7 +141,8 @@
 	margin: 0;
 
 	@media @mobile {
-		top: 3%;
+		top: inherit;
+		bottom: 0;
 	}
 
 
@@ -316,7 +317,9 @@
 // ------------------------------
 
 .responsiveslideshow__image-title,
-.responsiveslideshow__image-description {
+.responsiveslideshow__image-description,
+.imagewidget__image-title,
+.imagewidget__image-description {
 	width: 100%;
     max-width: 760px;
     margin: 0 auto;
@@ -324,50 +327,47 @@
 }
 
 // Image Title
-.responsiveslideshow__image-title {
-	font-size: bkscale(@font__feature-headline--font-size, 0.7);
+.responsiveslideshow__image-title,
+.imagewidget__image-title {
+	font-family: @font__feature-headline--font-family;
+	font-size: 46px;
 	font-weight: @font__feature-headline--font-weight;
-	line-height: @font__feature-headline--line-height;
+	line-height: 64px;
 	letter-spacing: 2px;
 	color: @color__feature-headline--text;
 	text-transform: uppercase;
 
 	@media @bp-global-medium {
-        font-size: bkscale(@font__feature-headline--font-size, 0.6);
-        line-height: bkscale(@font__feature-headline--line-height, 0.8);
+        font-size: 36px;
+        line-height: 56px;
     }
     @media @tablet {
-		font-size: bkscale(@font__feature-headline--font-size, 0.4);
-        line-height: bkscale(@font__feature-headline--line-height, 0.6);
+		font-size: 28px;
+        line-height: 32px;
     }
     @media @mobile {
-		font-size: bkscale(@font__feature-headline--font-size, 0.3);
-        line-height: bkscale(@font__feature-headline--line-height, 0.3);
+		font-size: 22px;
+        line-height: 28px;
     }
-
-	&:after {
-		display: none;
-	}
 }
 
+
 // Image Description
-.responsiveslideshow__image-description {
-	font-size: bkscale(@font__feature-strapline--font-size, 0.9);
+.responsiveslideshow__image-description,
+.imagewidget__image-description,
+.gallery__image-description {
+	font-size: 14px;
 	font-weight: @font__feature-strapline--font-weight;
-	line-height: @font__feature-strapline--line-height;
+	line-height: 26px;
 	color: @color__feature-strapline--text;
 
-	@media @bp-global-medium {
-        font-size: bkscale(@font__feature-strapline--font-size, 0.8);
-        line-height: bkscale(@font__feature-strapline--line-height, 0.8);
-    }
     @media @tablet {
-		font-size: bkscale(@font__feature-strapline--font-size, 0.75);
-        line-height: bkscale(@font__feature-strapline--line-height, 0.75);
+		font-size: 12px;
+        line-height: 30px;
     }
     @media @mobile {
-		font-size: bkscale(@font__feature-strapline--font-size, 0.7);
-        line-height: bkscale(@font__feature-strapline--line-height, 0.6);
+		font-size: 11px;
+		line-height: 26px;
     }
 }
 
@@ -419,7 +419,7 @@
 
 	@media @bp-global-small {
 		min-height: 40px;
-		bottom: -20px;
+		bottom: -4px;
 	}
 }
 

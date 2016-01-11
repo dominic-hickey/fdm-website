@@ -192,9 +192,9 @@
             "font__button--letter-spacing" : "2px"
         },
         "gallery": {
-            "color__gallery-caption--background" : "fade(@color__p--text, 50%)",
-            "color__gallery-title--text" : "@color__body--background",
-            "color__gallery-description--text" : "@color__body--background"
+            "color__gallery-caption--background" : "#26292f",
+            "color__gallery-title--text" : "#fff",
+            "color__gallery-description--text" : "#bebebe"
         },
         "slideshow": {
             "color__slideshow-title--text" : "#fff",

@@ -76,7 +76,6 @@
 // Captions fade in/out
 
 .caption-link {
-	background-color: @color__gallery-caption--background;
 	padding: 40px;
 	position: absolute;
 	top: 0;
@@ -96,9 +95,9 @@
 	transform: scale(1.5);
 
     @media @bp-global-medium {
-        padding: 30px;
+        padding: 20px;
     }
-    @media @bp-global-small {
+    @media @mobile {
         padding: 20px;
     }
 
@@ -109,42 +108,24 @@
 		-o-transform: scale(1);
 		-ms-transform: scale(1);
 		transform: scale(1);
+		background-color: fade(@color__gallery-caption--background, 70%);
 	}
 }
 
 // Image Title
-
 .gallery__image-title {
+	margin-bottom: 10px;
+	font-family: @font__feature-headline--font-family;
+	font-size: 18px;
+	font-weight: @font__feature-headline--font-weight;
+	line-height: 26px;
+	letter-spacing: 1px;
 	color: @color__gallery-title--text;
-	margin-top: 0;
-
-	font-family: @font__h1--font-family;
-    font-size: @font__h4--font-size;
-    line-height: @font__h4--line-height;
-    padding-bottom: 0.6em;
-    @media @bp-global-medium {
-        font-size: bkscale(@font__h4--font-size, 0.9);
-        line-height: bkscale(@font__h4--line-height, 0.9);
-    }
-
-    @media @bp-global-small {
-        font-size: bkscale(@font__h4--font-size, 0.7);
-        line-height: bkscale(@font__h4--line-height, 0.7);
-    }
-
-	&:after {
-		background-color: @color__gallery-title--text;
-	}
+	text-transform: uppercase;
 }
-
-
-// Gallery Image Description
 
 .gallery__image-description {
 	color: @color__gallery-description--text;
-	@media @mobile {
-		display: none;
-	}
 }
 
 
