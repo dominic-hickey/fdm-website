@@ -90,7 +90,11 @@
     }
 
     .widget[data-name="responsivecolumns"] .widget {
-        margin: 0;
+        margin: 0 0 20px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -99,6 +103,13 @@
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+// Button
+.widget[data-name="content"] {
+    @media @bp-global-large {
+        margin-bottom: 20px;
+    }
 }
 
 
