@@ -197,6 +197,7 @@
             "color__gallery-description--text" : "#bebebe"
         },
         "slideshow": {
+            "color__slideshow-caption--background": "#26292f",
             "color__slideshow-title--text" : "#fff",
             "color__slideshow-description--text" : "#bebebe"
         },
