@@ -1,0 +1,55 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--default">
+
+
+    {% include "includes/header.twig" %}
+
+
+    <div class="page-title">
+        {{widget('pagetitle', 'page-title', {})|raw}}
+    </div>
+
+
+    <!-- Zone Content -->
+    <div class="main-content">
+        <div class="container">
+
+            {{widget('responsiveslideshow', 'slideshow', {
+                'duration':'3',
+                'transSpeed': '1000',
+                'transType': 'fade',
+                'showButtons': true,
+                'showBullets': true,
+                'allowPause': false,
+                'allowLoop': true,
+                'crop': true,
+                'images':[
+                    {
+                        'url':'/images/slideshow/slideshow-image--1.jpg',
+                        'title':'Kings template',
+                        'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                    },
+                    {
+                        'url':'/images/slideshow/slideshow-image--2.jpg',
+                        'title':'Kings template',
+                        'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                    },
+                    {
+                        'url':'/images/slideshow/slideshow-image--3.jpg',
+                        'title':'Kings template',
+                        'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                    }
+                ]})|raw}}
+
+            {{zone('main')|raw}}
+
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock %}

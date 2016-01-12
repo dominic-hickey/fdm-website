@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"kings.png",
     "templateType":"standard",
-    "pageTypes": ["home"],
+    "pageTypes": [ "home", "slideshow" ],
     "screenshot":"kings-screenshot.jpg",
      "images":[
         "images/gallery/gallery-image--1.jpg",

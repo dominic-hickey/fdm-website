@@ -37,6 +37,10 @@ body {
 // Site Container
 .site-container {
     width: 100%;
+    .flex-display;
+    .flex-direction(column);
+    height: 100%;
+    min-height: 100vh;
     background-color: @color__body--background;
 
     @media @bp-global-above-fullwidth {
@@ -67,15 +71,26 @@ body {
 }
 
 
-@color__primary--alt : darken(desaturate(@color__primary, 10%), 5%);
-@color__secondary-alt : lighten(saturate(@color__secondary, 1%), 4%);
 
 
+// Page Styles
+// ------------------------------
+
+.page {
+    .flex(1 1 auto);
+
+    // Default Page
+    &--default .main-content {
+        margin-top: 0;
+
+        .widget:first-child {
+            margin-top: 60px;
+        }
+    }
+}
 
 
 // Page Title
-// ------------------------------
-
 .pagetitle {
     padding: 6px 70px;
     background-color: @color__secondary;
@@ -89,6 +104,7 @@ body {
     }
 }
 
+// Page Title Text
 .pagetitle-text {
     padding-bottom: 0;
     .heading--4;
@@ -98,24 +114,6 @@ body {
         line-height: bkscale(@font__h4--line-height, 0.7);
     }
 }
-
-
-
-
-// Avoids Floating Footer
-// ------------------------------
-
-.site-container {
-    .flex-display;
-    .flex-direction(column);
-    height: 100%;
-    min-height: 100vh;
-}
-
-.page {
-    .flex(1 1 auto);
-}
-
 
 
 

@@ -67,6 +67,7 @@
 // Full Width Widgets
 .main-content {
     .widget[data-name="responsiveslideshow"],
+    .widget[data-widget-type="responsiveslideshow"],
     .widget[data-name="contactform"],
     .widget[data-name="youtube"],
     .widget[data-name="map"],
@@ -85,6 +86,7 @@
     .widget[data-name="image"] {
         margin-left: 0;
         margin-right: 0;
+        margin-top: 0!important; // Ensures correct spacing for default pages
     }
 
     .widget[data-name="responsivecolumns"] .widget {
@@ -98,15 +100,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
-// Max height for image widget
-// .widget[data-name="image"] {
-//     max-height: 650px;
-
-//     .image {
-//         max-height: 100%;
-//     }
-// }
 
 
 
