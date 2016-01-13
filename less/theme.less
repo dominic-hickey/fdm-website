@@ -122,6 +122,13 @@ body {
 // #Header
 // ------------------------------
 
+.drag-active .template-header & {
+    z-index: 10100;
+}
+.drag-active .template-header {
+    z-index: 10100;
+}
+
 
 .template-header {
     position: absolute;
@@ -230,7 +237,7 @@ body {
     position: relative;
     z-index: 50;
     width: 100%;
-    margin-top: 70px;
+    // margin-top: 70px;
     background-color: @color__body--background;
     border-top: 1px solid darken(@color__body--background, 10%);
     text-align: center;
