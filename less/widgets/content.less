@@ -9,7 +9,14 @@ h3, .heading--3 {color: @color__h3--text;}
 h4, .heading--4 {color: @color__h4--text;}
 
 h1, h2, h3, h4, p {
+	padding-bottom: 10px;
 	-webkit-font-smoothing: antialiased;
+}
+
+.content h1, h2, h3, h4, p {
+	&:last-child {
+		padding-bottom: 0;
+	}
 }
 
 .content,

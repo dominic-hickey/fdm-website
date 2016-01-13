@@ -98,6 +98,10 @@
 
         @media @mobile {
             margin: 0 0 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &:first-child {
@@ -108,6 +112,16 @@
     .widget[data-name="responsivecolumns"] .widget[data-name="content"] {
         @media @mobile {
             margin-bottom: 20px;
+        }
+    }
+
+    .column {
+        @media @mobile {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
