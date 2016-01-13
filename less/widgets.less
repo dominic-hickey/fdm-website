@@ -91,9 +91,17 @@
 
     .widget[data-name="responsivecolumns"] .widget {
         margin: 0 0 40px 0;
+
+        @media @mobile {
+            margin-bottom: 20px;
+        }
     }
     .widget[data-name="responsivecolumns"] .widget[data-name="content"] {
         margin-bottom: 20px;
+
+        @media @mobile {
+            margin-bottom: 10px;
+        }
     }
 }
 
