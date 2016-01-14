@@ -56,18 +56,18 @@ body {
     z-index: 50;
     background-color: @color__body--background;
 
-    // @media @bp-global-large {
-    //     margin-top: 70px;
-    // }
-    // @media @bp-global-medium {
-    //     margin-top: 60px;
-    // }
-    // @media @bp-global-small {
-    //     margin-top: 30px;
-    // }
-    // @media @mobile {
-    //     margin-top: 20px;
-    // }
+    @media @bp-global-large {
+        margin-top: @value__widget--spacing--desktop;
+    }
+    @media @bp-global-medium {
+        margin-top: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-top: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-top: @value__widget--spacing--mobile;
+    }
 }
 
 
@@ -122,24 +122,13 @@ body {
 // #Header
 // ------------------------------
 
-.drag-active .template-header & {
-    z-index: 10100;
-}
-.drag-active .template-header {
-    z-index: 10100;
-}
-
-
 .template-header {
     position: absolute;
     top: 0;
     z-index: 10002;
     width: 90%;
-    // min-height: 150px;
     max-width: 1800px;
     padding: 30px 70px;
-    // background-color: @color__header--background;
-    // .gradient(@color__header--background, transparent);
 
     @media @bp-global-below-fullwidth {
         width: 100%;
@@ -148,8 +137,13 @@ body {
         padding: 30px 40px;
     }
     @media @tablet {
-        // min-height: 100px;
         padding: 20px;
+    }
+    @media @mobile {
+        position: relative;
+        order: 1;
+        padding: 0 0 20px;
+        background-color: @color__header--background;
     }
 
 
@@ -158,6 +152,10 @@ body {
 		.flex-display;
 		.justify-content(space-between);
         .align-items(center);
+
+        @media @mobile {
+            display: block;
+        }
 	}
 
     // Flex Item
@@ -165,13 +163,27 @@ body {
         width: 33.333%;
 
         @media @mobile {
-            width: 60%;
+            width: 100%;
 
-            &:first-child,
-            &:last-child {
-                width: 20%;
+            &:first-child {
+                .flex-display;
+                .flex-direction(column);
+                .justify-content(center);
+                width: 80%;
+                padding: 0;
+                background-color: darken(@color__header--background, 2%);
+                min-height: 42px;
             }
-
+            &:nth-child(2) {
+                margin-top: 20px;
+            }
+            &:last-child {
+                position: absolute;
+                top: -2px;
+                right: 0;
+                width: 20%;
+                background-color: darken(@color__header--background, 2%);
+            }
         }
     }
 

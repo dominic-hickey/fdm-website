@@ -3,6 +3,21 @@
 // ----------------------------------------
 
 
+// Hero
+// ------------------------------
+
+.hero {
+    @media @mobile {
+        .flex-display;
+        .flex-direction(column);
+    }
+
+    [data-widget-type="feature"] {
+        order: 2;
+    }
+}
+
+
 // Background Image
 // ------------------------------
 
@@ -33,7 +48,7 @@
     .flex-display;
     .align-items(center);
 
-    height: 900px;
+    height: @value__feature--height--desktop;
     padding: 30px;
     overflow: auto;
     background-color: fade(@color__feature-content--background, 80%);
@@ -42,11 +57,10 @@
         height: 800px;
     }
     @media @tablet {
-        height: 700px;
+        height: @value__feature--height--tablet;
     }
     @media @mobile {
-        height: auto;
-        padding: 80px 20px 40px;
+        height: @value__feature--height--mobile;
     }
 
 }
@@ -89,6 +103,7 @@
         line-height: bkscale(@font__feature-headline--line-height, 0.7);
     }
     @media @mobile {
+        margin-top: 0;
         font-size: bkscale(@font__feature-headline--font-size, 0.5);
         line-height: bkscale(@font__feature-headline--line-height, 0.5);
     }
@@ -158,7 +173,7 @@
 .feature-arrow {
     position: absolute;
     top: 800px;
-    z-index: 10009;
+    z-index: 9999;
     max-width: 1800px;
     opacity: .6;
 

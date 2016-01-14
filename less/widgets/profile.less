@@ -66,7 +66,7 @@
         margin-bottom: 20px;
     }
     .input {
-        width: 250px;
+        max-width: 250px;
         margin-right: 20px;
     }
 
@@ -79,6 +79,21 @@
 .template-header {
 
     .profile {
+        @media @mobile {
+            padding-left: 20px;
+
+            .twitter,
+            .companyaddress,
+            .companydescription,
+            .companycopyright {
+                padding-top: 6px;
+            }
+            .companyheadline,
+            .companystrapline {
+                padding: 9px 0 6px;
+                line-height: 18px;
+            }
+        }
 
         // Typography
         a, h2, h3, p {
@@ -94,13 +109,33 @@
             text-transform: uppercase;
             -webkit-font-smoothing: inherit;
 
-            &:before {
-                display: none;
+            @media @mobile {
+                line-height: 18px;
+            }
+        }
 
-                @media @tablet {
+
+        // Email
+        .emailaddress__email {
+            @media @mobile {
+                .flex-display;
+                color: @color__header--background;
+
+                &:before,
+                &:after {
+                    font-family: 'FontAwesome', sans-serif;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+                .icon:before { margin-right: 5px; }
+                .icon:after  { margin-left:  5px; }
+
+                &:before {
                     display: inline-block;
-                    font-size: 26px;
-                    line-height: 47px;
+                    content: "\f003";
+                    font-size: 22px;
+                    color: #fff;
                 }
             }
         }
@@ -112,8 +147,21 @@
                 display: none;
             }
         }
+        .phone-number-link:before {
+            display: none;
+
+            @media @mobile {
+                position: relative;
+                top: 3px;
+                display: inline-block;
+                font-size: 21px;
+            }
+        }
 
         // Address
+        .companyaddress {
+            margin-left: -10px;
+        }
         .address p {
             font-size: 12px;
             line-height: 22px;
@@ -123,14 +171,27 @@
         .strapline,
         .description,
         .tweet-content,
-        .tweet-content a {
+        .tweet-content a,
+        .copyright {
             font-size: 12px;
             line-height: 22px;
+
+            @media @mobile {
+                line-height: 18px;
+            }
         }
 
         // Social Icons
         .social-item {
             margin-right: 16px;
+
+            @media @mobile {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
         .social-link:before {
             width: auto;
@@ -159,6 +220,11 @@
         // Form
         // ----------
 
+        .signupform {
+            margin-left: -20px;
+            padding-bottom: 0;
+        }
+
         .legend {
             display: none;
         }
@@ -172,11 +238,20 @@
         .button {
             .feature__button;
             margin: 0;
-            line-height: 40px;
             box-shadow: none;
+            line-height: 40px;
+
+            @media @mobile {
+                border-top: 0;
+                border-bottom: 0;
+                border-left: 0;
+                border-top-color: @color__header--background;
+                line-height: 44px;
+            }
         }
         .input {
             max-width: 170px;
+            margin-top: 0;
         }
 
         // Placeholder
@@ -211,6 +286,7 @@
 
         // Button
         .button {
+            margin-top: 0;
             padding: 0 10px;
             border-left: 0;
         }

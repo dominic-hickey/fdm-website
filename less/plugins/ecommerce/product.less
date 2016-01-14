@@ -285,6 +285,10 @@
         padding: 10px;
         height: 300px;
     }
+    @media @mobile {
+        padding: 10px;
+        height: 200px;
+    }
 }
 
 // Image
@@ -386,7 +390,8 @@
 
     // Button
     .button {
-        background-color: darken(@color__ecomproductslist-filters--background, 5%);
+        background-color: @color__body--background;
+        margin-bottom: 10px;
 
         &:hover {
             background-color: darken(@color__ecomproductslist-filters--background, 9%);
