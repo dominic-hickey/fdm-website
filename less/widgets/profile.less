@@ -117,7 +117,7 @@
 
         // Email
         .emailaddress__email {
-            @media @mobile {
+            @media @tablet {
                 .flex-display;
                 color: @color__header--background;
 
@@ -150,10 +150,13 @@
         .phone-number-link:before {
             display: none;
 
-            @media @mobile {
+            @media @tablet {
                 position: relative;
                 top: 3px;
                 display: inline-block;
+                font-size: 24px;
+            }
+            @media @mobile {
                 font-size: 21px;
             }
         }
