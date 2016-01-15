@@ -10,10 +10,8 @@ html, body {
 
 
 .template-navigation {
-    min-width: 50px;
-
     @media @mobile {
-    	margin-right: 20px;
+    	// margin-right: 6px;
     }
 }
 
@@ -114,7 +112,7 @@ html, body {
     text-align: center;
 
     @media @mobile {
-    	margin-top: 30%;
+    	margin-top: 20%;
     }
 }
 
@@ -342,10 +340,9 @@ html, body {
 
 	@media @mobile {
 		top: 1px;
-		right: -10px;
+		right: 0;
 		padding-left: 0;
-		height: 44px;
-		padding: 21px 10px;
+		height: 46px;
 	}
 
 	&:hover {
@@ -380,15 +377,27 @@ html, body {
 	}
 
 
-
-
 	// Toggle Button open state
 	// ------------------------------
 
 	.open & {
-		background-color: fade(@color-swatch7, 0%);
+		position: fixed;
 		z-index: 100000;
-		position: relative;
+		top: 30px;
+		right: 70px;
+		background-color: fade(@color-swatch7, 0%);
+
+		@media @bp-global-medium {
+			right: 40px;
+		}
+		@media @tablet {
+			top: 20px;
+			right: 20px;
+		}
+		@media @mobile {
+			top: 0;
+			right: 0;
+		}
 
 		&:before {
 			top: 23px;
@@ -396,10 +405,6 @@ html, body {
 			-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
 			-o-transform: rotate(45deg); -ms-transform: rotate(45deg);
 			transform: rotate(45deg);
-
-			@media @mobile {
-				top: 21px;
-			}
 
 		}
 		&:after {

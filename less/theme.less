@@ -93,7 +93,7 @@ body {
 // Page Title
 .pagetitle {
     padding: 6px 70px;
-    background-color: @color__secondary;
+    background-color: darken(@color__body--background, 4%);
     border-bottom: 1px solid darken(@color__body--background, 10%);
 
     @media @bp-global-medium {
@@ -112,6 +112,7 @@ body {
     @media @mobile {
         font-size: bkscale(@font__h4--font-size, 0.7);
         line-height: bkscale(@font__h4--line-height, 0.7);
+        text-align: center;
     }
 }
 
@@ -173,7 +174,8 @@ body {
                 width: 80%;
                 padding: 0;
                 background-color: darken(@color__header--background, 2%);
-                min-height: 42px;
+                border-bottom: 1px solid lighten(@color__header--background, 5%);
+                min-height: 43px;
             }
             &:nth-child(2) {
                 margin-top: 20px;
@@ -184,6 +186,7 @@ body {
                 right: 0;
                 width: 20%;
                 background-color: darken(@color__header--background, 2%);
+                border-bottom: 1px solid lighten(@color__header--background, 5%);
             }
         }
     }
@@ -213,13 +216,70 @@ body {
 .page--default .template-header {
     position: relative;
     width: 100%;
-    background: @color__body--background;
+    background-color: @color__body--background;
     min-height: auto;
     border-bottom: 1px solid darken(@color__body--background, 10%);
 
-    .phone-number-link,
-    .company-link {
-        color: @color__h2--text;
+
+    // Flex Item
+    @media @mobile {
+        .flex-item:first-child,
+        .flex-item:last-child {
+            background-color: darken(@color__body--background, 4%);
+            border-bottom: 1px solid darken(@color__body--background, 10%);
+        }
+    }
+
+    // Profile Widget
+    .profile {
+
+        p, h2, h3,
+        .phone-number-link,
+        .company-link,
+        .social-link:before,
+        .button {
+            color: @color__h2--text;
+        }
+
+        // Twitter
+        .tweet-content a {
+            color: @color__primary;
+        }
+
+        // Form
+        .input {
+            color: @color__h2--text;
+            border-color: darken(@color__body--background, 10%);
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+            border-right: 1px solid darken(@color__body--background, 10%);
+        }
+
     }
     .navigation-toggle {
         background-color: @color__h2--text;
@@ -236,7 +296,6 @@ body {
         }
     }
 }
-
 
 
 
