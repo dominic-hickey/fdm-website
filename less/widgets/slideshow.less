@@ -59,6 +59,22 @@
 }
 
 
+// Slideshow Height
+.responsiveslideshow__figure,
+.responsiveslideshow__slides-list {
+	min-height: 100px;
+	max-height: 700px;
+	padding-bottom: @value__slideshow--height--desktop;
+
+	@media @tablet {
+		padding-bottom: @value__slideshow--height--tablet;
+	}
+	@media @mobile {
+		padding-bottom: @value__slideshow--height--mobile;
+	}
+}
+
+
 
 
 // ------------------------------
@@ -66,15 +82,10 @@
 // ------------------------------
 
 .responsiveslideshow__slides-list {
-	min-height: 100px;
-	padding-bottom: 40%;
 	position: relative;
 	overflow: hidden;
 
 
-	@media @tablet {
-		padding-bottom: 54%;
-	}
 }
 
 
@@ -107,15 +118,8 @@
 
 
 .responsiveslideshow__figure {
-	min-height: 100px;
-	max-height: 700px;
-	padding-bottom: 40%;
 	background-size: cover;
 	background-position: center;
-
-	@media @tablet {
-		padding-bottom: 54%;
-	}
 }
 
 
@@ -343,7 +347,7 @@
     }
     @media @mobile {
 		font-size: 22px;
-        line-height: 28px;
+        line-height: 20px;
     }
 }
 
@@ -363,7 +367,7 @@
     }
     @media @mobile {
 		font-size: 11px;
-		line-height: 26px;
+		line-height: 18px;
     }
 }
 

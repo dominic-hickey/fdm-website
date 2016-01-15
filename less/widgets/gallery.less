@@ -10,8 +10,8 @@
 .gallery__gallery-item {
 	float: left;
 	height: 0; // Height is achieved using padding-bottom
-	width: 20%;
-	padding-bottom: 20%;
+	width: @value__gallery--width--desktop;
+	padding-bottom: @value__gallery--width--desktop;
 	overflow: hidden;
 	position: relative;
 	margin: 0;
@@ -19,22 +19,22 @@
 
 	// 4 Columns Layout
 	@media @bp-global-medium {
-		width: 25%;
-		padding-bottom: 25%;
+		width: @value__gallery--width--laptop;
+		padding-bottom: @value__gallery--width--laptop;
 	}
 
 
 	// 3 Columns Layout
 	@media @tablet {
-		width: 33.33%;
-		padding-bottom: 33.33%;
+		width: @value__gallery--width--tablet;
+		padding-bottom: @value__gallery--width--tablet;
 	}
 
 
 	// 2 Columns Layout
 	@media @mobile {
-		width: 50%;
-		padding-bottom: 50%;
+		width: @value__gallery--width--mobile;
+		padding-bottom: @value__gallery--width--mobile;
 	}
 }
 

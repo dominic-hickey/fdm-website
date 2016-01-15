@@ -21,19 +21,6 @@ html, body {
 // --------------------------------
 
 
-// Page Content, when nav is open
-// ------------------------------
-
-
-.page-content.navigation--open {
-	max-height: 100vh;
-	overflow: hidden;
-	width: -webkit-calc(100% - 0px);
-}
-
-
-
-
 // Navigation Body
 // ------------------------------
 
@@ -52,7 +39,6 @@ html, body {
 }
 
 // When nav is open
-
 .widget__extendednavigation.open .navigation-body {
 	display: block;
 	z-index: 10010;
@@ -66,13 +52,14 @@ html, body {
 	left: 0;
 	height: 100%;
 	opacity: 1;
+
 	@media @mobile {
 		padding-bottom: 45px;
 	}
 }
 
-// Open navigation page overlay
 
+// Open navigation page overlay
 .widget__extendednavigation {
 	&:after {
 		content: "";
@@ -93,8 +80,10 @@ html, body {
 	}
 
 	&.open:after {
-		background-color: @color__primary;
 		height: auto;
+		max-width: @value__container--width;
+		margin: 0 auto;
+		background-color: @color__primary;
 		opacity: 1;
 	}
 }
@@ -316,7 +305,7 @@ html, body {
 
 
 // ------------------------------
-//  4.   Pull Down Navigation
+//  4.   Navigation Toggle
 // ------------------------------
 
 .navigation-toggle {
@@ -341,8 +330,8 @@ html, body {
 	@media @mobile {
 		top: 1px;
 		right: 0;
-		padding-left: 0;
-		height: 46px;
+		padding: 21px 10px;
+		height: 44px;
 	}
 
 	&:hover {
@@ -381,23 +370,9 @@ html, body {
 	// ------------------------------
 
 	.open & {
-		position: fixed;
+		position: relative;
 		z-index: 100000;
-		top: 30px;
-		right: 70px;
 		background-color: fade(@color-swatch7, 0%);
-
-		@media @bp-global-medium {
-			right: 40px;
-		}
-		@media @tablet {
-			top: 20px;
-			right: 20px;
-		}
-		@media @mobile {
-			top: 0;
-			right: 0;
-		}
 
 		&:before {
 			top: 23px;
@@ -405,6 +380,10 @@ html, body {
 			-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
 			-o-transform: rotate(45deg); -ms-transform: rotate(45deg);
 			transform: rotate(45deg);
+
+			@media @mobile {
+				top: 21px;
+			}
 
 		}
 		&:after {
