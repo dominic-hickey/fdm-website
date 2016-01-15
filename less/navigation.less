@@ -58,6 +58,16 @@ html, body {
 	}
 }
 
+.widget__extendednavigation {
+	+ .widget-overlay {
+		display: none;
+	}
+
+	&.open + .widget-overlay {
+		display: inline-block;
+	}
+}
+
 
 // Open navigation page overlay
 .widget__extendednavigation {

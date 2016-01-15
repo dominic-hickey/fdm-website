@@ -164,6 +164,14 @@ body {
     .flex-item {
         width: 33.333%;
 
+        @media @tablet {
+            width: 40%;
+
+            &:first-child,
+            &:last-child {
+                width: 30%;
+            }
+        }
         @media @mobile {
             width: 100%;
 

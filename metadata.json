@@ -184,7 +184,6 @@
             "color__button--text" : "#7e8a8e",
             "color__button--background--hover": "darken(@color__button--background, 4%)",
             "color__button--text--hover" : "@color__button--text",
-            "color__button--border" : "@font-swatch7-color",
             "font__button--font-family" : "@font-swatch7-font-family",
             "font__button--font-size" : "13px",
             "font__button--font-weight" : "700",
