@@ -246,6 +246,17 @@ body {
             color: @color__primary;
         }
 
+         // Email
+        .emailaddress__email {
+            @media @tablet {
+                color: darken(@color__body--background, 4%);
+
+                &:before {
+                    color: @color__h2--text;
+                }
+            }
+        }
+
         // Form
         .input {
             color: @color__h2--text;

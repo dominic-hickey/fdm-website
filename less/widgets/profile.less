@@ -105,7 +105,7 @@
             font-weight: 400;
             line-height: 22px;
             letter-spacing: 3px;
-            color: @color__companyname--text;
+            color: @color__feature-headline--text;
             text-transform: uppercase;
             -webkit-font-smoothing: inherit;
 
@@ -128,14 +128,12 @@
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
                 }
-                .icon:before { margin-right: 5px; }
-                .icon:after  { margin-left:  5px; }
 
                 &:before {
                     display: inline-block;
                     content: "\f003";
                     font-size: 22px;
-                    color: #fff;
+                    color: @color__feature-headline--text;
                 }
             }
         }
@@ -226,6 +224,10 @@
         .signupform {
             margin-left: -20px;
             padding-bottom: 0;
+
+            @media @mobile {
+                max-height: 43px;
+            }
         }
 
         .legend {
@@ -256,6 +258,10 @@
         .input {
             max-width: 170px;
             margin-top: 0;
+
+            @media @mobile {
+                max-width: 140px;
+            }
         }
 
         // Placeholder
