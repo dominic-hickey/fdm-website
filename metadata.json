@@ -219,17 +219,17 @@
             "color__feature-button--background" : "transparent"
         },
         "menu": {
-            "color__menusections--background" : "darken(desaturate(@color__primary, 10%), 5%)",
-            "color__menu--background" : "fade(@color__p--text, 3%)",
-            "color__menu-section-header--background" : "@color__primary",
-            "color__menu-section-featured--background" : "@color__primary"
+            "color__menusections--background" : "@color__secondary",
+            "color__menu--background" : "fade(@color__secondary, 3%)",
+            "color__menu-section-header--background" : "@color__secondary",
+            "color__menu-section-featured--background" : "@color__secondary"
         },
         "blog": {
             "color__blogsearch-legend--background" : "@color__form-legend--background",
             "color__blogsearch-legend--text" : "@color__form-legend--text",
-            "color__blogpostlist-article--background" : "@color__primary",
-            "color__blogpost-title--background" : "@color__primary",
-            "color__blogpost-title--text" : "@color__p--text"
+            "color__blogpostlist-article--background" : "@color__secondary",
+            "color__blogpost-title--background" : "@color__secondary",
+            "color__blogpost-title--text" : "@color__h1--text"
         },
         "ecommerce": {
             "color__ecomproductslist-product-title--text" : "@color__p--text",
