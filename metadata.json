@@ -118,7 +118,7 @@
     },
     "styles": {
         "colors": {
-            "color__primary": "@color__h1--text",
+            "color__primary": "@color__link--text",
             "color__secondary": "#f5f6f7"
         },
         "site": {
@@ -215,7 +215,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
             "color__feature-strapline--text" : "#bebebe",
             "color__feature-button--text" : "@color__body--background",
-            "color__feature-button--border" : "fade(@color__body--background, 6%)",
+            "color__feature-button--border" : "fade(@color__body--background, 10%)",
             "color__feature-button--background" : "transparent"
         },
         "menu": {
