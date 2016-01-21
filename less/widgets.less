@@ -1,360 +1,239 @@
-// -----------------------------
-// Scribe Template: CSS > Widgets
-// -----------------------------
+// -------------------------------------
+// Kings Template: LESS > Widgets
+// -------------------------------------
+
 
 // -----------------------------
 // #Table of Contents
 // -----------------------------
 
-// -----------------------------
-// #Table Of Contents
-// -----------------------------
+//  INCLUDES
+//  --------
 
-//  0.   #Widget Components
-//  0.1  -- #Widget Wrapper
-//  0.2  -- #Form Elements
-//  0.3  -- #Pagination
-//  1.   #Logo
-//  2.   #Company Name
-//  3.   #Navigation
-//  4.   #Feature
-//  5.   #Buttons
-//  5.1  -- #Standard
-//  5.2  -- #Dropbox
-//  5.3  -- #Click To Call
-//  6.   #Image
-//  7.   #Gallery
-//  8.   #Slideshow
-//  9.   #Contact Form
-// 10.   #Signup Form
-// 11.   #Social List
-// 12.   #Twitter Feed
-// 13.   #Divider (Keyline)
-// 14.   #Profile
-// 15.   #Map
-// 16.   #Content Widget
-// 17.   #Yelp Review
+//  #Widget Spacing
 
+//  #Profile
+//  #Content
 
+//  #Forms (General)
+//  #Contact Form
+//  #Sign Up Form
 
+//  #Navigation
+//  #Feature
+//  #Gallery
+//  #Slideshow
 
-// -----------------------------
-// Standard Widgets
-// -----------------------------
+//  #Twitter
+//  #Social List
+//  #Yelp Review
 
-.widget--zone-widget {
-    margin: 0;
-}
 
-.main-content .widget {
-    margin: 0 @value__widget--spacing--desktop @value__widget--spacing--desktop;
+//  IN FILE
+//  --------
 
-    @media @bp-global-medium {
-        margin: 0 @value__widget--spacing--laptop @value__widget--spacing--laptop;
-    }
-    @media @tablet {
-        margin: 0 @value__widget--spacing--tablet @value__widget--spacing--tablet;
-    }
-    @media @mobile {
-        margin: 0 @value__widget--spacing--mobile @value__widget--spacing--mobile;
-    }
+//  #Logo & Company Name
+//  #Company Name
+//  #Buttons
+//  #Dropbox
+//  #Click to Call
+//  #Images
+//  #Divider (Keyline)
 
-    &:first-child {
-        margin-top: 0;
-    }
-}
 
-
-
-
-// Full Width Widgets
-// -----------------------------
-
-.main-content {
-    .widget[data-name="responsiveslideshow"],
-    .widget[data-widget-type="responsiveslideshow"],
-    .widget[data-name="youtube"],
-    .widget[data-name="map"],
-    .widget[data-name="youtube"],
-    .widget[data-name="gallery"],
-    .widget[data-name="blogpostlist"],
-    .widget[data-widget-type="blogpostlist"],
-    .widget[data-name="blogpost"],
-    .widget[data-widget-type="blogpost"],
-    .widget[data-name="ecomproductslist"],
-    .widget[data-name="ecomproduct"],
-    .widget[data-name="ecomfeaturedproducts"],
-    .widget[data-name="line"],
-    .widget[data-name="menusections"],
-    .widget[data-name="menu"],
-    .widget[data-name="image"] {
-        margin-top: 0!important; // Ensures correct spacing for default pages
-        margin-left: 0;
-        margin-right: 0;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-
-    // Responsive Column Widgets
-    .widget[data-name="responsivecolumns"] {
-
-        // Widget
-        .widget {
-            margin: 30px 0 0 0;
-
-            @media @mobile {
-                margin: 0 0 30px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-
-        .widget[data-name="content"] {
-            @media @mobile {
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    // Button Widgets
-    // .widget[data-name="paypalbuynow"],
-    // .widget[data-name="tweet"],
-    // .widget[data-name="dropbox"],
-    // .widget[data-name="clicktocall"],
-    // .widget[data-name="button"] {
-    //     margin-bottom: 20px;
-    // }
-
-
-    .column {
-        @media @mobile {
-            margin-bottom: 30px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-
-
-
-// 0.2 Form Elements
-// ------------------------------
-
-
-@import "@{templateLocal}/less/widgets/-forms.less";
-
-
-
-
-// 0.3 Pagination
-// ------------------------------
-
-
-
-
-
-// -----------------------------
-// 1.  #Logo
-// -----------------------------
-
-
-
-
-
-
-// -----------------------------
-// 2.  #Company Name
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/companyname.less";
-
-
-
-
-// -----------------------------
-// 3.  #Navigation
-// -----------------------------
-
-
-@import "@{templateLocal}/less/navigation.less";
-
-
-
-
-// -----------------------------
-// 4.  #Feature widget
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/feature.less";
-
-
-
-
-// -----------------------------
-// 5.  #Buttons
-// -----------------------------
-
-
-
-
-
-
-
-// 5.1 Standard buttons
-// ------------------------------
-
-// See '-forms.less'
-
-
-
-
-// 5.2 Dropbox
-// ------------------------------
-
-
-@import "@{templateLocal}/less/widgets/dropbox.less";
-
-
-// 5.3 Click to call
-// ------------------------------
-
-
-@import "@{templateLocal}/less/widgets/clicktocall.less";
-
-
-
-
-// -----------------------------
-// 6.  #Images
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/images.less";
-
-
-
-
-// -----------------------------
-// 7.  #Gallery
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/gallery.less";
-
-
-
-
-// -----------------------------
-// 8.  #Slideshow
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/slideshow.less";
-
-
-
-
-// -----------------------------
-// 9.  #Contact Form
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/contact-form.less";
-
-
-
-
-// -----------------------------
-// 10.  #Signup Form
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/signupform.less";
-
-
-
-
-// -----------------------------
-// 11.  #Social List
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/social-list.less";
-
-
-
-
-// -----------------------------
-// 12.  #Twitter Feed
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/twitter.less";
-
-
-
-
-// -----------------------------
-// 13.  #Divider (Keyline)
-// -----------------------------
-
-
-@import "@{templateLocal}/less/widgets/divider.less";
-
-
-
-
-// -----------------------------
-// 14. #Profile
-// -----------------------------
-
+@import "@{templateLocal}/less/widgets/widget-spacing.less";
 
 @import "@{templateLocal}/less/widgets/profile.less";
-
-
-
-
-// -----------------------------
-// 15. #Map
-// -----------------------------
-
-
-// no styles
-
-
-
-
-// -----------------------------
-// 16.  #Content Widget
-// -----------------------------
-
-
 @import "@{templateLocal}/less/widgets/content.less";
 
+@import "@{templateLocal}/less/widgets/forms.less";
+@import "@{templateLocal}/less/widgets/contact-form.less";
+@import "@{templateLocal}/less/widgets/signupform.less";
 
+@import "@{templateLocal}/less/navigation.less";
+@import "@{templateLocal}/less/widgets/feature.less";
+@import "@{templateLocal}/less/widgets/gallery.less";
+@import "@{templateLocal}/less/widgets/slideshow.less";
 
-
-// -----------------------------
-// 17.  #Yelp Review
-// -----------------------------
-
-
+@import "@{templateLocal}/less/widgets/twitter.less";
+@import "@{templateLocal}/less/widgets/social-list.less";
 @import "@{templateLocal}/less/widgets/yelp-review.less";
 
 
 
 
+
+// -----------------------------
+// #Logo / Company Name
+// -----------------------------
+
+
+.companyname,
+.logo {
+    text-align: center;
+}
+.companyname {
+    margin-top: 10px;
+}
+
+
+
+
+// -----------------------------
+// #Company Name
+// -----------------------------
+
+
+.companyname {
+    font-size: 0;
+    line-height: 0;
+}
+
+.company-link {
+    margin: 0;
+    color: @color__companyname--text;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+    @media @bp-global-medium, @bp-global-small {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__companyname--font-size, 0.8);
+        line-height: bkscale(@font__companyname--line-height, 0.8);
+    }
+}
+
+
+
+
+// -----------------------------
+// #Buttons
+// -----------------------------
+
+
+
+
+// #Dropbox
+// ------------------------------
+
+
+.dropbox__button,
+.dropbox__label {
+    vertical-align: top;
+}
+
+.dropbox__button {
+    margin-right: 0; // LESS Framework Reset
+}
+
+
+// Label
+.dropbox__label {
+    display: inline-block;
+    background-color: @color__button--background;
+    line-height: @font__button--line-height;
+    color: @color__button--text;
+    padding: 0 1em;
+    font-size: 14px;
+
+    @media @mobile {
+        font-size:  bkscale(@font__button--font-size, 0.88);
+    }
+}
+
+
+
+// #Click to Call
+// ------------------------------
+
+
+.widget__clicktocall {
+
+    .phone-number-link {
+        .button;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Images
+// ------------------------------
+
+
+// Image Link
+.image-link {
+    display: inline-block;
+    overflow: visible;
+}
+
+
+// Image Figure
+.imagewidget__figure {
+    margin: 0;
+    text-align: center;
+}
+
+
+// Image Alignment
+.imagewidget__caption,
+.imagewidget {
+    text-align: center;
+}
+
+
+// Image Caption
+.imagewidget__caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: fade(@color__slideshow-caption--background, 70%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 10px 25px 15px;
+    }
+
+    @media @bp-global-small {
+        padding: 5px 20px 5px;
+    }
+}
+
+
+// Image Title
+.imagewidget .image-title:after {
+    margin: 0 auto;
+}
+
+
+
+
+// -----------------------------
+// #Divider (Keyline)
+// -----------------------------
+
+
+.widget__line {
+    line-height: 0;
+}
+
+hr.rule {
+    height: 3px;
+    background-color: darken(@color__body--background, 5%);
+}

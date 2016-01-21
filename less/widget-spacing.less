@@ -1,0 +1,106 @@
+// ----------------------------------------------
+// Kings Template: LESS > Widgets > Widget Spacing
+// ----------------------------------------------
+
+
+
+
+// -----------------------------
+// #Standard Widgets
+// -----------------------------
+
+.widget--zone-widget {
+    margin: 0;
+}
+
+.main-content .widget {
+    margin: 0 @value__widget--spacing--desktop @value__widget--spacing--desktop;
+
+    @media @bp-global-medium {
+        margin: 0 @value__widget--spacing--laptop @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin: 0 @value__widget--spacing--tablet @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin: 0 @value__widget--spacing--mobile @value__widget--spacing--mobile;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Full Width Widgets
+// -----------------------------
+
+.main-content {
+    .widget[data-name="responsiveslideshow"],
+    .widget[data-widget-type="responsiveslideshow"],
+    .widget[data-name="youtube"],
+    .widget[data-name="map"],
+    .widget[data-name="youtube"],
+    .widget[data-name="gallery"],
+    .widget[data-name="blogpostlist"],
+    .widget[data-widget-type="blogpostlist"],
+    .widget[data-name="blogpost"],
+    .widget[data-widget-type="blogpost"],
+    .widget[data-name="ecomproductslist"],
+    .widget[data-name="ecomproduct"],
+    .widget[data-name="ecomfeaturedproducts"],
+    .widget[data-name="line"],
+    .widget[data-name="menusections"],
+    .widget[data-name="menu"],
+    .widget[data-name="image"] {
+        margin-top: 0!important; // Ensures correct spacing for default pages
+        margin-left: 0;
+        margin-right: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    // Responsive Column Widgets
+    .widget[data-name="responsivecolumns"] {
+
+        // Widget
+        .widget {
+            margin: 30px 0 0 0;
+
+            @media @mobile {
+                margin: 0 0 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .widget[data-name="content"] {
+            @media @mobile {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // Column
+    .column {
+        @media @mobile {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
