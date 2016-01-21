@@ -118,7 +118,7 @@
     },
     "styles": {
         "colors": {
-            "color__primary": "#314beb",
+            "color__primary": "@color__h1--text",
             "color__secondary": "#f5f6f7"
         },
         "site": {
@@ -172,7 +172,7 @@
             "font__navigation--font-weight": "700",
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "2px",
-            "color__navigation--text": "#c0C7f7",
+            "color__navigation--text": "#9a9ca5",
             "color__navigation--text--selected": "#fff"
         },
         "form": {

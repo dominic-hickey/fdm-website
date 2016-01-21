@@ -9,15 +9,10 @@ html, body {
 }
 
 
-.template-navigation {
-    @media @mobile {
-    	// margin-right: 6px;
-    }
-}
 
 
 // --------------------------------
-//  1.   Navigation Overlay
+// #Navigation Overlay
 // --------------------------------
 
 
@@ -112,7 +107,7 @@ html, body {
 		height: auto;
 		max-width: @value__container--width;
 		margin: 0 auto;
-		background-color: @color__primary;
+		background-color: @color__h1--text;
 		opacity: 1;
 	}
 }
@@ -135,7 +130,6 @@ html, body {
 }
 
 // Navigation List Children
-
 .navigation-list--children {
 	margin-top: 0;
 
@@ -144,6 +138,9 @@ html, body {
 	}
 }
 
+.item-name {
+	-webkit-font-smoothing: antialiased;
+}
 .item-name--parent {
 	margin-left: .4em;
 }
@@ -151,7 +148,7 @@ html, body {
 
 
 // --------------------------------
-//  2.   Navigation Items
+// #Navigation Items
 // --------------------------------
 
 
@@ -162,6 +159,7 @@ html, body {
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
 }
+
 
 
 
@@ -179,7 +177,6 @@ html, body {
 		font-size: 15px;
 	}
 }
-
 
 
 
@@ -211,11 +208,8 @@ html, body {
 
 
 
+// #Folder Item
 // ------------------------------
-//	3.   Folder Item
-// ------------------------------
-
-
 
 
 .navigation-item.folder {
@@ -226,13 +220,11 @@ html, body {
 }
 
 // Open Folder navigation item
-
 .navigation-item.folder.open {
 	margin-bottom: 30px;
 }
 
 // Navigation Item Name
-
 .navigation-item.folder > .item-name {
 
 	// Folder Icon
@@ -259,7 +251,6 @@ html, body {
 }
 
 // Folder's Item Names
-
 .navigation-item.folder .navigation-item .item-name {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -267,7 +258,6 @@ html, body {
 }
 
 // Open Navigaiton Folder
-
 .navigation-item.folder.open > .item-name {
 	color: @color__navigation--text--selected;
 
@@ -296,7 +286,7 @@ html, body {
 	height: 0;
 	overflow: hidden;
 	padding-right: 0;
-	background-color: darken(@color__primary, 3%);
+	background-color: darken(@color__h1--text, 3%);
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -314,7 +304,6 @@ html, body {
 }
 
 // Less Framework Reset
-
 .navigation-item:hover .navigation-list--children {
 	display: none;
 }
@@ -334,7 +323,7 @@ html, body {
 
 
 // ------------------------------
-//  4.   Navigation Toggle
+// #Navigation Toggle
 // ------------------------------
 
 .navigation-toggle {
