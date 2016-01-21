@@ -172,7 +172,7 @@
 
 .feature-arrow {
     position: absolute;
-    top: 800px;
+    top: calc(@value__feature--height--desktop - 100px);
     z-index: 9999;
     max-width: @value__container--width;
     opacity: .6;
@@ -184,10 +184,10 @@
         width: 100%;
     }
     @media @bp-global-medium {
-        top: 700px;
+        top: @value__feature--height--tablet;
     }
     @media @tablet {
-        top: 600px;
+        top: calc(@value__feature--height--tablet - 100px);
     }
     @media @mobile {
         display: none;

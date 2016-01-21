@@ -8,16 +8,11 @@
     {% include "includes/header.twig" %}
 
 
-    <div class="page-title">
-        {{widget('pagetitle', 'page-title', {})|raw}}
-    </div>
-
-
     <!-- Zone Content -->
     <div class="main-content">
         <div class="container">
 
-            {{zone('main')|raw}}
+            {{widget('blogpostlist', 'header-profile26', {})|raw}}
 
         </div>
     </div>

@@ -13,17 +13,6 @@
 .blogpost {
 
 
-    max-width: 66.666%;
-    margin: 0 auto;
-
-    @media @bp-global-medium {
-        max-width: 80%;
-    }
-    @media @tablet {
-        max-width: 100%;
-    }
-
-
     // Blog Article
     // ------------------------------
     .post-article {
@@ -54,10 +43,14 @@
 
             // Container Width * 0.66
             height: 0;
-            padding-bottom: 40%;
+            padding-bottom: 30%;
 
             background-position: center;
             background-size: cover;
+
+            @media @tablet {
+                padding-bottom: 40%;
+            }
 
             .image {
                 display: none;
@@ -73,7 +66,15 @@
 
     .post-content {
         margin: 0;
-        padding: 0;
+    }
+    .post-body,
+    .post-footer {
+        max-width: 66.666%;
+        margin: 0 auto;
+
+        @media @tablet {
+            max-width: 90%;
+        }
     }
 
 
@@ -85,14 +86,14 @@
 
     .post-body {
         clear: both;
-        padding: 40px 70px 40px 0;
+        padding: 60px 0;
 
         @media @bp-blog-post-layout-vertical {
-            padding: 40px;
+            padding: 40px 0;
         }
 
         @media @bp-global-small {
-            padding: 20px;
+            padding: 20px 0;
         }
     }
 
@@ -105,10 +106,10 @@
 
     .post-header {
         background-color: @color__blogpost-title--background;
-        padding: 20px;
+        padding: 20px 16.666%;
 
-        @media @bp-global-small {
-            padding: 10px 20px;
+        @media @tablet {
+            padding: 10px 5%;
         }
 
     }
