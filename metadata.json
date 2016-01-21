@@ -123,7 +123,7 @@
         },
         "site": {
             "color__body--background": "#fff",
-            "color__link--text": "@color__primary",
+            "color__link--text": "#314beb",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "26px",
             "font__companyname--font-weight": "400",
