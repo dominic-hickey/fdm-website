@@ -227,7 +227,6 @@
         "blog": {
             "color__blogsearch-legend--background" : "@color__form-legend--background",
             "color__blogsearch-legend--text" : "@color__form-legend--text",
-            "color__blogpostlist-article--background" : "@color__secondary",
             "color__blogpost-title--background" : "@color__secondary",
             "color__blogpost-title--text" : "@color__h1--text"
         },
