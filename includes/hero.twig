@@ -1,19 +1,30 @@
+{% include "includes/header.twig" %}
+
 <div class="hero">
 
-    {{widget('feature', 'feature', {
-        'header': 'profile',
-        'strapline': 'profile',
-        'defaultBgImg': asset('images/feature-image.jpg'),
-        'positionTopPercentage': '0',
-        'showBtn': true,
-        'buttonText': 'Lorem Ipsum'
-    })|raw}}
+    <div class="bk-feature  feature  widget__feature">
+        <div class="background-image  feature__background-image">
 
-    {% include "includes/header.twig" %}
+            <div class="content-wrap  feature__content-wrap">
+                <div class="content-inner-wrap  feature__content-inner-wrap">
 
-    <!-- Feature Arrow -->
-    <div class="feature-arrow">
-        <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+                    <h2 class="headline  feature__headline">Turning local products into global products</h2>
+                    <h3 class="strapline  feature__strapline">We create strategic partnerships between hosting &amp; domain providers and vendors.</h3>
+
+                    <div class="button-wrap">
+                        <button class="button  button--primary  feature__button">View Our Work</button>
+                        <button class="button  button--secondary  feature__button">How We Work</button>
+                    </div>
+
+                    <!-- Feature Arrow -->
+                    <div class="feature-arrow">
+                        <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </div>

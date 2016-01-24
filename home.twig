@@ -7,14 +7,162 @@
 
 	{% include "includes/hero.twig" %}
 
-	<!-- Zone Content -->
+	<!-- Main Content -->
     <div id="main-scroll" class="main-content">
         <div class="container">
 
-            {{zone('main')|raw}}
+
+            <!-- Section: About FDM -->
+            <div class="section  section--about">
+
+                {{widget('content', 'home--about-text1', { content:'
+                    <h1>About FDM</h1>
+                '})|raw}}
+
+                <div class="row">
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image1', {
+                          'src': asset('/images/icon--network.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text2', { content:'
+                            <h2>Large Client Network</h2>
+                            <p>FDM boasts over 10,000 hosting companies on file and a huge network of remote industry experts around the world.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image2', {
+                          'src': asset('/images/icon--people.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text3', { content:'
+                            <h2>Strong Relationships</h2>
+                            <p>FDM have a strong relationship with 100s of enterprise level SMB services providers. Lorem ipsum dolor sit amet, consectetur elim sed do eiusmod tempor.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image3', {
+                          'src': asset('/images/icon--telesales.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text4', { content:'
+                            <h2>UK Based Telesales</h2>
+                            <p>FDM run its telesales operation from Dorset, UK. Lorem ipsum dolor sit amet, consectetur elim sit amet, consectetur elim sed do eiusmod tempor.</p>
+                        '})|raw}}
+                    </div>
+                </div>
+
+                <div class="cta-row">
+                    {{widget('button', 'home--about-button1', {
+                      'text': 'More About FDM',
+                      'action': 'internal',
+                      'url': '/about-fdm'
+                    })|raw}}
+                </div>
+
+            </div>
+
+
+            <!-- Section: Services -->
+            <div class="section  section--dark  section--services">
+                <div class="section-content-wrap">
+
+                    {{widget('content', 'home--services-text1', { content:'
+                        <h1>Our Services</h1>
+                        <h3>We have acted like independent sales people and have built entire sales teams. We can be as involved as you want us to be!</h3>
+                    '})|raw}}
+
+                    <ul class="service-list">
+                        <li class="service-list-item">
+                            {{widget('content', 'home--services-text2', { content:'
+                                <h3>B2B Sales - Enterprise</h3>
+                                <h3>B2B Sales - Telesales</h3>
+                                <h3>Project Management</h3>
+                            '})|raw}}
+                        </li>
+                        <li class="service-list-item">
+                            {{widget('content', 'home--services-text3', { content:'
+                                <h3>Account Management</h3>
+                                <h3>Conference Planning</h3>
+                                <h3>Business Development</h3>
+                            '})|raw}}
+                        </li>
+                    </ul>
+
+                    {{widget('button', 'home--services-button1', {
+                      'text': 'View Our Services',
+                      'action': 'internal',
+                      'url': '/services'
+                    })|raw}}
+
+                </div>
+            </div>
+
+
+            <!-- Section: Clients-->
+            <div class="section  section--clients">
+                <div class="section-content-wrap">
+
+                    {{widget('content', 'home--clients-text1', { content:'
+                        <h1>Clients &amp; Partners</h1>
+                        <h3>We work with clients that have developed awesome products that are relevant to the SMB industry and our network of SMB services providers.</h3>
+                    '})|raw}}
+
+                    <div class="client-logos">
+                        {{widget('image', 'home--clients-image1', {
+                            'src': asset('/images/logo--patchman.png')
+                        })|raw}}
+                        {{widget('image', 'home--clients-image2', {
+                            'src': asset('/images/logo--rushfiles.png')
+                        })|raw}}
+                        {{widget('image', 'home--clients-image3', {
+                            'src': asset('/images/logo--basekit.png')
+                        })|raw}}
+                    </div>
+
+                    <div class="client-quote">
+                        {{widget('content', 'home--clients-text2', { content:'
+                            <h3>FDM has helped Patchman to set up the business development process and closed strategic partnerships with web hosting providers around the globe.</h3>
+                            <h4>Damian Clarke, CEO Patchman</h4>
+                        '})|raw}}
+                    </div>
+
+                    <div class="cta-row">
+                        {{widget('button', 'home--clients-button1', {
+                          'text': 'View Case Studies',
+                          'action': 'internal',
+                          'url': '/case-studies'
+                        })|raw}}
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Section: Contact-->
+            <div class="section  section--contact">
+                <div class="section-content-wrap">
+
+                    <div class="row">
+                        <div class="col  col--30">
+                            {{widget('content', 'contact-text1', { content:'
+                                <h1>Contact Us</h1>
+                                <p class="p-sml">Whether you’re interested in becoming one of our clients, in joining our network of industry experts or in one of our client’s products – please reach out!</p>
+                            '})|raw}}
+                        </div>
+                        <div class="col  col--70">
+                            <!-- {{widget('contactform', 'contact-form', {
+                                'text': 'Submit Enquiry',
+                                'formTitle': 'Contact Us',
+                                'email': 'profile'
+                            })|raw}} -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
         </div>
     </div>
+
 </section>
 
 {% endblock %}

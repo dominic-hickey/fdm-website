@@ -1,12 +1,25 @@
+// -------------------------------------
+// Kings Template: LESS > Variables
+// -------------------------------------
 
-@color__primary:@color__link--text;
-@color__secondary: #f5f6f7;
 
+@color__primary: #f96042;
+@color__secondary: #62b762;
 
 @color__body--background:#fff;
+@color__site-border: #ececec;
 @color__link--text:#314beb;
 
 
+
+
+// Typography
+// ------------------------------
+
+// Heading Text
+@color__heading--text: #2f2d2d;
+
+// Company Name
 @font__companyname--font-family:@font-swatch10-font-family;
 @font__companyname--font-size:26px;
 @font__companyname--font-weight:400;
@@ -14,39 +27,39 @@
 @font__companyname--letter-spacing:2px;
 @color__companyname--text: #fff;
 
-
+// Heading 1
 @font__h1--font-family:@font-swatch1-font-family;
-@font__h1--font-size:30px;
-@font__h1--font-weight:@font-swatch1-font-weight;
-@font__h1--line-height:44px;
-@font__h1--letter-spacing:@font-swatch1-letter-spacing;
-@color__h1--text: #30323e;
+@font__h1--font-size: 32px;
+@font__h1--font-weight:700;
+@font__h1--line-height: 38px;
+@font__h1--letter-spacing: 1px;
+@color__h1--text: @color__heading--text;
 
-
+// Heading 2
 @font__h2--font-family:@font-swatch2-font-family;
-@font__h2--font-size:@font-swatch2-font-size;
-@font__h2--font-weight:@font-swatch2-font-weight;
-@font__h2--line-height:@font-swatch2-line-height;
+@font__h2--font-size: 22px;
+@font__h2--font-weight: 400;
+@font__h2--line-height: 46px;
 @font__h2--letter-spacing:inherit;
-@color__h2--text: #30323e;
+@color__h2--text: @color__heading--text;
 
-
+// Heading 3
 @font__h3--font-family:@font-swatch3-font-family;
-@font__h3--font-size:22px;
+@font__h3--font-size:17px;
 @font__h3--font-weight:@font-swatch3-font-weight;
 @font__h3--line-height:34px;
 @font__h3--letter-spacing:inherit;
-@color__h3--text: #30323e;
+@color__h3--text: #747682;
 
-
+// Heading 4
 @font__h4--font-family:@font-swatch4-font-family;
-@font__h4--font-size:@font-swatch4-font-size;
-@font__h4--font-weight:@font-swatch4-font-weight;
-@font__h4--line-height:@font-swatch4-line-height;
-@font__h4--letter-spacing:@font-swatch4-letter-spacing;
-@color__h4--text: #30323e;
+@font__h4--font-size: 13px;
+@font__h4--font-weight: 400;
+@font__h4--line-height: 28px;
+@font__h4--letter-spacing: 1px;
+@color__h4--text: @color__heading--text;
 
-
+// Paragraph
 @font__p--font-family:@font-swatch5-font-family;
 @font__p--font-size:15px;
 @font__p--font-weight:400;
@@ -54,40 +67,58 @@
 @font__p--letter-spacing:@font-swatch5-letter-spacing;
 @color__p--text:#747682;
 
+// Button
+@color__button--background: @color__primary;
+@color__button--text:#fff;
+@color__button--background--hover:darken(@color__button--background, 6%);
+@font__button--font-family:@font-swatch7-font-family;
+@font__button--font-size:14px;
+@font__button--font-weight:400;
+@font__button--line-height:50px;
+@font__button--letter-spacing:2px;
 
-@color__header--background: #22242b;
+
+// Header / Footer
+@color__header--background: #fff;
+@color__footer--background: @color__h1--text;
+
+
+
+
+// Navigation
+// ------------------------------
 
 @color__navigation--icon: #fff;
 @font__navigation--font-family:@font-swatch6-font-family;
-@font__navigation--font-size:20px;
-@font__navigation--font-weight:700;
+@font__navigation--font-size:13px;
+@font__navigation--font-weight:400;
 @font__navigation--line-height:26px;
-@font__navigation--letter-spacing:2px;
-@color__navigation--text: #c5c6ce;
-@color__navigation--text--selected:#fff;
+@font__navigation--letter-spacing:1px;
+@color__navigation--text: @color__heading--text;
+@color__navigation--text--hover: @color__primary;
+@color__navigation--text--selected:@color__primary;
 
 
 @color__form-legend--text:#fff;
 @color__form-legend--background:@color__primary;
 
 
-@color__button--background: @color__secondary;
-@color__button--text:#7e8a8e;
-@color__button--background--hover:darken(@color__button--background, 4%);
-@font__button--font-family:@font-swatch7-font-family;
-@font__button--font-size:13px;
-@font__button--font-weight:700;
-@font__button--line-height:44px;
-@font__button--letter-spacing:2px;
+
+
+// Feature
+// ------------------------------
 
 @color__feature-content--background: #26292f;
-@font__feature-headline--font-family:@font-swatch8-font-family;
-@font__feature-headline--font-size:70px;
-@font__feature-headline--font-weight:700;
-@font__feature-headline--line-height:72px;
-@font__feature-headline--letter-spacing:6px;
-@color__feature-headline--text:#fff;
 
+// Headline
+@font__feature-headline--font-family:@font-swatch8-font-family;
+@font__feature-headline--font-size:56px;
+@font__feature-headline--font-weight:700;
+@font__feature-headline--line-height:60px;
+@font__feature-headline--letter-spacing:3px;
+@color__feature-headline--text: #fff;
+
+// Strapline
 @font__feature-strapline--font-family:@font-swatch9-font-family;
 @font__feature-strapline--font-size:16px;
 @font__feature-strapline--font-weight:400;
@@ -95,10 +126,11 @@
 @font__feature-strapline--letter-spacing:@font-swatch9-letter-spacing;
 @color__feature-strapline--text:#bebebe;
 
-@color__feature-button--border:fade(@color__body--background, 10%);
-@color__feature-button--background:transparent;
-@color__feature-button--background--hover:fade(@color__body--background, 4%);
-@color__feature-button--text:#fff;
+
+
+
+// Gallery
+// ------------------------------
 
 @color__gallery-caption--background: #26292f;
 @color__gallery-title--text: #fff;

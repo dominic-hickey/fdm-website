@@ -6,14 +6,33 @@
 // #General Typography
 // -----------------------------
 
+ul, li {
+	margin: 0;
+	padding: 0;
+}
 
 h1, h2, h3, h4, p {
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	-webkit-font-smoothing: antialiased;
+
+	@media @tablet {
+		padding-bottom: 10px;
+	}
 }
 
 h1, .heading--1 {
+	padding-bottom: 40px;
 	color: @color__h1--text;
+	text-transform: uppercase;
+
+	&:after {
+		display: block;
+		width: 40px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		border-bottom: 3px solid @color__primary;
+		content: "";
+	}
 }
 
 h2, .heading--2 {
@@ -26,6 +45,7 @@ h3, .heading--3 {
 
 h4, .heading--4 {
 	color: @color__h4--text;
+	text-transform: uppercase;
 }
 
 p {
@@ -33,6 +53,10 @@ p {
         font-size: bkscale(@font__p--font-size, 0.9);
         line-height: bkscale(@font__p--line-height, 0.9);
     }
+}
+.p-sml {
+	font-size: 14px;
+	line-height: 28px;
 }
 
 
@@ -48,6 +72,27 @@ a {
     &:hover {
         text-decoration: none;
     }
+}
+
+
+
+
+// #Buttons
+// -----------------------------
+
+.button {
+	padding: 0 30px;
+	.border-radius(4px);
+	.transition(.6s);
+	background-color: @color__button--background;
+	color: @color__button--text;
+	text-transform: uppercase;
+	box-shadow: inset 0 1px 3px rgba(150, 64, 48, 0.6);
+
+	&:hover {
+		background-color: @color__button--background--hover;
+		box-shadow: inset 0 2px 3px rgba(150, 64, 48, 0.8);
+	}
 }
 
 
@@ -161,12 +206,12 @@ a {
 
 
 	ul {
-		margin: 0 0 0 1.2em;
+		margin: 0;
 		padding: 0;
 
 		li {
-			padding: 0 0 0 0.5em;
-			margin: 0 0 1em 0;
+			padding: 0;
+			margin: 0;
 			font-size: bkscale(@font__p--font-size, 0.9);
 			line-height: bkscale(@font__p--line-height, 0.9);
 

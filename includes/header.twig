@@ -1,23 +1,23 @@
 <!-- Header -->
 <header class="template-header">
-	<div class="container">
+	<div class="row">
 
-		<div class="flex-item">
-			{{widget('profile', 'header-profile1', { 'profileType':'phone' })|raw}}
+        <div class="col  col--third">
+			<ul class="nav-list">
+				<li class="nav-item"><a href="/" class="nav-link  nav-link--selected">Home</a></li>
+				<li class="nav-item"><a href="/about-fdm" class="nav-link">About FDM</a></li>
+				<li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+			</ul>
 		</div>
-		<div class="flex-item">
+		<div class="col  col--third">
 			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-			{{widget('companyname', 'companyname', {
-				"business": "profile",
-				"showTplWidget":"0"
-			})|raw}}
 		</div>
-		<div class="flex-item">
-			<div class="template-navigation">
-
-				{{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
-
-			</div>
+		<div class="col  col--third">
+			<ul class="nav-list">
+				<li class="nav-item"><a href="/case-studies" class="nav-link">Case Studies</a></li>
+				<li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+				<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+			</ul>
 		</div>
 
 	</div>

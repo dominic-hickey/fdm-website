@@ -8,19 +8,520 @@
 }
 
 
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Imports
+//  #Global Breakpoints
+//  #Site Styles
+//  #Header / Footer
+//  #Navigation
+
+//  #Page Styles
+//  -- #Home
+
+
+
+
 // -----------------------------
 // #Imports
 // -----------------------------
 
 @import "@{templateCommon}/bk-less-framework-v8.less";  // LESS Framework v8
 @import "@{templateLocal}/less/fork-variables.less";    // Fork Variables
-// @import "@{templateLocal}/less/variables.less";         // Variables
+@import "@{templateLocal}/less/variables.less";         // Variables
 
 @import "@{templateLocal}/less/typography.less";  // Typography
 @import "@{templateLocal}/less/mixins.less";      // Mixins
-@import "@{templateLocal}/less/theme.less";       // Template
 @import "@{templateLocal}/less/widgets.less";     // Widgets
+@import "@{templateLocal}/less/layout.less";      // Layout
 
 @import "@{templateLocal}/less/plugins/plugin-blog.less";       // Plugin: Blog
 @import "@{templateLocal}/less/plugins/plugin-menu.less";       // Plugin: Menu
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less";  // Plugin: Ecommerce
+
+
+
+
+// ------------------------------
+// #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
+
+@bp-global-large: 	~"only screen and (min-width: 1400px)";
+@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width: 478px)";
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+// Body
+body {
+    background-color: darken(@color__body--background, 12%);
+}
+
+
+// Site Container
+.site-container {
+    width: 100%;
+    .flex-display;
+    .flex-direction(column);
+    height: 100%;
+    min-height: 100vh;
+    background-color: @color__body--background;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+        max-width: @value__container--width;
+        margin: 0 auto;
+    }
+}
+
+
+// Main
+.main-content {
+    position: relative;
+    z-index: 50;
+    background-color: @color__body--background;
+}
+
+
+
+
+// ------------------------------
+// #Header / Footer
+// ------------------------------
+
+
+.template-header,
+.template-footer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    // Flex Row
+	.row {
+		.justify-content(space-between);
+        .align-items(center);
+
+        @media @mobile {
+            display: block;
+        }
+	}
+}
+
+
+
+
+// #Header
+// ------------------------------
+
+.template-header {
+	padding: 0 70px;
+	background-color: @color__header--background;
+
+	.col:first-child {
+		text-align: right;
+	}
+	.col:last-child {
+		text-align: left;
+	}
+}
+
+
+
+
+// #Footer
+// ------------------------------
+
+.template-footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: @color__footer--background;
+
+	.col:last-child {
+		text-align: right;
+	}
+
+    // Widget
+    .widget {
+        margin: 0;
+    }
+
+	// Mini Navigation
+	.nav-item {
+		margin: 0 20px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.nav-link {
+		.heading--4;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+    h4,
+    .nav-link {
+    	color: #8d8d8d;
+    }
+}
+
+
+
+
+// ------------------------------
+// Navigation
+// ------------------------------
+
+// Nav Item
+.nav-item {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+// Nav Link
+.nav-link {
+    color: @color__navigation--text;
+    .transition(.8s);
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+        color: @color__navigation--text--hover;
+    }
+    &--selected {
+        color: @color__navigation--text--selected;
+    }
+}
+
+
+
+
+// ------------------------------
+// Page Styles
+// ------------------------------
+
+
+// General Page Styles
+// ------------------------------
+
+
+// Page
+.page {
+    .flex(1 1 auto);
+}
+
+
+// Page Title
+.pagetitle {
+    padding: 6px 70px;
+    background-color: darken(@color__body--background, 4%);
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+    @media @bp-global-medium {
+        padding: 6px 40px;
+    }
+    @media @bp-global-small {
+        padding: 6px 20px;
+    }
+}
+
+
+// Page Title Text
+.pagetitle-text {
+    padding-bottom: 0;
+    .heading--4;
+
+    @media @mobile {
+        font-size: bkscale(@font__h4--font-size, 0.7);
+        line-height: bkscale(@font__h4--line-height, 0.7);
+        text-align: center;
+    }
+}
+
+
+// Sections
+.section {
+	display: inline-block;
+	width: 100%;
+    text-align: center;
+    padding: @value__widget--spacing--desktop 0;
+
+    @media @bp-global-medium {
+        padding: @value__widget--spacing--laptop 0;
+    }
+    @media @tablet {
+        padding: @value__widget--spacing--tablet 0;
+    }
+    @media @mobile {
+        padding: @value__widget--spacing--mobile 0;
+    }
+
+
+	// Dark BGs
+    &--dark {
+    	h1, h3 {
+    		color: #fff;
+    	}
+    	h3 {
+    		opacity: .8;
+    	}
+    }
+
+
+	// Section Content Wrap
+    .section-content-wrap {
+    	max-width: 830px;
+    	margin: 0 auto;
+    }
+
+}
+
+
+// CTA Rows
+.cta-row {
+	position: relative;
+    margin-top: @value__widget--spacing--desktop;
+
+    @media @bp-global-medium {
+        margin-top: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-top: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-top: @value__widget--spacing--mobile;
+    }
+
+	&:before {
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: 23px;
+	    display: inline-block;
+	    margin: 0 auto;
+	    max-width: 690px;
+	    height: 2px;
+	    background-color: @color__site-border;
+	    content: "";
+	}
+}
+
+
+
+
+// ------------------------------
+// Home Page Styles
+// ------------------------------
+
+
+// Section: About FDM
+// ------------------------------
+
+.section--about {
+	[data-widget-type="image"] {
+	    margin: 0 0 20px 0 !important;
+
+	    @media @tablet {
+	        margin-bottom: 10px !important;
+	        transform: scale(.8);
+	    }
+	}
+}
+
+
+// Section: Services
+// ------------------------------
+
+.section--services {
+	background-image: image('/images/services-section-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    // Service List
+    .service-list {
+    	.flex-display;
+    	.justify-content(space-around);
+    	max-width: 690px;
+    	margin: 0 auto;
+    	padding: 50px 40px 70px;
+    	border: 3px solid rgba(255, 255, 255, 0.1);
+    	text-align: left;
+
+    	.widget:first-child {
+			margin: 0;
+		}
+    }
+
+    // Service List Item
+    .service-list-item {
+    	display: inline-block;
+
+		h3 {
+			font-size: 19px;
+			opacity: 1;
+
+			&:before {
+				display: inline-block;
+				margin-right: 20px;
+				width: 8px;
+				height: 8px;
+				content: "";
+				.border-radius(50%);
+				border: 2px solid @color__primary;
+			}
+		}
+    }
+
+    // CTA Button
+    [data-widget-type="button"] {
+    	margin-top: -27px;
+    	margin-bottom: 97px;
+    }
+}
+
+
+
+
+// Section: Clients
+// ------------------------------
+
+// Client Logos
+.client-logos {
+	.flex-display;
+    .justify-content(space-around);
+    .align-items(center);
+
+    [data-widget-type="image"] {
+    	margin: 0;
+    }
+}
+
+// Client Quote
+.client-quote {
+	position: relative;
+	margin-top: 90px;
+	padding: 60px 50px 50px;
+	border: 3px solid @color__site-border;
+
+    @media @bp-global-medium {
+        margin-top: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-top: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-top: @value__widget--spacing--mobile;
+    }
+
+	// Quote Mark
+    &:before {
+    	position: absolute;
+    	top: -4px;
+    	left: 0;
+    	right: 0;
+		display: inline-block;
+		width: 80px;
+		margin: 0 auto;
+		padding: 0 60px 0 25px;
+		background-color: #fff;
+		font-family: @font__h1--font-family;
+		font-size: 110px;
+		line-height: 50px;
+		color: @color__primary;
+		content: "“";
+    }
+
+    .widget {
+    	margin: 0;
+    }
+
+	h3 {
+		font-size: 19px;
+		line-height: 38px;
+	}
+}
+
+
+
+
+// Section: Contact
+// ------------------------------
+
+.section--contact {
+	background-color: #f7f7f7;
+	text-align: left;
+
+	.section-content-wrap {
+		.flex-display;
+	    .justify-content(space-between);
+	    max-width: 1024px;
+	}
+
+	.widget {
+		margin: 0;
+	}
+
+	h1 {
+		padding-bottom: 20px;
+		font-size: 28px;
+		line-height: 32px;
+
+		&:after {
+			margin: inherit;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

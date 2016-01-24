@@ -108,50 +108,6 @@ textarea {
 
 
 // ------------------------------
-//  2.   #Buttons
-// ------------------------------
-
-
-
-.button {
-    position: relative;
-    border: none;
-    padding: 0 26px;
-    font-size:  @font__button--font-size;
-    line-height: @font__button--line-height;
-    font-weight: @font__button--font-weight;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-    text-align: left;
-    -webkit-appearance: none;
-    background-color: @color__button--background;
-    border-radius: 0;
-    color: @color__button--text;
-    text-transform: uppercase;
-
-    &:hover {
-        background-color: @color__button--background--hover;
-    }
-
-    @media @mobile {
-        padding: 0 20px;
-        font-size:  bkscale(@font__button--font-size, .9);
-        line-height: bkscale(@font__button--line-height, .8);
-    }
-
-    &:focus {
-        outline: none;
-    }
-}
-
-
-
-
-// ------------------------------
 //  3.   Selects
 // ------------------------------
 

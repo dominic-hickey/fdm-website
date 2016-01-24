@@ -1,21 +1,10 @@
 {
-    "name":"Kings",
+    "name":"FDM Website",
     "widgetVersion": 2,
-    "thumbnail":"kings.png",
+    "thumbnail":"fdm-thumbnail.png",
+    "screenshot":"fdm-screenshot.jpg",
     "templateType":"standard",
-    "pageTypes": [ "home", "slideshow" ],
-    "screenshot":"kings-screenshot.jpg",
-     "images":[
-        "images/gallery/gallery-image--1.jpg",
-        "images/gallery/gallery-image--2.jpg",
-        "images/gallery/gallery-image--3.jpg",
-        "images/gallery/gallery-image--4.jpg",
-        "images/gallery/gallery-image--5.jpg",
-        "images/gallery/gallery-image--6.jpg",
-        "images/gallery/gallery-image--7.jpg",
-        "images/gallery/gallery-image--8.jpg",
-        "images/gallery/gallery-image--9.jpg"
-    ],
+    "pageTypes": [ "home", "about-fdm", "services", "case-studies", "careers", "contact" ],
     "colorSwatches":
     {
         "Swatch 1": {
@@ -31,7 +20,7 @@
     "fontSwatch": {
        "title": "Karla / Merriweather",
         "font1": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "32px",
             "font-weight": "400",
             "line-height": "54px",
@@ -39,7 +28,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "36px",
@@ -47,7 +36,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Merriweather\", Georgia, serif",
             "font-size": "22px",
             "font-weight": "400",
             "line-height": "42px",
@@ -55,7 +44,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "20px",
             "font-weight": "400",
             "line-height": "36px",
@@ -64,14 +53,14 @@
         },
         "font5": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "18px",
+            "font-size": "17px",
             "font-weight": "400",
-            "line-height": "27px",
+            "line-height": "34px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "26px",
@@ -82,7 +71,7 @@
             "background-color-hover": "darken(@color-swatch3,8%)"
         },
         "font7": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "27px",
@@ -92,7 +81,7 @@
             "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "38px",
             "font-weight": "400",
             "line-height": "48px",
@@ -108,7 +97,7 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Bree Serif\", \"Merriweather\", Georgia, serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "26px",
             "font-weight": "700",
             "line-height": "32px",

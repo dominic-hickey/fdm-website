@@ -1,0 +1,415 @@
+// --------------------------------
+// Kings Template: CSS > Navigation
+// --------------------------------
+
+
+// iOS fix of VH unit
+html, body {
+    width: -webkit-calc(100% - 0px);
+}
+
+
+
+
+// --------------------------------
+// #Navigation Overlay
+// --------------------------------
+
+
+// Navigation Body
+// ------------------------------
+
+
+.navigation-body {
+	z-index: -1000;
+	outline: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.8s ease;
+	-moz-transition: opacity 0.8s ease;
+	-o-transition: opacity 0.8s ease;
+	transition: opacity 0.8s ease;
+}
+
+// When nav is open
+.widget__extendednavigation.open .navigation-body {
+	display: block;
+	z-index: 10010;
+	opacity: 1;
+	width: auto;
+	overflow: auto;
+	position: fixed;
+	right:0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	opacity: 1;
+
+	@media @mobile {
+		padding-bottom: 45px;
+	}
+}
+
+// Widget Overlay
+.widget__extendednavigation {
+	+ .widget-overlay {
+		display: none;
+	}
+
+	&.open + .widget-overlay {
+		position: fixed!important;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    z-index: 10400!important;
+	    display: block;
+	    max-width: 500px;
+    	margin: 13% auto;
+
+    	@media @mobile {
+    		width: 90%;
+    	}
+
+    	&:hover {
+    		background: rgba(0, 147, 135, 0.2);
+    		border: 1px solid rgb(0, 148, 136);
+    		box-shadow: rgba(0, 147, 135, 0.2) 0px 0px 0px 3px inset;
+    	}
+	}
+}
+
+
+// Open navigation page overlay
+.widget__extendednavigation {
+	&:after {
+		content: "";
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		opacity: 0;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		height: 0;
+		z-index: 10009;
+	}
+
+	&.open:after {
+		height: auto;
+		max-width: @value__container--width;
+		margin: 0 auto;
+		background-color: @color__h1--text;
+		opacity: 1;
+	}
+}
+
+
+
+
+// Navigation List
+// ------------------------------
+
+
+.navigation-list {
+    max-width: 500px;
+    margin: 13% auto 0;
+    text-align: center;
+
+    @media @mobile {
+    	margin-top: 20%;
+    }
+}
+
+// Navigation List Children
+.navigation-list--children {
+	margin-top: 0;
+
+	@media @bp-global-small {
+		padding-top: 0;
+	}
+}
+
+.item-name {
+	-webkit-font-smoothing: antialiased;
+}
+.item-name--parent {
+	margin-left: .4em;
+}
+
+
+
+// --------------------------------
+// #Navigation Items
+// --------------------------------
+
+
+.navigation-body .navigation-item {
+	display: block;
+
+	&, * {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+}
+
+
+
+
+// Item Name
+// ------------------------------
+
+@color__navigation--text--hover: @color__navigation--text;
+
+.navigation-body .item-name {
+	box-shadow: inset 0px 0px 0px 2px fade(@color__navigation--text, 0%);
+	padding: 1em 20px;
+	text-transform: uppercase;
+
+	@media @mobile {
+		font-size: 15px;
+	}
+}
+
+
+
+
+// Selected Navigation Item
+// ------------------------------
+
+
+// Selected Item (not open folder)
+
+.navigation-body .navigation-item.selected:not(.open) > .item-name {
+	color: @color__navigation--text--selected;
+}
+
+// Hover
+
+.navigation-body .navigation-item.selected:not(.open):hover > .item-name {
+	box-shadow: none;
+	background-color: @color__navigation-item--background--selected;
+}
+
+// Hover
+
+.navigation-body .navigation-item.selected.folder:not(.open):hover > .item-name {
+	box-shadow: none;
+	background-color: darken(desaturate(@color__navigation-item--background--selected, 10%), 5%);
+}
+
+
+
+
+// #Folder Item
+// ------------------------------
+
+
+.navigation-item.folder {
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+// Open Folder navigation item
+.navigation-item.folder.open {
+	margin-bottom: 30px;
+}
+
+// Navigation Item Name
+.navigation-item.folder > .item-name {
+
+	// Folder Icon
+	&:after {
+		content: "\f107";
+		font-family: 'FontAwesome', sans-serif;
+		margin-left: 0.4em;
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		line-height: 0.8em;
+		text-align: center;
+		// Folder icon animation
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		-webkit-transition: all 0.15s ease-in-out;
+		-moz-transition: all 0.15s ease-in-out;
+		-o-transition: all 0.15s ease-in-out;
+		transition: all 0.15s ease-in-out;
+	}
+}
+
+// Folder's Item Names
+.navigation-item.folder .navigation-item .item-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+// Open Navigaiton Folder
+.navigation-item.folder.open > .item-name {
+	color: @color__navigation--text--selected;
+
+	&:after {
+		// Folder icon animation
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+
+
+
+// Folder List Items
+// ------------------------------
+
+
+.navigation-list--children {
+	white-space: inherit;
+	z-index: 10000;
+	opacity: 0;
+	display: none;
+	height: 0;
+	overflow: hidden;
+	padding-right: 0;
+	background-color: darken(@color__h1--text, 3%);
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	position: relative;
+
+	// Open folder item
+
+	.navigation-item.folder.open & {
+		display: block;
+		opacity: 1;
+		height: auto;
+	}
+
+}
+
+// Less Framework Reset
+.navigation-item:hover .navigation-list--children {
+	display: none;
+}
+
+
+
+
+// Selected Folder Item
+// ------------------------------
+
+
+.navigation-list--children .navigation-item.selected .item-name {
+	color: @color__navigation--text--selected;
+}
+
+
+
+
+// ------------------------------
+// #Navigation Toggle
+// ------------------------------
+
+.navigation-toggle {
+	.animation;
+	// Displays as icon's middle bar
+	background-color: @color__feature-headline--text;
+	background-clip: content-box;
+	width: 42px;
+	height: 47px;
+	margin-left: auto;
+	padding: 22px 10px;
+	position: relative;
+	text-indent: 200%;
+	display: block;
+	overflow: hidden;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+
+	@media @mobile {
+		top: 1px;
+		right: 0;
+		padding: 21px 10px;
+		height: 44px;
+	}
+
+	&:hover {
+		opacity: .6;
+	}
+
+	// Top and bottom navigation item bar
+	&:after, &:before {
+		content: "";
+		height: 3px;
+		width: 27px;
+		position: absolute;
+		left: 5px;
+		display: block;
+		background: @color__feature-headline--text;
+		margin-right: 0;
+		margin-left: 0;
+
+		@media @mobile {
+			height: 2px;
+		}
+	}
+
+	// Top bar
+	&:before {
+		top: 13px;
+	}
+
+	// Bottom bar
+	&:after {
+		bottom: 13px;
+	}
+
+
+	// Toggle Button open state
+	// ------------------------------
+
+	.open & {
+		position: relative;
+		z-index: 100000;
+		background-color: fade(@color-swatch7, 0%);
+
+		&:before {
+			top: 23px;
+			background: @color__navigation--text;
+			-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg); -ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+
+			@media @mobile {
+				top: 21px;
+			}
+
+		}
+		&:after {
+			bottom: 21px;
+			background: @color__navigation--text;
+			-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}

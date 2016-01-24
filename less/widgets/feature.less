@@ -7,6 +7,8 @@
 // ------------------------------
 
 .hero {
+    position: relative;
+
     @media @mobile {
         .flex-display;
         .flex-direction(column);
@@ -23,12 +25,11 @@
 
 
 .feature__background-image {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-image: image('/images/feature-image.jpg');
+    background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
 
     @media @tablet {
         background-attachment: inherit;
@@ -66,11 +67,16 @@
 }
 
 
+
+
+// Content Inner Wrap
+// ------------------------------
+
 .feature__content-inner-wrap {
     position: relative;
     z-index: 3;
     width: 100%;
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 
@@ -83,7 +89,7 @@
 
 
 
-// Headline
+// Feature Headline
 // ------------------------------
 
 
@@ -113,7 +119,7 @@
 
 
 
-// Strapline
+// Feature Strapline
 // ------------------------------
 
 
@@ -136,31 +142,47 @@
 
 
 
-// Button
+// Feature Buttons
 // ------------------------------
 
 
-.feature__button {
-    margin: 20px 0 0;
-    border: 2px solid @color__feature-button--border;
-    color: @color__feature-button--text;
-    background-color: @color__feature-button--background;
+.button-wrap {
+    margin-top: 40px;
 
-    @media @bp-global-medium, @bp-global-small {
-        margin-top: 10px;
-    }
     @media @tablet {
-        font-size: bkscale(@font__feature-button--font-size, 0.9);
-        line-height: bkscale(@font__feature-button--line-height, 0.9);
+        margin-top: 20px;
     }
     @media @mobile {
-        font-size: bkscale(@font__feature-button--font-size, 0.8);
-        line-height: bkscale(@font__feature-button--line-height, 0.8);
+        margin-top: 10px;
     }
 
-    &:hover {
-        background-color: @color__feature-button--background--hover;
+    // Button
+    .button {
+        margin: 0 5px;
+        line-height: 58px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+
+    // Primary Button
+    .button--primary {
+        .gradient(@color__secondary, lighten(@color__secondary, 8%));
+
+        &:hover {
+            background-color: darken(@color__secondary, 6%);
+        }
+    }
+
+    // Secondary Button
+    .button--secondary {
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
 }
 
 
@@ -171,23 +193,15 @@
 
 
 .feature-arrow {
-    position: absolute;
-    top: calc(@value__feature--height--desktop - 100px);
-    z-index: 9999;
-    max-width: @value__container--width;
-    opacity: .6;
+    position: relative;
+    top: 230px;
+    opacity: .5;
 
     @media @bp-global-above-fullwidth {
-        width: 90%;
-    }
-    @media @bp-global-below-fullwidth {
-        width: 100%;
-    }
-    @media @bp-global-medium {
-        top: @value__feature--height--tablet;
+        top: 200px;
     }
     @media @tablet {
-        top: calc(@value__feature--height--tablet - 100px);
+        top: 180px;
     }
     @media @mobile {
         display: none;

@@ -1,0 +1,56 @@
+// ----------------------------------------
+// FDM Website: LESS > Layout
+// ----------------------------------------
+
+
+// Row
+// -----------------------------
+
+.row {
+	.flex-display;
+	.flex-wrap(wrap);
+}
+
+
+
+
+// Columns
+// -----------------------------
+
+.col {
+
+	// Column: Third
+	&--third {
+		.flex-basis(33.333%);
+
+		@media @tablet {
+			.flex-basis(50%);
+		}
+	}
+
+	// Column: 30
+	&--30 {
+		.flex-basis(30%);
+
+		@media @tablet {
+			.flex-basis(50%);
+		}
+	}
+
+	// Column: 70
+	&--70 {
+		.flex-basis(70%);
+
+		@media @tablet {
+			.flex-basis(50%);
+		}
+	}
+
+	@media @mobile {
+		.flex-basis(100%);
+	}
+
+}
+
+
+
