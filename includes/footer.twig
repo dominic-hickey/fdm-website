@@ -11,7 +11,9 @@
 			</ul>
 		</div>
 		<div class="col  col--third">
-			{{widget('logo', 'footer-logo', {"defaultlogo": asset('images/logo--dark.png')})|raw}}
+			<a href="/" class="logo-link">
+				<img src="{{asset('/images/logo--dark.png')}}" alt="FDM Logo">
+			</a>
 		</div>
 		<div class="col  col--third">
 			{{widget('content', 'footer-text3', { content:'
