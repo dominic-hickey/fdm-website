@@ -106,6 +106,14 @@ body {
 // #Header / Footer
 // ------------------------------
 
+.logo-link {
+	.transition(.6s);
+
+	&:hover {
+		opacity: .4;
+	}
+}
+
 
 .template-header,
 .template-footer {
@@ -121,6 +129,12 @@ body {
         @media @mobile {
             display: block;
         }
+	}
+
+	.col {
+		text-align: center;
+		line-height: 0;
+		font-size: 0;
 	}
 }
 
