@@ -68,6 +68,7 @@ p {
 
 a {
 	color: @color__link--text;
+	text-decoration: none;
 
     &:hover {
         text-decoration: none;
@@ -87,11 +88,18 @@ a {
 	background-color: @color__button--background;
 	color: @color__button--text;
 	text-transform: uppercase;
-	box-shadow: inset 0 1px 3px rgba(150, 64, 48, 0.6);
 
+	@media @bp-1050 {
+        padding: 0 22px;
+        font-size: 13px;
+    }
+
+	&:focus,
+	&:active {
+		box-shadow: inset 0 1px 3px rgba(150, 64, 48, 0.8);
+	}
 	&:hover {
 		background-color: @color__button--background--hover;
-		box-shadow: inset 0 2px 3px rgba(150, 64, 48, 0.8);
 	}
 }
 
@@ -188,13 +196,12 @@ a {
 
 
 	a {
-		box-shadow: inset 0px -1px 0px 0px @color__link--text;
 		display: inline-block;
 		line-height: 1.5;
 
 		&:hover {
 			text-decoration: none;
-			box-shadow: inset 0px -2px 0px 0px @color__link--text;
+			box-shadow: inset 0px -1px 0px 0px @color__link--text;
 		}
 	}
 

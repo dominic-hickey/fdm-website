@@ -23,6 +23,28 @@
 
 
 
+
+// ------------------------------
+//  #Form Body
+// ------------------------------
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding-left: 24px;
+    font-family: @font__navigation--font-family;
+    color: @color__navigation--text;
+}
+.form-group {
+    position: relative;
+}
+.textarea--message {
+    min-height: 140px;
+    padding: 22px 20px 10px 140px;
+}
+
+
 // ------------------------------
 //  1.   #Text Inputs
 // ------------------------------
@@ -34,7 +56,8 @@ input[type="password"],
 .input--single-line,
 .input--search,
 textarea {
-    background-color: transparent;
+    background-color: #fff;
+    padding: 0 20px 0 142px;
     border: 0;
     box-shadow: inset 0px -1px 0px 0px lighten(@color__p--text, 45%);
     font-size:  @font__p--font-size;
@@ -74,11 +97,8 @@ input[type="password"],
 .input--single-line,
 .input--search,
 .product-filters .input--search {
-    height: 44px;
-
-    @media @mobile {
-        height: 44px;
-    }
+    height: 60px;
+    padding: 0 20px 0 142px;
 }
 
 
@@ -104,6 +124,20 @@ textarea {
     }
 }
 
+
+
+
+// ------------------------------
+//  2.   Form Buttons
+// ------------------------------
+
+.button--submit {
+    background-color: @color__secondary;
+
+    &:hover {
+        background-color: darken(@color__secondary, 8%);
+    }
+}
 
 
 

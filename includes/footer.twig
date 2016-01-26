@@ -1,26 +1,24 @@
 <!-- Footer -->
 <footer class="template-footer">
-	<div class="row">
+	<div class="container">
+		<div class="row">
 
-        <div class="col  col--third">
-			<ul class="nav-list">
-				<li class="nav-item"><a href="/about-fdm" class="nav-link">About FDM</a></li>
-				<li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
-				<li class="nav-item"><a href="/case-studies" class="nav-link">Case Studies</a></li>
-				<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-			</ul>
-		</div>
-		<div class="col  col--third">
-			<a href="/" class="logo-link">
-				<img src="{{asset('/images/logo--dark.png')}}" alt="FDM Logo">
-			</a>
-		</div>
-		<div class="col  col--third">
-			{{widget('content', 'footer-text3', { content:'
-                <h4>Copyright 2015 © FDM. All Rights Reserved.</h4>
-            '})|raw}}
-		</div>
+	        <div class="col  col--third">
+				{{widget('content', 'footer-text1', { content:'
+	                <h4>Info@fdm.global</h4>
+	            '})|raw}}
+			</div>
+			<div class="col  col--third">
+				<a href="/" class="logo-link">
+					<img src="{{asset('/images/logo--dark.png')}}" alt="FDM Logo">
+				</a>
+			</div>
+			<div class="col  col--third">
+				{{widget('content', 'footer-text2', { content:'
+	                <h4>Copyright 2015 © FDM</h4>
+	            '})|raw}}
+			</div>
 
+		</div>
 	</div>
-
 </footer>

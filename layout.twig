@@ -39,12 +39,22 @@
 	</div>
 
     {% include basekit.bodyScript %}
-	
-	<!-- jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-	<script src="{{ asset('js/navigation.js')}}"></script>
+	<!-- jQuery -->
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+	<script src="{{ asset('js/jquery.1.11.0.js')}}"></script>
+
 	<script src="{{ asset('js/custom.js')}}"></script>
+	<script>
+
+		// Toggles class open to display/hide the whole navigation
+		$( ".template-nav" ).addClass( "closed" );
+
+		$( ".nav-icon" ).click(function() {
+			$( ".template-nav" ).toggleClass( "open" ).toggleClass( "closed" );
+		});
+
+	</script>
 
 	{% block bodyscripts %}
 	{% endblock %}

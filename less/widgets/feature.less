@@ -3,23 +3,6 @@
 // ----------------------------------------
 
 
-// Hero
-// ------------------------------
-
-.hero {
-    position: relative;
-
-    @media @mobile {
-        .flex-display;
-        .flex-direction(column);
-    }
-
-    [data-widget-type="feature"] {
-        .flex-order(2);
-    }
-}
-
-
 // Background Image
 // ------------------------------
 
@@ -29,7 +12,7 @@
     background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
+    background-attachment: fixed;
 
     @media @tablet {
         background-attachment: inherit;
@@ -49,21 +32,20 @@
     .flex-display;
     .align-items(center);
 
-    height: @value__feature--height--desktop;
+    height: 100vh;
     padding: 30px;
     overflow: auto;
     background-color: fade(@color__feature-content--background, 80%);
 
-    @media @bp-global-medium {
-        height: 800px;
+    @media @bp-1050 {
+        top: 138px;
     }
     @media @tablet {
-        height: @value__feature--height--tablet;
+        top: 61px;
     }
     @media @mobile {
-        height: @value__feature--height--mobile;
+        top: 51px;
     }
-
 }
 
 
@@ -99,14 +81,9 @@
     color: @color__feature-headline--text;
     text-transform: uppercase;
 
-    @media @bp-global-medium {
-        margin: 10px 0;
+    @media @bp-1050 {
         font-size: bkscale(@font__feature-headline--font-size, 0.8);
         line-height: bkscale(@font__feature-headline--line-height, 0.8);
-    }
-    @media @tablet {
-        font-size: bkscale(@font__feature-headline--font-size, 0.7);
-        line-height: bkscale(@font__feature-headline--line-height, 0.7);
     }
     @media @mobile {
         margin-top: 0;
@@ -124,12 +101,11 @@
 
 
 .feature__strapline {
-    width: 90%;
-    margin: 15px auto;
+    margin: 20px 0;
     padding: 0;
     color: @color__feature-strapline--text;
 
-    @media @tablet {
+    @media @bp-1050 {
         font-size: bkscale(@font__feature-strapline--font-size, 0.9);
         line-height: bkscale(@font__feature-strapline--line-height, 0.9);
     }
@@ -150,10 +126,10 @@
     margin-top: 40px;
 
     @media @tablet {
-        margin-top: 20px;
+        margin-top: 26px;
     }
     @media @mobile {
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     // Button
@@ -161,11 +137,22 @@
         margin: 0 5px;
         line-height: 58px;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+        @media @bp-1050 {
+            line-height: 48px;
+        }
+        @media @mobile {
+            min-width: 70%;
+        }
     }
 
     // Primary Button
     .button--primary {
         .gradient(@color__secondary, lighten(@color__secondary, 8%));
+
+        @media @tablet {
+            margin-bottom: 14px;
+        }
 
         &:hover {
             background-color: darken(@color__secondary, 6%);
@@ -200,8 +187,8 @@
     @media @bp-global-above-fullwidth {
         top: 200px;
     }
-    @media @tablet {
-        top: 180px;
+    @media @bp-1050 {
+        top: 100px;
     }
     @media @mobile {
         display: none;
