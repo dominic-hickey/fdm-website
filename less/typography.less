@@ -39,15 +39,30 @@ h1, .heading--1 {
 
 h2, .heading--2 {
 	color: @color__h2--text;
+
+	@media @mobile {
+		font-size: bkscale(@font__h2--font-size, 0.8);
+		line-height: bkscale(@font__h2--line-height, 0.8);
+	}
 }
 
 h3, .heading--3 {
 	color: @color__h3--text;
+
+	@media @mobile {
+		font-size: bkscale(@font__h3--font-size, 0.8);
+		line-height: bkscale(@font__h3--line-height, 0.8);
+	}
 }
 
 h4, .heading--4 {
 	color: @color__h4--text;
 	text-transform: uppercase;
+
+	@media @mobile {
+		font-size: bkscale(@font__h4--font-size, 0.8);
+		line-height: bkscale(@font__h4--line-height, 0.8);
+	}
 }
 
 h5, .heading--5 {
@@ -132,10 +147,17 @@ a {
 // #Content Widget
 // -----------------------------
 
-.content h1, h2, h3, h4, p {
+.content h1, h2, h3, h4, h5, h6, p {
+	max-width: 920px;
+	margin: 0 auto;
+
 	&:last-child {
 		padding-bottom: 0;
 	}
+}
+
+.bk-zone h5:after {
+	margin: 0 auto;
 }
 
 .content,
