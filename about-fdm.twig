@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--inner  page--about">
+
+
+    {% include "includes/header.twig" %}
+
+
+    <div class="page-title  page-title--about">
+        <div class="page-title-content-wrap">
+            {{widget('pagetitle', 'page-title', {})|raw}}
+        </div>
+    </div>
+
+
+    <!-- Zone Content -->
+    <div class="main-content">
+        <div class="container">
+
+            {{zone('main')|raw}}
+
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock %}
+
