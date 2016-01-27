@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<section class="page  page--default">
+<section class="page  page--inner">
 
 
     {% include "includes/header.twig" %}
 
 
     <div class="page-title">
-        {{widget('pagetitle', 'page-title', {})|raw}}
+        <div class="page-title-content-wrap">
+            {{widget('pagetitle', 'page-title', {})|raw}}
+        </div>
     </div>
 
 

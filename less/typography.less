@@ -23,6 +23,7 @@ h1, h2, h3, h4, p {
 h1, .heading--1 {
 	padding-bottom: 40px;
 	color: @color__h1--text;
+	text-align: center;
 	text-transform: uppercase;
 
 	&:after {
@@ -46,6 +47,27 @@ h3, .heading--3 {
 h4, .heading--4 {
 	color: @color__h4--text;
 	text-transform: uppercase;
+}
+
+h5, .heading--5 {
+	padding-bottom: 20px;
+	font-family: @font__h1--font-family;
+	font-size: 28px;
+	line-height: 32px;
+	color: @color__h1--text;
+	text-transform: uppercase;
+
+	&:after {
+		display: block;
+		width: 32px;
+		padding-bottom: 20px;
+		border-bottom: 3px solid @color__primary;
+		content: "";
+
+		@media @tablet {
+			margin: 0 auto;
+		}
+	}
 }
 
 p {
