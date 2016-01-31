@@ -18,7 +18,7 @@
                 <h1>About FDM</h1>
             '})|raw}}
 
-            <div class="row">
+            <div class="row  row--col-3">
                 <div class="col  col--third">
                     {{widget('image', 'home--about-image1', {
                       'src': asset('/images/icon--network.png')
@@ -68,15 +68,15 @@
                     <h3>We have acted like independent sales people and have built entire sales teams. We can be as involved as you want us to be!</h3>
                 '})|raw}}
 
-                <ul class="service-list">
-                    <li class="service-list-item">
+                <ul class="service-short-list">
+                    <li class="service-short-list-item">
                         {{widget('content', 'home--services-text2', { content:'
                             <h3>B2B Sales - Enterprise</h3>
                             <h3>B2B Sales - Telesales</h3>
                             <h3>Project Management</h3>
                         '})|raw}}
                     </li>
-                    <li class="service-list-item">
+                    <li class="service-short-list-item">
                         {{widget('content', 'home--services-text3', { content:'
                             <h3>Account Management</h3>
                             <h3>Conference Planning</h3>
@@ -97,7 +97,7 @@
 
         <!-- Section: Clients-->
         <div class="section  section--clients">
-            <div class="section-content-wrap">
+            <div class="container">
 
                 {{widget('content', 'home--clients-text1', { content:'
                     <h1>Clients &amp; Partners</h1>
@@ -116,7 +116,7 @@
                     })|raw}}
                 </div>
 
-                <div class="client-quote">
+                <div class="boxed-content  boxed-content--clients">
                     {{widget('content', 'home--clients-text2', { content:'
                         <h3>FDM has helped Patchman to set up the business development process and closed strategic partnerships with web hosting providers around the globe.</h3>
                         <h4>Damian Clarke, CEO Patchman</h4>
@@ -125,6 +125,9 @@
 
             </div>
         </div>
+
+
+        {% include "includes/contact.twig" %}
 
 
     </div>

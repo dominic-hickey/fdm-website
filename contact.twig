@@ -1,0 +1,36 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--inner  page--contact">
+
+
+    <div class="page-title  page-title--contact">
+        <div class="page-title-content-wrap">
+            {{widget('pagetitle', 'page-title', {})|raw}}
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Section: contact Intro -->
+        <div class="section  section--careers">
+            <div class="container">
+
+                {{widget('content', 'contact-text1', { content:'
+                    <h2>Have a project you’re interested in discussing with us? <br>Use the contact form below, we’d love to talk.</h2>
+                '})|raw}}
+
+            </div>
+        </div>
+
+        {% include "includes/contact.twig" %}
+
+    </div>
+
+
+</section>
+
+{% endblock %}

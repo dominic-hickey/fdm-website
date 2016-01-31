@@ -1,0 +1,99 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--inner  page--case-studies">
+
+
+    <div class="page-title  page-title--case-studies">
+        <div class="page-title-content-wrap">
+            {{widget('pagetitle', 'page-title', {})|raw}}
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="section  section--case-studies">
+            <div class="container">
+
+                {{widget('image', 'case-studies-image1', {
+                    'src': asset('/images/logo--patchman.png')
+                })|raw}}
+                {{widget('content', 'case-studies-text1', { content:'
+                    <h3>Patchman is a security start-up from the Netherlands that developed an automated tool to patch security vulnerabilities in CMS’s and to detect &amp; clean up malware, allowing hosting companies to pro-actively protect their customers sites and their own servers.</h3>
+                    <h3>Patchman teamed up with FDM to build out the indirect channel and manage the entire sales cycle with medium and large hosting providers around the globe.</h3>
+                '})|raw}}
+
+                {{widget('line', 'line', {})|raw}}
+
+                <div class="row  row--results-list">
+                    <div class="col col--35">
+                        {{widget('content', 'case-studies-text2', { content:'
+                            <h5>Results:</h5>
+                            <p>Over a 7-month period</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col col--65">
+                        <div class="results-list">
+                            {{widget('content', 'case-studies-text3', { content:'
+                                <p>Introduced the product to over 850 shared hosting companies.</p>
+                                <p>Closed strategic partnerships with enterprise level hosters including Hostpapa, Web Africa, Hostnet, Yourhosting, Domovanje, UK2 Group, A2 Hosting and many more.</p>
+                                <p>Built relationships with Reseller Platforms including <a href="https://blog.cpanel.com/patchman-a-bodyguard-for-your-server/">cPanel</a> and Industry Media channels like the <a href="http://www.thewhir.com/web-hosting-news/patchman-automates-vulnerability-patches-to-save-web-hosts-time">WHIR</a>.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxed-content  boxed-content--clients">
+                    {{widget('content', 'case-studies--quote1', { content:'
+                        <h3>FDM has helped Patchman to set up the business development process and closed strategic partnerships with web hosting providers around the globe. I have come to know FDM as a motivated and passionate team member with a true love for growing business.</h3>
+                        <h4>Damian Clarke, CEO Patchman</h4>
+                    '})|raw}}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section  section--grey  section--case-studies">
+            <div class="container">
+
+                {{widget('image', 'case-studies-image2', {
+                    'src': asset('/images/logo--tapastreet.png')
+                })|raw}}
+                {{widget('content', 'case-studies-text4', { content:'
+                    <h3>TapaStreet are a start-up from Ireland who work together with the university of Lion on building cutting edge social tools for SMBs.</h3>
+                    <h3>TapaStreet is a social app that allows SMBs to find out what people are uploading to social networks around their businesses. One of the company’s products is a social gallery that site owners can pull directly onto their site, pulling in local social content and imagery from Twitter, Instagram and other social networks.</h3>
+                '})|raw}}
+
+                {{widget('line', 'line1', {})|raw}}
+
+                <div class="row  row--results-list">
+                    <div class="col col--35">
+                        {{widget('content', 'case-studies-text5', { content:'
+                            <h5>Results:</h5>
+                        '})|raw}}
+                    </div>
+                    <div class="col col--65">
+                        <div class="results-list">
+                            {{widget('content', 'case-studies-text6', { content:'
+                                <p>In 3 months FDM has built distribution and marketing channels from scratch for TapaStreet.</p>
+                                <p>The social gallery app has been introduced to over 20 sitebuilder platforms of which most of them have agreed to integrate the app into their platform.</p>
+                                <p>Furthermore, FDM established relationships with the organization of the largest web hosting conference in the world – WHD Global. We set TapaStreet up with a unique sponsorship opportunity during the WHD event in Rust. WHD will use the TapaStreet app to visualize the social activities during the event. During the event, the app will be showcased originally and effectively to their channel partners including the largest sitebuilders in the world.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {% include "includes/hiring.twig" %}
+
+    </div>
+
+
+</section>
+
+{% endblock %}

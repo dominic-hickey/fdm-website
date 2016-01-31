@@ -5,9 +5,6 @@
 <section class="page  page--inner  page--about">
 
 
-    {% include "includes/header.twig" %}
-
-
     <div class="page-title  page-title--about">
         <div class="page-title-content-wrap">
             {{widget('pagetitle', 'page-title', {})|raw}}
@@ -17,11 +14,53 @@
 
     <!-- Zone Content -->
     <div class="main-content">
-        <div class="container">
 
-            {{zone('main')|raw}}
+        <!-- Section: About Intro -->
+        <div class="section  section--about-intro">
+            <div class="container">
 
+                {{widget('content', 'about-intro-text1', { content:'
+                    <h2>FDM are a network of people that build bridges between SMB service providers and products that could generate revenue, reduce churn or optimize business processes for these companies.</h2>
+                '})|raw}}
+
+                <div class="boxed-content  boxed-content--services">
+                    {{widget('content', 'about--intro-text2', { content:'
+                        <h2>Problem</h2>
+                        <p>Having to fly around the world to go to conferences and meet your prospects is time consuming and expensive.</p>
+                    '})|raw}}
+                    {{widget('content', 'about--intro-text3', { content:'
+                        <h2>Solution</h2>
+                        <p>FDM is a network of business developers that can rapidly connect with companies around the globe.</p>
+                    '})|raw}}
+                    {{widget('content', 'about--intro-text4', { content:'
+                        <h2>Who</h2>
+                        <p>Our network of SMB services providers – including hosting, domain and design companies - are at your finger tips.</p>
+                    '})|raw}}
+                </div>
+
+            </div>
         </div>
+
+
+        <!-- Section: Services -->
+        <div class="section  section--grey  section--founders">
+            <div class="container">
+
+                {{widget('content', 'about--founders-text1', { content:'
+                    <h5>Founders and the team</h5>
+                    <p>David &amp; Freek have a combined experience of 10 years in the hosting industry and teamed in 2015 to start FDM.</p>
+                    <p>FDM has worked with many types of companies, from small shared hosting companies and design agencies, up to global telco’s and everything in between.</p>
+                    <p>Specializing in selling products and services into the industry, our previous roles have covered, market and channel identification, identifying prospects, networking in identified channels, delivering sales presentations &amp; live technology demos, contract negotiation and signing, project delivery and post live account management &amp; inside sales.</p>
+                    <p>Having setup offices and sales channels around the world, our market intelligence and network is truly global. Partners we have worked with are focused in Europe, but we have setup offices and partner channels in North &amp; South America, Africa, India and South East Asia.</p>
+                '})|raw}}
+
+            </div>
+        </div>
+
+
+        {% include "includes/hiring.twig" %}
+
+
     </div>
 
 

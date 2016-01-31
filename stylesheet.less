@@ -88,7 +88,6 @@ body {
     background-color: @color__body--background;
 
     @media @bp-global-above-fullwidth {
-        width: 90%;
         max-width: @value__container--width;
         margin: 0 auto;
     }
@@ -98,9 +97,14 @@ body {
 .container {
 	width: 90%;
 	margin: 0 auto;
+	max-width: 1024px;
 
-	@media @tablet {
-		width: 100%;
+	&--lrg {
+		max-width: 100%;
+
+		.widget {
+			margin: 0;
+		}
 	}
 }
 
@@ -153,7 +157,7 @@ body {
 	width: 100%;
 	max-width: @value__container--width;
 	background-color: @color__header--background;
-	border-bottom: 1px solid @color__site-border;
+	border-bottom: 1px solid @color__site--border;
 	box-shadow: 0 0 16px rgba(110, 110, 110, 0.2);
 	line-height: 0;
 	text-align: center;
@@ -207,11 +211,6 @@ body {
 			text-align: center;
 		}
 	}
-
-    // Widget
-    .widget {
-        margin: 0;
-    }
 
 	// Mini Navigation
 	.nav-item {
@@ -279,19 +278,19 @@ body {
     .flex(1 1 auto);
 
 	// Inner Pages
-    &--inner .main-content {
-		padding-top: @value__widget--spacing--desktop;
+  //   &--inner .main-content {
+		// padding-top: @value__widget--spacing--desktop;
 
-	    @media @bp-global-medium {
-	        padding-top: @value__widget--spacing--laptop;
-	    }
-	    @media @tablet {
-	        padding-top: @value__widget--spacing--tablet;
-	    }
-	    @media @mobile {
-	        padding-top: @value__widget--spacing--mobile;
-	    }
-    }
+	 //    @media @bp-global-medium {
+	 //        padding-top: @value__widget--spacing--laptop;
+	 //    }
+	 //    @media @tablet {
+	 //        padding-top: @value__widget--spacing--tablet;
+	 //    }
+	 //    @media @mobile {
+	 //        padding-top: @value__widget--spacing--mobile;
+	 //    }
+  //   }
 }
 
 
@@ -375,8 +374,7 @@ body {
 
 
 
-
-
+// ------------------------------
 // Sections
 // ------------------------------
 
@@ -397,20 +395,32 @@ body {
     }
 
 
-	// Dark BGs
+	// Dark BG
     &--dark {
-    	h1, h3 {
+    	background-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+
+    	h1, h3, p {
     		color: #fff;
     	}
-    	h3 {
+    	h3, p {
     		opacity: .8;
     	}
+    	p {
+    		font-size: 16px;
+    		line-height: 32px;
+    	}
+    }
+
+    // Grey BG
+    &--grey {
+		background-color: @color__grey;
     }
 
 
 	// Section Content Wrap
     .section-content-wrap {
-    	max-width: 830px;
     	margin: 0 auto;
     }
 
@@ -419,7 +429,59 @@ body {
 
 
 
-// CTA Rows
+// ------------------------------
+// Global Sections
+// ------------------------------
+
+
+
+
+// Global Section: Contact
+// ------------------------------
+
+.section--contact {
+	text-align: left;
+
+	@media @tablet {
+		text-align: center;
+	}
+
+	.section-content-wrap {
+		.flex-display;
+	    .justify-content(space-between);
+	    width: 90%;
+	    max-width: 1024px;
+	    margin: 0 auto;
+
+	    @media @tablet {
+	    	max-width: 90%;
+	    	margin: 0 auto;
+	    	text-align: center;
+	    }
+	}
+
+	.contact-p {
+		padding-bottom: 0;
+	}
+
+	.widget {
+		margin: 0;
+	}
+
+	.form {
+		max-width: 600px;
+		margin-left: auto;
+
+		@media @tablet {
+			margin: 40px auto 0;
+		}
+	}
+}
+
+
+
+
+// Global Section: CTA Row
 // ------------------------------
 
 .cta-row {
@@ -445,7 +507,7 @@ body {
 	    margin: 0 auto;
 	    max-width: 690px;
 	    height: 2px;
-	    background-color: @color__site-border;
+	    background-color: @color__site--border;
 	    content: "";
 	}
 }
@@ -461,7 +523,7 @@ body {
 // Section: About FDM
 // ------------------------------
 
-.section--about {
+.row--col-3 {
 	[data-widget-type="image"] {
 	    margin: 0 0 20px 0 !important;
 
@@ -488,13 +550,15 @@ body {
 
 .section--services {
 	background-image: image('/images/services-section-bg.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
+	// Section Content Wrap
+    .section-content-wrap {
+    	max-width: 830px;
+    	margin: 0 auto;
+    }
 
     // Service List
-    .service-list {
+    .service-short-list {
     	.flex-display;
     	.justify-content(space-around);
     	max-width: 690px;
@@ -518,7 +582,7 @@ body {
     }
 
     // Service List Item
-    .service-list-item {
+    .service-short-list-item {
     	display: inline-block;
 
     	@media @mobile {
@@ -573,29 +637,31 @@ body {
 
     	@media @mobile {
     		margin-bottom: 30px;
+    		transform: scale(.8);
     	}
     }
 }
 
-// Client Quote
-.client-quote {
+// Boxed Content
+.boxed-content {
 	position: relative;
-	margin-top: 90px;
-	padding: 60px 50px 50px;
-	border: 3px solid @color__site-border;
+	margin: 90px auto 0;
+	padding: 50px;
+	border: 3px solid @color__site--border;
 
     @media @bp-global-medium {
         margin-top: @value__widget--spacing--laptop;
     }
     @media @tablet {
     	width: 90%;
-        margin: 40px auto 0;
+        margin: 60px auto 0;
+        padding: 40px;
     }
     @media @mobile {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
-	// Quote Mark
+
     &:before {
     	position: absolute;
     	top: -4px;
@@ -610,58 +676,164 @@ body {
 		font-size: 110px;
 		line-height: 50px;
 		color: @color__primary;
-		content: "“";
     }
 
     .widget {
     	margin: 0;
     }
 
-	h3 {
-		font-size: 19px;
-		line-height: 38px;
+    h2 {
+    	line-height: 32px;
 
-		@media @mobile {
-	    	font-size: 17px;
-			line-height: 32px;
+    	@media @mobile {
+	    	padding-bottom: 20px;
 	    }
+
+    	&:after {
+			display: block;
+			width: 26px;
+			margin: 0 auto;
+			padding-bottom: 15px;
+			border-bottom: 2px solid @color__primary;
+			content: "";
+		}
+    }
+
+	// Clients
+	&--clients {
+		padding: 60px 50px 50px;
+
+		@media @tablet {
+	        padding: 50px 40px 40px;
+		}
+		@media @mobile {
+			padding: 40px 30px 30px;
+		}
+
+		// Quote Mark
+		&:before {
+			content: "“";
+		}
+
+		h3 {
+			font-size: 19px;
+			line-height: 38px;
+
+			@media @mobile {
+		    	font-size: 15px;
+				line-height: 32px;
+		    }
+		}
+    }
+
+    // Services
+	&--services {
+		max-width: 650px;
+
+		&:before {
+			content: "";
+		    top: -26px;
+		    height: 50px;
+			background-image: image('/images/icon--about.png');
+			background-position: center;
+		    background-size: 59px;
+		    background-repeat: no-repeat;
+		    text-align: center;
+		}
+
+		.widget {
+			margin-bottom: 30px;
+		}
+    }
+
+}
+
+
+
+
+// ------------------------------
+// About FDM Page
+// ------------------------------
+
+
+// Section: Who We Are
+// ------------------------------
+
+.who-we-are {
+	margin-top: @value__widget--spacing--desktop;
+
+    @media @bp-global-medium {
+        margin-top: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-top: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-top: @value__widget--spacing--mobile;
+    }
+}
+
+
+
+
+// Section: Founders
+// ------------------------------
+
+.section--founders {
+	h5:after {
+		margin: 0 auto;
 	}
 }
 
 
 
 
-// Section: Contact
+// Section: Hiring
 // ------------------------------
 
-.section--contact {
-	background-color: #f0f0f0;
+.section--hiring {
+	padding: 50px 0;
+	background-image: image('/images/hiring-section-bg.jpg');
+	background-size: cover;
+	background-position: center;
 	text-align: left;
 
-	.section-content-wrap {
+	.container {
 		.flex-display;
-	    .justify-content(space-between);
-	    width: 90%;
-	    max-width: 1024px;
-	    margin: 0 auto;
+		.justify-content(space-between);
+		.align-items(center);
 
-	    @media @tablet {
-	    	max-width: 90%;
-	    	margin: 0 auto;
-	    	text-align: center;
-	    }
+		@media @bp-1050 {
+			display: block;
+			text-align: center;
+		}
 	}
 
-	.widget {
-		margin: 0;
-	}
-
-	.form {
-		max-width: 600px;
-		margin-left: auto;
+	h2 {
+		padding-bottom: 10px;
+		font-size: 28px;
+		line-height: 42px;
+		color: #fff;
 
 		@media @tablet {
-			margin-top: 40px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+
+	p {
+		opacity: 0.7;
+		color: #fff;
+	}
+
+	.button {
+		font-size: 16px;
+	    padding: 0 32px;
+	    line-height: 60px;
+
+	    @media @bp-1050 {
+	    	margin-top: 30px;
+			.button;
 		}
 	}
 }
@@ -669,5 +841,179 @@ body {
 
 
 
+// ------------------------------
+// Services Page
+// ------------------------------
+
+.section--services-intro {
+	.widget {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
 
 
+
+// Service List
+// ------------------------------
+
+.row.service-list {
+	border-top: 3px solid @color__site--border;
+
+    .col {
+    	.flex-display;
+
+		@media @bp-1050 {
+			.flex-basis(50%);
+		}
+		@media @mobile {
+			.flex-basis(100%);
+		}
+    }
+
+    .widget {
+    	margin: 0;
+    }
+
+    h2:after {
+		display: block;
+		width: 26px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid @color__primary;
+		content: "";
+    }
+    p {
+    	.p-sml;
+    }
+}
+
+
+
+
+// Service List Item
+// ------------------------------
+
+.service-list-item {
+	.flex-display;
+   	.flex-direction(column);
+	padding: 30px 50px 50px;
+	text-align: left;
+	border-right: 3px solid @color__site--border;
+	border-bottom: 3px solid @color__site--border;
+
+	@media @tablet {
+		padding: 20px 40px 40px;
+	}
+	@media @mobile {
+		padding: 20px;
+		border-right: 0;
+	}
+}
+
+
+
+
+// ------------------------------
+// Careers Page
+// ------------------------------
+
+.section--careers {
+	.container {
+		max-width: 850px;
+	}
+}
+
+// Careers
+.service-list--careers {
+	margin-bottom: @value__widget--spacing--desktop;
+
+    @media @bp-global-medium {
+        margin-bottom: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-bottom: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-bottom: @value__widget--spacing--mobile;
+    }
+
+	.service-list-item {
+		@media @mobile {
+			border-right: 3px solid @color__site--border;
+		}
+	    &--first {
+			border-left: 3px solid @color__site--border;
+		}
+		&--middle {
+			@media @mobile {
+				border-left: 3px solid @color__site--border;
+			}
+		}
+		&--last {
+			@media @bp-1050 {
+				border-left: 3px solid @color__site--border;
+				border-bottom: 3px solid @color__site--border;
+			}
+			@media @mobile {
+				border-right: 3px solid @color__site--border;
+			}
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// Case Studies Page
+// ------------------------------
+
+.section--case-studies {
+
+	[data-widget-type="image"] {
+	    margin-bottom: 40px;
+
+	    @media @tablet {
+	        margin-bottom: 10px !important;
+	        transform: scale(.8);
+	    }
+	}
+
+	[data-widget-type="line"] {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.row--results-list {
+		text-align: left;
+
+		@media @tablet {
+			text-align: center;
+		}
+
+		.widget {
+			margin: 0;
+		}
+	}
+	.results-list {
+		text-align: left;
+
+		@media @tablet {
+			margin-top: 30px;
+		}
+
+		p:before {
+			display: inline-block;
+			margin-right: 20px;
+			width: 8px;
+			height: 8px;
+			content: "";
+			.border-radius(50%);
+			border: 2px solid @color__primary;
+		}
+	}
+}
+
+#page-zones__template-widgets__line-line1 hr.rule {
+	background-color: #e2e2e2;
+}

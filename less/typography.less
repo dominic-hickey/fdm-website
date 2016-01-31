@@ -16,9 +16,9 @@ h1, h2, h3, h4, h5, p {
 	padding-bottom: 20px;
 	-webkit-font-smoothing: antialiased;
 
-	@media @tablet {
-		padding-bottom: 10px;
-	}
+	// @media @tablet {
+	// 	padding-bottom: 10px;
+	// }
 }
 
 h1, .heading--1 {
@@ -26,6 +26,12 @@ h1, .heading--1 {
 	color: @color__h1--text;
 	text-align: center;
 	text-transform: uppercase;
+
+	@media @mobile {
+		padding-bottom: 30px;
+		font-size: 26px;
+		line-height: 32px;
+	}
 
 	&:after {
 		display: block;
@@ -57,16 +63,16 @@ h3, .heading--3 {
 
 h4, .heading--4 {
 	color: @color__h4--text;
+	line-height: 22px;
 	text-transform: uppercase;
 
 	@media @mobile {
 		font-size: bkscale(@font__h4--font-size, 0.8);
-		line-height: bkscale(@font__h4--line-height, 0.8);
 	}
 }
 
 h5, .heading--5 {
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	font-family: @font__h1--font-family;
 	font-size: 28px;
 	line-height: 32px;
@@ -120,7 +126,7 @@ a {
 // -----------------------------
 
 .button {
-	padding: 0 30px;
+	padding: 0 26px;
 	.border-radius(4px);
 	.transition(.6s);
 	background-color: @color__button--background;
@@ -139,6 +145,22 @@ a {
 	&:hover {
 		background-color: @color__button--background--hover;
 	}
+
+	// Green
+	&--green {
+		background-color: @color__secondary;
+
+		&:hover {
+			background-color: darken(@color__secondary, 8%);
+		}
+	}
+
+	// Small
+	&--sml {
+		padding: 0 10px;
+		font-size: 12px;
+		line-height: 30px;
+	}
 }
 
 
@@ -148,8 +170,6 @@ a {
 // -----------------------------
 
 .content h1, h2, h3, h4, h5, h6, p {
-	max-width: 920px;
-	margin: 0 auto;
 
 	&:last-child {
 		padding-bottom: 0;
@@ -164,28 +184,18 @@ a {
 .post-body {
 
 
-	// H1
-	// ------------------------------
-
-
-	h1 {
-		@media @bp-global-small {
-			font-size: bkscale(@font__h1--font-size, 0.9);
-			line-height: bkscale(@font__h1--line-height, 0.9);
-		}
-	}
-
-
-
-
 	// H2
 	// ------------------------------
 
 
 	h2 {
-		@media @bp-global-small {
+		@media @tablet {
 			font-size: bkscale(@font__h2--font-size, 0.9);
 			line-height: bkscale(@font__h2--line-height, 0.9);
+		}
+		@media @mobile {
+			font-size: bkscale(@font__h2--font-size, 0.8);
+			line-height: bkscale(@font__h2--line-height, 0.7);
 		}
 	}
 
@@ -232,24 +242,6 @@ a {
 			line-height: bkscale(@font__p--line-height, 0.9);
 		}
 	}
-
-
-
-
-	// Link
-	// ------------------------------
-
-
-	a {
-		display: inline-block;
-		line-height: 1.5;
-
-		&:hover {
-			text-decoration: none;
-			box-shadow: inset 0px -1px 0px 0px @color__link--text;
-		}
-	}
-
 
 
 

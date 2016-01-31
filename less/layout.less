@@ -20,6 +20,15 @@
 .col {
 
 	// Column: Third
+	&--half {
+		.flex-basis(50%);
+
+		@media @tablet {
+			.flex-basis(100%);
+		}
+	}
+
+	// Column: Third
 	&--third {
 		.flex-basis(33.333%);
 
