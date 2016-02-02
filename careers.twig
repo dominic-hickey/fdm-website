@@ -20,48 +20,35 @@
             <div class="container">
 
                 {{widget('content', 'careers-text1', { content:'
-                    <h1>Our Mission</h1>
                     <h2>Our mission is to bring companies together.</h2>
                     <p>And we do this by bringing our sales and product expertise to the table. We’re always on the look out for biz dev, product and marketing people to join our company.</p>
-                    <p>If you’re looking for a diverse job where you can take on different projects, travel a bit and work with fun people you can learn from, then please reach out!</p>
                 '})|raw}}
 
             </div>
         </div>
 
-        <div class="container  container--lrg">
-            <ul class="row  service-list  service-list--careers">
-                <div class="col  col--third">
-                    <li class="service-list-item  service-list-item--first">
-                        {{widget('content', 'careers--text2', { content:'
-                            <h2>Job Title 1</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <a href="#" class="button  button--sml">More Info</a>
-                        '})|raw}}
-                    </li>
-                </div>
-                <div class="col  col--third">
-                    <li class="service-list-item  service-list-item--middle">
-                        {{widget('content', 'careers--text3', { content:'
-                            <h2>Job Title 2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <a href="#" class="button  button--sml">More Info</a>
-                        '})|raw}}
-                    </li>
-                </div>
-                <div class="col  col--third">
-                    <li class="service-list-item  service-list-item--last">
-                        {{widget('content', 'careers--text4', { content:'
-                            <h2>Job Title 3</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <a href="#" class="button  button--sml">More Info</a>
-                        '})|raw}}
-                    </li>
-                </div>
-            </ul>
-        </div>
+        <!-- Section: Contact-->
+        <div class="section  section--grey  section--contact">
+            <div class="container">
 
-        {% include "includes/contact-section.twig" %}
+                <div class="row">
+                    <div class="col  col--35">
+                        {{widget('content', 'careers-text2', { content:'
+                            <h5>Get In Touch</h5>
+                            <p class="p-sml">If you’re looking for a diverse job where you can take on different projects, travel a bit and work with fun people you can learn from, then please reach out!</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--65">
+                        {{widget('contactform', 'contact-form', {
+                            'text': 'Submit Enquiry',
+                            'formTitle': 'Contact Us',
+                            'email': 'profile'
+                        })|raw}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 

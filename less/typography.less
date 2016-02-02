@@ -46,6 +46,10 @@ h1, .heading--1 {
 h2, .heading--2 {
 	color: @color__h2--text;
 
+	@media @bp-1050 {
+		font-size: bkscale(@font__h2--font-size, 0.9);
+		line-height: bkscale(@font__h2--line-height, 0.9);
+	}
 	@media @mobile {
 		font-size: bkscale(@font__h2--font-size, 0.8);
 		line-height: bkscale(@font__h2--line-height, 0.8);

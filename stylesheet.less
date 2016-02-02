@@ -28,7 +28,7 @@
 // #Imports
 // -----------------------------
 
-@import "@{templateLocal}/bk-less-framework-v8.less";   // LESS Framework v8
+@import "@{templateCommon}/bk-less-framework-v8.less";   // LESS Framework v8
 @import "@{templateLocal}/less/fork-variables.less";    // Fork Variables
 @import "@{templateLocal}/less/variables.less";         // Variables
 
@@ -39,8 +39,6 @@
 @import "@{templateLocal}/less/navigation.less";  // Navigation
 
 @import "@{templateLocal}/less/plugins/plugin-blog.less";       // Plugin: Blog
-@import "@{templateLocal}/less/plugins/plugin-menu.less";       // Plugin: Menu
-@import "@{templateLocal}/less/plugins/plugin-ecommerce.less";  // Plugin: Ecommerce
 
 
 
@@ -241,6 +239,7 @@ body {
 
 .logo {
 	display: inline-block;
+	width: 180px;
 
 	@media @bp-1050 {
 		margin: 20px 0;
@@ -273,24 +272,8 @@ body {
 // General Page Styles
 // ------------------------------
 
-
 .page {
     .flex(1 1 auto);
-
-	// Inner Pages
-  //   &--inner .main-content {
-		// padding-top: @value__widget--spacing--desktop;
-
-	 //    @media @bp-global-medium {
-	 //        padding-top: @value__widget--spacing--laptop;
-	 //    }
-	 //    @media @tablet {
-	 //        padding-top: @value__widget--spacing--tablet;
-	 //    }
-	 //    @media @mobile {
-	 //        padding-top: @value__widget--spacing--mobile;
-	 //    }
-  //   }
 }
 
 
@@ -300,12 +283,16 @@ body {
 // ------------------------------
 
 .page-title {
-	background-image: image('/images/feature-image.jpg');
     background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
 
+
+	// Default Image
+    &--default {
+		background-image: image('/images/feature-default.jpg');
+    }
 
 	// About Image
     &--about {
@@ -356,7 +343,7 @@ body {
     .justify-content(center);
 	height: 250px;
 	margin-top: 61px;
-	background-color: fade(@color__feature-content--background, 70%);
+	background-color: fade(@color__feature-content--background, 60%);
 
 	@media @bp-1050 {
 		margin-top: 138px;
@@ -384,7 +371,7 @@ body {
     text-align: center;
     padding: @value__widget--spacing--desktop 0;
 
-    @media @bp-global-medium {
+    @media @bp-1050 {
         padding: @value__widget--spacing--laptop 0;
     }
     @media @tablet {
@@ -527,19 +514,26 @@ body {
 	[data-widget-type="image"] {
 	    margin: 0 0 20px 0 !important;
 
-	    @media @tablet {
+	    @media @bp-1050 {
 	        margin-bottom: 10px !important;
 	        transform: scale(.8);
 	    }
 	}
 
-	.col--third:last-child {
-		@media @tablet {
-			.flex-basis(70%);
-			margin: 30px auto 0;
-		}
+	.col--third {
 		@media @mobile {
-			.flex-basis(100%);
+			margin-bottom: @value__widget--spacing--mobile;
+		}
+
+		&:last-child {
+			@media @bp-1050 {
+				.flex-basis(70%);
+				margin: 30px auto 0;
+			}
+			@media @mobile {
+				.flex-basis(100%);
+				margin: 0;
+			}
 		}
 	}
 }
@@ -939,9 +933,11 @@ body {
     }
 
 	.service-list-item {
+
 		@media @mobile {
 			border-right: 3px solid @color__site--border;
 		}
+
 	    &--first {
 			border-left: 3px solid @color__site--border;
 		}
@@ -951,6 +947,8 @@ body {
 			}
 		}
 		&--last {
+			border-bottom: 0;
+
 			@media @bp-1050 {
 				border-left: 3px solid @color__site--border;
 				border-bottom: 3px solid @color__site--border;
@@ -970,6 +968,10 @@ body {
 // ------------------------------
 
 .section--case-studies {
+
+	&.section--grey .boxed-content:before {
+		background-color: @color__grey;
+	}
 
 	[data-widget-type="image"] {
 	    margin-bottom: 40px;
