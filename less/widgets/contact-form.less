@@ -20,11 +20,11 @@
 // ------------------------------
 
 
-.contactform__form-group {
-	margin-bottom: 26px;
+.form-group {
+	margin-bottom: 20px;
 
-	@media @bp-global-small {
-		margin-bottom: 16px;
+	@media @mobile {
+		margin-bottom: 10px;
 	}
 
 
@@ -32,6 +32,24 @@
 		margin-bottom: 0;
 	}
 
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #fff;
 }
 
 
