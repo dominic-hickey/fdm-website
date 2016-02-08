@@ -327,7 +327,15 @@ body {
     // Typography
     h1 {
     	padding-bottom: 0;
+    	font-size: 38px;
     	color: #fff;
+
+    	@media @tablet {
+    		font-size: 32px;
+    	}
+    	@media @mobile {
+    		font-size: 22px;
+    	}
 
     	&:after {
     		display: none;
@@ -343,6 +351,7 @@ body {
     .justify-content(center);
 	height: 350px;
 	margin-top: 61px;
+	padding: 20px;
 	background-color: fade(@color__feature-content--background, 70%);
 
 	@media @bp-1050 {
