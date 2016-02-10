@@ -626,23 +626,29 @@ body {
 // ------------------------------
 
 // Client Logos
-.client-logos {
-	.flex-display;
-    .justify-content(space-around);
-    .align-items(center);
+.main-content .client-logos {
+	.row--col-3 {
+		.align-items(center);
 
-    @media @mobile {
-    	display: block;
-    }
+		&:first-child {
+			margin-bottom: 30px;
 
-    [data-widget-type="image"] {
-    	margin: 0;
+			@media @tablet {
+				margin-bottom: 40px;
+			}
+			@media @mobile {
+				margin-bottom: 30px;
+			}
+		}
+	}
 
-    	@media @mobile {
-    		margin-bottom: 30px;
-    		transform: scale(.8);
-    	}
-    }
+	[data-widget-type="image"] {
+		margin: 40px 0 20px 0;
+
+		@media @mobile {
+			transform: scale(.8);
+		}
+	}
 }
 
 // Boxed Content
