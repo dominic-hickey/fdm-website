@@ -531,10 +531,13 @@ body {
 // Section: About FDM
 // ------------------------------
 
+.section--about [data-widget-type="image"] {
+	height: 48px;
+}
+
 .row--col-3 {
 	[data-widget-type="image"] {
 	    margin: 0 0 20px 0 !important;
-	    height: 48px;
 
 	    @media @bp-1050 {
 	        margin-bottom: 10px !important;
@@ -638,6 +641,20 @@ body {
 // Section: Clients
 // ------------------------------
 
+.section--clients .service-blocks-title {
+	margin-bottom: @value__widget--spacing--desktop;
+
+    @media @bp-global-medium {
+        margin-bottom: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-bottom: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-bottom: @value__widget--spacing--mobile;
+    }
+}
+
 // Client Logos
 .main-content .client-logos {
 	.row--col-3 {
@@ -656,7 +673,7 @@ body {
 	}
 
 	[data-widget-type="image"] {
-		margin: 40px 0 20px 0;
+		margin: 0!important;
 
 		@media @mobile {
 			transform: scale(.8);
@@ -667,7 +684,7 @@ body {
 // Boxed Content
 .boxed-content {
 	position: relative;
-	margin: 90px auto 0;
+	margin: 80px auto 0;
 	padding: 50px;
 	border: 3px solid @color__site--border;
 
