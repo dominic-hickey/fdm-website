@@ -104,6 +104,9 @@ body {
 			margin: 0;
 		}
 	}
+	&--med {
+		max-width: 1600px;
+	}
 }
 
 
@@ -878,9 +881,14 @@ body {
 // Section: Founders
 // ------------------------------
 
-.section--founders {
-	h5:after {
-		margin: 0 auto;
+.founders {
+	[data-widget-type="image"] {
+		margin-bottom: 0!important
+	}
+
+	.dual-blocks .col h5 {
+		padding-bottom: 20px;
+		font-size: 26px;
 	}
 }
 
@@ -965,10 +973,10 @@ body {
 
 
 
-// Service Blocks
+// Dual Blocks
 // ------------------------------
 
-.service-blocks {
+.dual-blocks {
 	line-height: 0;
 
 	.section {
@@ -996,6 +1004,16 @@ body {
 	.col {
 		font-size: 0;
 		line-height: 0;
+
+		h5 {
+			padding-bottom: 10px;
+			font-size: 16px;
+			letter-spacing: 1px;
+
+			&:after {
+				display: none;
+			}
+		}
 
 		@media @tablet {
 			background-color: #3b3b3b;
@@ -1035,6 +1053,9 @@ body {
 			h2 {
 				color: #fff;
 			}
+			h5 {
+				color: #fff;
+			}
 			p {
 				color: #b7b7b7;
 			}
@@ -1057,79 +1078,6 @@ body {
 		.p-sml;
 	}
 
-}
-
-
-
-.section--services {
-	@media  @mobile {
-		padding: 30px 0 50px;
-	}
-}
-
-.section--services-intro {
-	.widget {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-
-
-// Service List
-// ------------------------------
-
-.row.service-list {
-	border-top: 3px solid @color__site--border;
-
-    .col {
-    	.flex-display;
-
-		@media @bp-1050 {
-			.flex-basis(50%);
-		}
-		@media @mobile {
-			.flex-basis(100%);
-		}
-    }
-
-    .widget {
-    	margin: 0;
-    }
-
-    h2:after {
-		display: block;
-		width: 26px;
-		padding-bottom: 15px;
-		border-bottom: 2px solid @color__primary;
-		content: "";
-    }
-    p {
-    	.p-sml;
-    }
-}
-
-
-
-
-// Service List Item
-// ------------------------------
-
-.service-list-item {
-	.flex-display;
-   	.flex-direction(column);
-	padding: 30px 50px 50px;
-	text-align: left;
-	border-right: 3px solid @color__site--border;
-	border-bottom: 3px solid @color__site--border;
-
-	@media @tablet {
-		padding: 20px 40px 40px;
-	}
-	@media @mobile {
-		padding: 20px;
-		border-right: 0;
-	}
 }
 
 

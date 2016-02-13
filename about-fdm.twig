@@ -36,6 +36,7 @@
 
         <!-- About Blocks -->
         <div class="about-blocks">
+            <div class="container  container--med">
 
             <div class="section">
                 <div class="row">
@@ -73,28 +74,40 @@
 
         </div>
 
-        {% include "includes/contact-section.twig" %}
 
-    </div>
+        <!-- Section: Founders -->
+        <div class="founders">
+            <div class="dual-blocks">
 
+                <!-- Section: Sales -->
+                <div class="section">
+                    <div class="row">
 
-        <!-- Section: Services -->
-        <div class="section  section--grey  section--founders">
-            <div class="container">
+                        <div class="col  col--half  col--dark  col--text">
+                            {{widget('content', 'about--founders-text1', { content:'
+                                <h5>Founders and the team</h5>
+                                <p>David &amp; Freek have a combined experience of 10 years in the hosting industry and teamed in 2015 to start FDM.</p>
+                                <p>FDM has worked with many types of companies, from small shared hosting companies and design agencies, up to global telco’s and everything in between.</p>
+                                <p>Specializing in selling products and services into the industry, our previous roles have covered, market and channel identification, identifying prospects, networking in identified channels, delivering sales presentations &amp; live technology demos, contract negotiation and signing, project delivery and post live account management &amp; inside sales.</p>
+                                <p>Having setup offices and sales channels around the world, our market intelligence and network is truly global. Partners we have worked with are focused in Europe, but we have setup offices and partner channels in North &amp; South America, Africa, India and South East Asia.</p>
+                            '})|raw}}
+                        </div>
+                        <div class="col  col--half">
+                            {{widget('image', 'services-image--founders', {
+                                'src': asset('/images/about-image--founders.jpg')
+                            })|raw}}
+                        </div>
 
-                {{widget('content', 'about--founders-text1', { content:'
-                    <h5>Founders and the team</h5>
-                    <p>David &amp; Freek have a combined experience of 10 years in the hosting industry and teamed in 2015 to start FDM.</p>
-                    <p>FDM has worked with many types of companies, from small shared hosting companies and design agencies, up to global telco’s and everything in between.</p>
-                    <p>Specializing in selling products and services into the industry, our previous roles have covered, market and channel identification, identifying prospects, networking in identified channels, delivering sales presentations &amp; live technology demos, contract negotiation and signing, project delivery and post live account management &amp; inside sales.</p>
-                    <p>Having setup offices and sales channels around the world, our market intelligence and network is truly global. Partners we have worked with are focused in Europe, but we have setup offices and partner channels in North &amp; South America, Africa, India and South East Asia.</p>
-                '})|raw}}
+                    </div>
+                </div>
 
             </div>
         </div>
 
+    </div>
 
-        {% include "includes/contact-cta.twig" %}
+
+    {% include "includes/contact-section.twig" %}
 
 
     </div>

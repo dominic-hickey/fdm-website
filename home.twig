@@ -13,49 +13,51 @@
 
         <!-- Section: About FDM -->
         <div class="section  section--about">
+            <div class="container  container--med">
 
-            {{widget('content', 'home--about-text1', { content:'
-                <h1>About FDM</h1>
-            '})|raw}}
+                {{widget('content', 'home--about-text1', { content:'
+                    <h1>About FDM</h1>
+                '})|raw}}
 
-            <div class="row  row--col-3">
-                <div class="col  col--third">
-                    {{widget('image', 'home--about-image1', {
-                      'src': asset('/images/icon--network.png')
-                    })|raw}}
-                    {{widget('content', 'home--about-text2', { content:'
-                        <h2>Large Client Network</h2>
-                        <p>FDM boasts over 10,000 hosting companies on file and a huge network of remote industry experts around the world.</p>
-                    '})|raw}}
+                <div class="row  row--col-3">
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image1', {
+                          'src': asset('/images/icon--network.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text2', { content:'
+                            <h2>Large Client Network</h2>
+                            <p>FDM boasts over 10,000 hosting companies on file and a huge network of remote industry experts around the world.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image2', {
+                          'src': asset('/images/icon--people.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text3', { content:'
+                            <h2>Strong Relationships</h2>
+                            <p>FDM have a strong relationship with 100s of enterprise level SMB services providers. Lorem ipsum dolor sit amet, consectetur elim sed do eiusmod tempor.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'home--about-image3', {
+                          'src': asset('/images/icon--telesales.png')
+                        })|raw}}
+                        {{widget('content', 'home--about-text4', { content:'
+                            <h2>UK Based Telesales</h2>
+                            <p>FDM run its telesales operation from Dorset, UK. Lorem ipsum dolor sit amet, consectetur elim sit amet, consectetur elim sed do eiusmod tempor.</p>
+                        '})|raw}}
+                    </div>
                 </div>
-                <div class="col  col--third">
-                    {{widget('image', 'home--about-image2', {
-                      'src': asset('/images/icon--people.png')
+
+                <div class="cta-row">
+                    {{widget('button', 'home--about-button1', {
+                      'text': 'More About FDM',
+                      'action': 'internal',
+                      'url': '/about-fdm'
                     })|raw}}
-                    {{widget('content', 'home--about-text3', { content:'
-                        <h2>Strong Relationships</h2>
-                        <p>FDM have a strong relationship with 100s of enterprise level SMB services providers. Lorem ipsum dolor sit amet, consectetur elim sed do eiusmod tempor.</p>
-                    '})|raw}}
                 </div>
-                <div class="col  col--third">
-                    {{widget('image', 'home--about-image3', {
-                      'src': asset('/images/icon--telesales.png')
-                    })|raw}}
-                    {{widget('content', 'home--about-text4', { content:'
-                        <h2>UK Based Telesales</h2>
-                        <p>FDM run its telesales operation from Dorset, UK. Lorem ipsum dolor sit amet, consectetur elim sit amet, consectetur elim sed do eiusmod tempor.</p>
-                    '})|raw}}
-                </div>
+
             </div>
-
-            <div class="cta-row">
-                {{widget('button', 'home--about-button1', {
-                  'text': 'More About FDM',
-                  'action': 'internal',
-                  'url': '/about-fdm'
-                })|raw}}
-            </div>
-
         </div>
 
 
