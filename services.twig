@@ -15,98 +15,132 @@
     <!-- Main Content -->
     <div class="main-content">
 
-        <!-- Section: Services Intro -->
-        <div class="section  section--services-intro">
-
+        <div class="section">
             <div class="container">
 
                 {{widget('content', 'services-text1', { content:'
-                    <h2>Our mission is to bring companies together in an effective and efficient way. We can be as involved with your organization and manage the entire sales and project process or make solely introductions; it’s up to you! Here are some of the services we provide:</h2>
+                    <h2>Our mission is to bring companies together and help them grow. We become truly involved with our clients and can help speed up the sales process, improve product management, recruit for key roles and look after larger accounts.</h2>
                 '})|raw}}
 
-            </div>
+                <div class="service-blocks-title">
+                    {{widget('content', 'services-blocks-title', { content:'
+                        <h4>Some of the services we provide are:</h4>
+                    '})|raw}}
+                </div>
 
+            </div>
         </div>
 
-        <ul class="row  service-list">
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text2', { content:'
-                        <h2>B2B Sales - Enterprise</h2>
-                        <p>We setup the best channel strategy and deliver results by identifying targets and creating necessary collateral to setup a consultative experience, from lead generation through to contract signing. With 10+ years experience in the hosting, registrar &amp; telco space, our network can be applied to your technology right away.</p>
-                    '})|raw}}
-                </li>
+
+        <!-- Service Blocks-->
+        <div class="service-blocks">
+
+            <!-- Section: Sales -->
+            <div class="section">
+                <div class="row">
+
+                    <div class="col  col--half  col--dark col--text">
+                        {{widget('content', 'services--text2', { content:'
+                            <h2>B2B Sales - Enterprise</h2>
+                            <p>We setup the best channel strategy and deliver results by identifying targets and creating necessary collateral to setup a consultative experience, from lead generation through to contract signing. With 10+ years experience in the hosting, registrar &amp; telco space, our network can be applied to your technology right away.</p>
+                        '})|raw}}
+                        {{widget('content', 'services--text3', { content:'
+                            <h2>B2B Sales – Telesales</h2>
+                            <p>With thousands of smaller sized companies on file our telesales operation is up to speed to introduce your product to this network. The decision making and sales cycle as a whole is typically a lot shorter with these smaller organizations compared to the enterprise level deals.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--half">
+                        {{widget('image', 'services-image--telesales', {
+                            'src': asset('/images/services-image--telesales.jpg')
+                        })|raw}}
+                    </div>
+
+                </div>
             </div>
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text3', { content:'
-                        <h2>B2B Sales – Telesales</h2>
-                        <p>With thousands of smaller sized companies on file our telesales operation is up to speed to introduce your product to this network. The decision making and sales cycle as a whole is typically a lot shorter with these smaller organizations compared to the enterprise level deals.</p>
-                    '})|raw}}
-                </li>
+
+
+            <!-- Section: Management -->
+            <div class="section  section--reverse">
+                <div class="row">
+
+                    <div class="col  col--half">
+                        {{widget('image', 'services-image--management', {
+                            'src': asset('/images/services-image--management.jpg')
+                        })|raw}}
+                    </div>
+                    <div class="col  col--half  col--text">
+                        {{widget('content', 'services--text4', { content:'
+                            <h2>Project Management</h2>
+                            <p>A well-executed project is the corner stone to developing long-standing channel relationships. We can manage the delivery phase of a B2B strategy with best practices to manage multi level stakeholders, both internally and externally.</p>
+                        '})|raw}}
+                        {{widget('content', 'services--text5', { content:'
+                            <h2>Account Management</h2>
+                            <p>FDM specializes in managing channel relationships post sale and post delivery to ensure that best efforts are maintained on both sides. Monitoring key metrics like ARPU &amp; churn allows us to dial in the optimum methods for commercializing the technology, region by region.</p>
+                        '})|raw}}
+                    </div>
+
+                </div>
             </div>
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text4', { content:'
-                        <h2>Project Management</h2>
-                        <p>A well-executed project is the corner stone to developing long-standing channel relationships. We can manage the delivery phase of a B2B strategy with best practices to manage multi level stakeholders, both internally and externally.</p>
-                    '})|raw}}
-                </li>
+
+
+            <!-- Section: Planning -->
+            <div class="section">
+                <div class="row">
+
+                    <div class="col  col--half  col--dark  col--text">
+                        {{widget('content', 'services--text6', { content:'
+                            <h2>Conference Planning </h2>
+                            <p>Sponsoring and exhibiting at events is a serious commitment. We can manage the entire process, from identifying the correct events, negotiating agreements, booth design, planning networking events and meeting with the right decision makers in attendance.</p>
+                        '})|raw}}
+                        {{widget('content', 'services--text7', { content:'
+                            <h2>Business Development</h2>
+                            <p>We help technology companies with the most important transactions. Our network of VC’s, angel investors and tech evangelists can assist from seed investment through to mergers and acquisitions and other exit strategies.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--half">
+                        {{widget('image', 'services-image--planning', {
+                            'src': asset('/images/services-image--planning.jpg')
+                        })|raw}}
+                    </div>
+
+                </div>
             </div>
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text5', { content:'
-                        <h2>Account Management</h2>
-                        <p>FDM specializes in managing channel relationships post sale and post delivery to ensure that best efforts are maintained on both sides. Monitoring key metrics like ARPU &amp; churn allows us to dial in the optimum methods for commercializing the technology, region by region.</p>
-                    '})|raw}}
-                </li>
+
+
+            <!-- Section: Recruitment -->
+            <div class="section  section--reverse">
+                <div class="row">
+
+                    <div class="col  col--half">
+                        {{widget('image', 'services-image--recruitment', {
+                            'src': asset('/images/services-image--recruitment.jpg')
+                        })|raw}}
+                    </div>
+                    <div class="col  col--half  col--text">
+                        {{widget('content', 'services--text8', { content:'
+                            <h2>Recruitment</h2>
+                            <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
+                        '})|raw}}
+                        {{widget('content', 'services--text9', { content:'
+                            <h2>M &amp; A</h2>
+                            <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
+                        '})|raw}}
+                    </div>
+                </div>
             </div>
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text6', { content:'
-                        <h2>Conference Planning </h2>
-                        <p>Sponsoring and exhibiting at events is a serious commitment. We can manage the entire process, from identifying the correct events, negotiating agreements, booth design, planning networking events and meeting with the right decision makers in attendance.</p>
-                    '})|raw}}
-                </li>
-            </div>
-            <div class="col  col--third">
-                <li class="service-list-item">
-                    {{widget('content', 'services--text7', { content:'
-                        <h2>Business Development</h2>
-                        <p>We help technology companies with the most important transactions. Our network of VC’s, angel investors and tech evangelists can assist from seed investment through to mergers and acquisitions and other exit strategies.</p>
-                    '})|raw}}
-                </li>
-            </div>
-            <div class="col  col--third">
-                <li class="service-list-item  service-list-item--last">
-                    {{widget('content', 'services--text8', { content:'
-                        <h2>Recruitment</h2>
-                        <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
-                    '})|raw}}
-                </li>
-            </div>
-            <div class="col  col--third">
-                <li class="service-list-item  service-list-item--last">
-                    {{widget('content', 'services--text9', { content:'
-                        <h2>M &amp; A</h2>
-                        <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
-                    '})|raw}}
-                </li>
-            </div>
-            <div class="col  col--third">
-                <li class="service-list-item  service-list-item--last">
-                    {{widget('content', 'services--text10', { content:'
-                        <h2>Product Services</h2>
-                        <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
-                    '})|raw}}
-                </li>
-            </div>
-        </ul>
+
+            {#
+            {{widget('content', 'services--text10', { content:'
+                <h2>Product Services</h2>
+                <p>With the combined experience we have, we can find you the right team. Whether it’s sales people, marketing experts, designers or developers, identifying the right talent at the right time is a natural evolution of our process.</p>
+            '})|raw}}
+            #}
+
+        </div>
 
         {% include "includes/contact-section.twig" %}
 
     </div>
-
 
 </section>
 

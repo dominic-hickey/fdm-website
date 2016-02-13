@@ -5,6 +5,7 @@
 <section class="page  page--inner  page--about">
 
 
+    <!-- Page Title -->
     <div class="page-title  page-title--about">
         <div class="page-title-content-wrap">
             {{widget('pagetitle', 'page-title', {})|raw}}
@@ -23,23 +24,58 @@
                     <h2>FDM are a network of people that build bridges between SMB service providers and products that could generate revenue, reduce churn or optimize business processes for these companies.</h2>
                 '})|raw}}
 
-                <div class="boxed-content  boxed-content--services">
-                    {{widget('content', 'about--intro-text2', { content:'
-                        <h2>Problem</h2>
-                        <p>Having to fly around the world to go to conferences and meet your prospects is time consuming and expensive.</p>
-                    '})|raw}}
-                    {{widget('content', 'about--intro-text3', { content:'
-                        <h2>Solution</h2>
-                        <p>FDM is a network of business developers that can rapidly connect with companies around the globe.</p>
-                    '})|raw}}
-                    {{widget('content', 'about--intro-text4', { content:'
-                        <h2>Who</h2>
-                        <p>Our network of SMB services providers – including hosting, domain and design companies - are at your finger tips.</p>
+                <div class="service-blocks-title">
+                    {{widget('content', 'about-title', { content:'
+                        <h4>We provide solutions for your business problems</h4>
                     '})|raw}}
                 </div>
 
             </div>
         </div>
+
+
+        <!-- About Blocks -->
+        <div class="about-blocks">
+
+            <div class="section">
+                <div class="row">
+
+                    <div class="col  col--third">
+                        {{widget('image', 'about-image--problem', {
+                            'src': asset('/images/about-image--problem.jpg')
+                        })|raw}}
+                        {{widget('content', 'about--intro-text2', { content:'
+                            <h2>Have a problem?</h2>
+                            <p>Having to fly around the world to go to conferences and meet your prospects is time consuming and expensive.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'about-image--solution', {
+                            'src': asset('/images/about-image--solution.jpg')
+                        })|raw}}
+                        {{widget('content', 'about--intro-text3', { content:'
+                            <h2>Need a solution?</h2>
+                            <p>FDM is a network of business developers that can rapidly connect with companies around the globe.</p>
+                        '})|raw}}
+                    </div>
+                    <div class="col  col--third">
+                        {{widget('image', 'about-image--help', {
+                            'src': asset('/images/about-image--help.jpg')
+                        })|raw}}
+                        {{widget('content', 'about--intro-text4', { content:'
+                            <h2>FDM can help!</h2>
+                            <p>Our network of SMB services providers – including hosting, domain and design companies - are at your finger tips.</p>
+                        '})|raw}}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        {% include "includes/contact-section.twig" %}
+
+    </div>
 
 
         <!-- Section: Services -->
