@@ -1144,6 +1144,14 @@ body {
 
 .section--case-studies {
 
+	.widget:nth-child(2) {
+	    margin-bottom: @value__widget--spacing--tablet;
+
+	    @media @mobile {
+	        margin-bottom: @value__widget--spacing--mobile;
+	    }
+	}
+
 	h2 {
 		font-size: 20px;
 		line-height: 40px;
@@ -1162,7 +1170,7 @@ body {
 	    }
 
 	    .image {
-	    	min-width: 150px;
+	    	min-width: 210px;
 	    	max-width: 250px;
 	    }
 	}
