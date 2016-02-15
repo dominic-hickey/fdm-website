@@ -383,7 +383,7 @@ body {
     text-align: center;
     padding: @value__widget--spacing--desktop 0;
 
-    @media @bp-1050 {
+    @media @bp-global-medium {
         padding: @value__widget--spacing--laptop 0;
     }
     @media @tablet {
@@ -960,8 +960,10 @@ body {
 	border-bottom: 1px solid @color__site--border;
 	text-align: center;
 
-	@media @mobile {
+	@media @bp-global-medium {
 		margin-top: 0;
+	}
+	@media @mobile {
 		padding: 12px 0;
 
 		h4 {
