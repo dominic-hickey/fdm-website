@@ -1155,6 +1155,11 @@ body {
 	h2 {
 		font-size: 20px;
 		line-height: 40px;
+
+		@media @mobile {
+			font-size: bkscale(@font__h2--font-size, 0.8);
+			line-height: bkscale(@font__h2--line-height, 0.8);
+		}
 	}
 
 	&.section--grey .boxed-content:before {
